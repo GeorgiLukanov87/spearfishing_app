@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from django.urls import reverse_lazy
@@ -102,3 +103,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.AppUser'
 
 LOGIN_REDIRECT_URL = reverse_lazy('index')
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
