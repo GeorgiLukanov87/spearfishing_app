@@ -1,42 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home page</title>
-</head>
-<body>
-<div>
-    <a href="{% url 'index' %}">HOME PAGE</a>
-</div>
-<h2>user pk= {{ request.user.pk }}</h2>
-<h2>user username= {{ request.user.username }}</h2>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
+    <main>
+        <div class="container">
+            <div class="col-9">
+                <form class="searchbar" method="post">
+                    {% csrf_token %}
+                    {{ search_form }}
 
-<div>
-    <a href="{% url 'login' %}">LogIn</a>
-</div>
+                    <button>
+                        <img src="{% static 'images/search.png' %}" height="18" alt="img2">
+                    </button>
+                </form>
 
-<div>
-    <a href="{% url 'logout' %}">LogOut</a>
-</div>
+            </div>
+        </div>
+    </main>
 
-<div>
-    <a href="{% url 'register' %}">Register</a>
-</div>
-
-
-<div>
-    <a href="{% url 'profile details' pk=request.user.pk %}">Profile details</a>
-</div>
-
-<div>
-    <a href="{% url 'profile delete' pk=request.user.pk %}">Profile delete</a>
-</div>
-
-
-</body>
-<footer>
-    <br>
-    <a href="{% url 'go to github' %}" target=”_blank” >Go to Github!</a>
-</footer>
-</html>
+{% endblock %}

@@ -1,33 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>LogIn</title>
-</head>
-<body>
-<h1>Profile LogIn Page</h1>
-<div>
-    <a href="{% url 'index' %}">HOME PAGE</a>
-</div>
-<main>
+{% extends 'base.html' %}
+{% block content %}
 
-    <div class="login-register-div">
-        <div class="login-register-box">
-            <h1>Petstagram</h1>
+    <form action="{% url 'login' %}" method="post">
+        <input type="hidden" name="next" value="{{ next }}">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit">Log in</button>
+    </form>
 
-            <form action="{% url 'login' %}" method="post">
-                <input type="hidden" name="next" value="{{ next }}">
-                {{ form.as_p }}
-                {% csrf_token %}
-                <button type="submit">Log in</button>
-            </form>
-
-        </div>
-        <div class="second-option">
-            <p>Don't have account? <a href="{% url 'register' %}">Register</a></p>
-        </div>
+    <div class="second-option">
+        <p>Don't have account? <a href="{% url 'register' %}">Register</a></p>
     </div>
-</main>
 
-</body>
-</html>
+{% endblock %}

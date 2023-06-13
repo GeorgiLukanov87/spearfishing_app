@@ -1,0 +1,102 @@
+{% load static %}
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="{% url 'index' %}">
+                    <img width="80px"
+                         src="{% static 'images/depositphotos_153173698-stock-illustration-spearfishing-club-concept-design-underwater.jpg' %}"
+                         alt="img1">
+                </a>
+
+                <a class="home" href="{% url 'index' %}">
+                    <i style="font-weight: bolder;font-size: 40px;color: #16a20c">SpearFishing4Life</i>
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <ul class="nav-group">
+
+                    <li class="nav-item">
+                        <a href="#">
+                            <i>Add Story</i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#">
+                            <i>Add SpearFishing Gun</i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#">
+                            <i>Add Trophy Fish</i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#">
+                            <i>Add Photo</i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#">
+                            <i>Create Fish Trip</i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#">
+                            <i>Add equipment</i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#">
+                            <i>Share Location</i>
+                        </a>
+                    </li>
+
+
+                    {% if request.user.is_authenticated %}
+
+                        <li class="nav-item">
+                            <a href="{% url 'profile details' pk=request.user.pk %}">
+                                <i>Profile={{ request.user }}</i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{% url 'logout' %}">
+                                <i>Log out</i>
+                            </a>
+                        </li>
+
+                    {% else %}
+                        <li class="nav-item">
+                            <a href="{% url 'login' %}">
+                                <i>Log in</i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{% url 'register' %}">
+                                <i>Register</i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#">
+                                <i>Add equipment</i>
+                            </a>
+                        </li>
+                    {% endif %}
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
