@@ -9,21 +9,19 @@ UserModel = get_user_model()
 
 
 class SignInView(auth_views.LoginView):
-    pass
-    # template_name = 'accounts/login-page.html'
+    template_name = 'accounts/login-page.html'
 
 
 class SingInView(generic.CreateView):
-    pass
-    # template_name = 'accounts/register-page.html'
-    # form_class = UserCreateForm
-    # success_url = reverse_lazy('show index')
-    #
-    # # when new user is created,auto-login
-    # def post(self, request, *args, **kwargs):
-    #     response = super().post(request, *args, **kwargs)
-    #     login(request, self.object)
-    #     return response
+    template_name = 'accounts/register-page.html'
+    form_class = UserCreateForm
+    success_url = reverse_lazy('index')
+
+    # when new user is created,auto-login
+    def post(self, request, *args, **kwargs):
+        response = super().post(request, *args, **kwargs)
+        login(request, self.object)
+        return response
 
 
 class SignOutView(auth_views.LogoutView):
@@ -31,9 +29,8 @@ class SignOutView(auth_views.LogoutView):
 
 
 class UserDetailsView(generic.DetailView):
-    pass
-    # model = UserModel
-    # template_name = 'accounts/profile-details-page.html'
+    model = UserModel
+    template_name = 'accounts/profile-details-page.html'
 
 
 class UserEditView(generic.UpdateView):
