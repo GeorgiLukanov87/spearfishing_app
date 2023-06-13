@@ -1,23 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div class="profile-container">
 
-    <h1>profile details page pk= {{ request.user.pk }}</h1>
-    <h2>Full Name: {{ object.get_full_name }}</h2>
-    <h2>Email: {{ object.email }}</h2>
-    <h2>Gender: {{ object.gender }}</h2>
-    <br>
+        <h1>profile details page pk= {{ request.user.pk }}</h1>
 
-    <div class="photo-wrapper">
-    {% if object.photo_set.all %}
-        {% for photo in object.photo_set.all %}
-            <ul>
-                <li class="users-photos"><img src="{{ photo.photo.url }}" alt=""></li>
-            </ul>
-        {% endfor %}
-    {% endif %}
+        <h2>Full Name: {{ object.get_full_name }}</h2>
+        <h2>Email: {{ object.email }}</h2>
+        <h2>Gender: {{ object.gender }}</h2>
+        <br>
+
+        <div class="photo-wrapper">
+            {% if object.photo_set.all %}
+                {% for photo in object.photo_set.all %}
+                    <ul>
+                        <li class="users-photos"><img src="{{ photo.photo.url }}" alt="">
+                            <div class="icons-wrapper">
+                                <i class="fa-solid fa-heart fa-beat-fade" style="color: #ff0000;"></i>
+                                <i class="fa-solid fa-square-share-nodes fa-beat-fade"></i>
+                            </div>
+                        </li>
+                    </ul>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <p>
+            <a class="button-edit-profile" href="{% url 'profile edit' pk=object.pk %}"> Edit profile <i
+                    class="fa-regular fa-user fa-bounce" style="color: #00f010;"></i></a>
+            <a class="button-edit-profile" href="{% url 'add-photo' %}"> Add new photo <i
+                    class="fa-regular fa-image fa-flip" style="color: #02dac8;"></i></a>
+            <a class="button-edit-profile" href="{% url 'profile delete' pk=object.pk %}"> Delete profile <i
+                    class="fa-solid fa-trash fa-fade" style="color: #ff0000;"></i></a>
+        </p>
     </div>
-    <br>
-    <a href="{% url 'profile edit' pk=object.pk %}"> Edit Profile</a>
-
-
 {% endblock %}

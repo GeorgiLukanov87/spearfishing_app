@@ -99,8 +99,10 @@ header {
 
 }
 
+/*profile photos*/
 .photo-wrapper {
     display: flex;
+
 
 }
 
@@ -114,4 +116,58 @@ header {
     margin: 10px;
     background-color: #ccc6c6;
 
+}
+
+.photo-wrapper li {
+    padding-left: 10px;
+    margin: 8px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #796565;
+}
+
+.icons-wrapper {
+    padding-left: 20px;
+    padding-bottom: 8px;
+}
+
+.icons-wrapper i {
+    color: #eae5e5;
+    font-size: 26px;
+    display: inline-block;
+    padding: 8px;
+
+}
+
+/*profile container*/
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    border-radius: 12px;
+    border:2px solid black;
+    padding: 12px;
+    background-color: #eae5e5;
+    width: 80vw;
+}
+
+.profile-container ul {
+    list-style: none;
+
+}
+
+
+/*button-edit-profile*/
+.button-edit-profile{
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 20px;
+    padding:10px;
+    text-decoration: none;
+    text-align: center;
+    margin:12px 4px;
+    background-color: #474e50;
+    font-size: 18px;
+    color: white;
 }
