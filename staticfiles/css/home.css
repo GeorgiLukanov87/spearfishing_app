@@ -8,7 +8,8 @@
 body {
     font-family: "Helvetica Neue", sans-serif;
     min-height: 100vh;
-
+    background: rgb(255, 255, 255);
+    background: linear-gradient(94deg, rgba(255, 255, 255, 1) 0%, rgba(157, 207, 254, 1) 100%);
 
 }
 
@@ -17,9 +18,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 20px;
     align-items: center;
     gap: 26px;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 2%, rgba(187, 188, 190, 1) 33%, rgba(121, 123, 124, 1) 61%, rgba(145, 143, 143, 1) 87%);
+    box-shadow: 1px 4px 15px 2px #1022f1;
+
 
 }
 
@@ -29,10 +33,11 @@ body {
 
 .logo img {
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 60px;
     margin: 20px;
     padding: 16px;
-    box-shadow: 1px 1px 10px 1px black;
+    box-shadow: 1px 1px 12px 1px #4ffa4f;
+    background-color: white;
 }
 
 .logo img:hover {
@@ -45,14 +50,14 @@ body {
     margin-top: 10px;
 }
 
-.users-photos i:hover{
+.users-photos i:hover {
     scale: 1.5;
     cursor: pointer;
 }
 
-.button-edit-profile:hover{
+.button-edit-profile:hover {
     scale: 1.1;
-        transition: linear 300ms;
+    transition: linear 300ms;
 }
 
 .nav-group {
@@ -61,6 +66,11 @@ body {
     gap: 16px;
     list-style: none;
 
+}
+
+header {
+    border-bottom: 2px solid #ece2e2;
+    margin-bottom: 50px;
 }
 
 .nav-group a {
@@ -88,17 +98,9 @@ body {
     font-size: 18px;
 }
 
-/*background image*/
-header {
-    background-image: url("/staticfiles/images/pexels-pixabay-62307.jpg");
-    background-size: cover;
-    overflow: hidden;
-}
 
 #bubbles {
-    opacity: 0.6;
     width: 100%;
-    height: 100vh;
     position: absolute;
     z-index: -111;
 
@@ -107,6 +109,8 @@ header {
 /*profile photos*/
 .photo-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
 
 }
@@ -155,8 +159,7 @@ header {
     border-radius: 12px;
     border: 1px solid black;
     padding: 12px;
-    background: rgb(185, 213, 253);
-    background: linear-gradient(90deg, rgba(185, 213, 253, 1) 0%, rgba(51, 140, 201, 1) 25%, rgb(171, 241, 153) 70%, rgba(72, 135, 224, 1) 100%);
+
     width: 80vw;
 }
 
@@ -184,7 +187,7 @@ header {
     text-align: center;
 }
 
-.button-login{
+.button-login {
     border: 1px solid black;
     display: inline-block;
     border-radius: 20px;
@@ -196,10 +199,10 @@ header {
     font-size: 18px;
     color: white;
     width: 100px;
-    margin:auto;
+    margin: auto;
 }
 
-.footer i:hover{
+.footer i:hover {
     scale: 1.4;
     transition: 300ms;
 }

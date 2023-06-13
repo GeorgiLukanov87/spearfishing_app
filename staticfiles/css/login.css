@@ -2,9 +2,9 @@ form {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    gap: 12px;
+    gap: 8px;
     width: 353px;
-    margin: 100px auto;
+    margin: 20px auto;
     padding: 26px;
     background: rgb(185, 213, 253);
     background: linear-gradient(90deg, rgba(185, 213, 253, 1) 0%, rgba(51, 140, 201, 1) 25%, rgb(178, 246, 162) 70%, rgba(72, 135, 224, 1) 100%);
@@ -24,7 +24,7 @@ form button:hover {
 form input {
     width: 280px;
     padding:10px;
-    color: red;
-    background-color: #b9d5fd;
-    font-size: 20px;
+    color: #4b1010;
+    background-color: #ffffff;
+    font-size: 18px;
 }

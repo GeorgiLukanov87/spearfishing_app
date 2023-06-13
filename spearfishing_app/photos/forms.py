@@ -20,17 +20,17 @@ class PhotoEditForm(forms.ModelForm):
         exclude = ['photo']
 
 
-class PhotoDeleteForm(PhotoBaseForm):
-    disabled_fields = '__all__'
+class PhotoDeleteForm(PhotoEditForm):
+    
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
     def save(self, commit=True):
         if commit:
-            self.instance.tagged_pets.clear()  # many-to-many
+            # self.instance.tagged_users.clear()  # many-to-many
+            # Photo.objects.all().first().tagged_pets.clear()
 
-            Photo.objects.all().first().tagged_pets.clear()
             Like.objects.filter(to_photo_id=self.instance.id).delete()  # one-to-many
             Comment.objects.filter(to_photo_id=self.instance.id).delete()  # one-to-many
 
