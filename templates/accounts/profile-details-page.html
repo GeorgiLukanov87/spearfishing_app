@@ -2,11 +2,13 @@
 {% block content %}
     <div class="profile-container">
 
-        <h1>profile details page pk= {{ request.user.pk }}</h1>
 
-        <h2>Full Name: {{ object.get_full_name }}</h2>
-        <h2>Email: {{ object.email }}</h2>
-        <h2>Gender: {{ object.gender }}</h2>
+        <div class="profile-details-wrapper">
+
+            <h2>Full Name: {{ object.get_full_name }}, pk= {{ request.user.pk }}</h2>
+            <h2>Email: {{ object.email }}</h2>
+            <h2>Gender: {{ object.gender }}</h2>
+        </div>
         <br>
 
         <div class="photo-wrapper">
@@ -15,8 +17,14 @@
                     <ul>
                         <li class="users-photos"><img src="{{ photo.photo.url }}" alt="">
                             <div class="icons-wrapper">
-                                <i class="fa-solid fa-heart fa-beat-fade" style="color: #ff0000;"></i>
-                                <i class="fa-solid fa-square-share-nodes fa-beat-fade"></i>
+                                <div>
+                                    <i class="fa-solid fa-heart fa-beat-fade" style="color: #ff0000;"></i>
+                                    <i class="fa-solid fa-square-share-nodes fa-beat-fade"></i>
+                                </div>
+{#                                <div>#}
+{#                                    <i class="fa-solid fa-trash-can-arrow-up fa-beat" style="color: #0065ff;"></i>#}
+{#                                </div>#}
+
                             </div>
                         </li>
                     </ul>
@@ -33,4 +41,5 @@
                     class="fa-solid fa-trash fa-fade" style="color: #ff0000;"></i></a>
         </p>
     </div>
+
 {% endblock %}

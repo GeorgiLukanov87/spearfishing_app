@@ -91,7 +91,7 @@ header {
 }
 
 #bubbles {
-    opacity: 0.4;
+    opacity: 0.8;
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -107,12 +107,10 @@ header {
 }
 
 .photo-wrapper img {
-
-    width: 350px;
-    height: 350px;
-    border-radius: 16px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     border: 2px solid black;
-    padding: 4px;
     margin: 10px;
     background-color: #ccc6c6;
 
@@ -122,17 +120,21 @@ header {
     padding-left: 10px;
     margin: 8px;
     border: 2px solid black;
-    border-radius: 8px;
+    border-radius: 18px;
     background-color: #796565;
 }
 
 .icons-wrapper {
-    padding-left: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
     padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .icons-wrapper i {
-    color: #eae5e5;
+    color: #fffdfd;
     font-size: 26px;
     display: inline-block;
     padding: 8px;
@@ -146,9 +148,10 @@ header {
     flex-direction: column;
     margin-left: 10%;
     border-radius: 12px;
-    border:2px solid black;
+    border: 1px solid black;
     padding: 12px;
-    background-color: #eae5e5;
+    background: rgb(185, 213, 253);
+    background: linear-gradient(90deg, rgba(185, 213, 253, 1) 0%, rgba(51, 140, 201, 1) 25%, rgba(51, 219, 8, 1) 70%, rgba(72, 135, 224, 1) 100%);
     width: 80vw;
 }
 
@@ -159,15 +162,19 @@ header {
 
 
 /*button-edit-profile*/
-.button-edit-profile{
+.button-edit-profile {
     border: 1px solid black;
     display: inline-block;
     border-radius: 20px;
-    padding:10px;
+    padding: 10px;
     text-decoration: none;
     text-align: center;
-    margin:12px 4px;
+    margin: 12px 4px;
     background-color: #474e50;
     font-size: 18px;
     color: white;
+}
+
+.profile-details-wrapper {
+    text-align: center;
 }
