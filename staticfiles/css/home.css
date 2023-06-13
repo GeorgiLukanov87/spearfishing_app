@@ -1,5 +1,4 @@
 
-
 * {
     margin: 0;
     padding: 0;
@@ -15,8 +14,10 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-between;
-    margin: 20px;
+
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px;
     align-items: center;
 
 }
@@ -31,7 +32,7 @@ body {
 
 .nav-group {
     display: flex;
-    gap: 8px;
+    gap: 12px;
     list-style: none;
 
 
@@ -41,12 +42,15 @@ body {
     text-decoration: none;
     border: 1px solid black;
     padding: 12px 10px;
-    border-radius: 10px;
+    border-radius: 14px;
+    background-color: #5e97ee;
+
 
 
 }
 
 .nav-group a:hover {
     color: #ef4848;
-    background-color: #5e97ee;
+    background-color: #0d1fe5;
+
 }
