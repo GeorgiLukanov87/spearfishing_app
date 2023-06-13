@@ -6,6 +6,17 @@
     <h2>Email: {{ object.email }}</h2>
     <h2>Gender: {{ object.gender }}</h2>
     <br>
-    <a href="{% url 'profile edit' pk=object.pk%}"> Edit Profile</a>
+
+    {% if object.photo_set.all %}
+        {% for photo in object.photo_set.all %}
+            <ul>
+                <li class="users-photos"><img src="{{ photo.photo.url }}" alt=""></li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+
+    <br>
+    <a href="{% url 'profile edit' pk=object.pk %}"> Edit Profile</a>
+
 
 {% endblock %}

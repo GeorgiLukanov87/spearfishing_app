@@ -94,17 +94,19 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# the folder will be named staticfiles
 STATICFILES_DIRS = (
-    BASE_DIR / 'staticfiles',
+    BASE_DIR / 'staticfiles/',
 )
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# always use the extended User
 AUTH_USER_MODEL = 'accounts.AppUser'
 
 LOGIN_REDIRECT_URL = reverse_lazy('index')
 
+# to save and reach uploaded media-files.
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
