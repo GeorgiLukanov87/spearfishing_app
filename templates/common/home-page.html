@@ -5,7 +5,8 @@
     <title>Home page</title>
 </head>
 <body>
-<h2>{{ request.user.pk }}</h2>
+<h2>user pk= {{ request.user.pk }}</h2>
+<h2>user username= {{ request.user.username }}</h2>
 <div>
     <a href="{% url 'index' %}">Home Page</a>
 </div>
@@ -22,14 +23,19 @@
     <a href="{% url 'register' %}">Register</a>
 </div>
 
-{#<div>#}
-{#    <a href="{% url 'profile details' %}">HOME PAGE</a>#}
-{#</div>#}
-{##}
-{#<div>#}
-{#    <a href="{% url 'profile delete' %}">HOME PAGE</a>#}
-{#</div>#}
+
+<div>
+    <a href="{% url 'profile details' pk=request.user.pk %}">Profile details</a>
+</div>
+
+<div>
+    <a href="{% url 'profile delete' pk=request.user.pk %}">Profile delete</a>
+</div>
 
 
 </body>
+<footer>
+    <br>
+    <a href="{% url 'go to github' %}" target=”_blank” >Go to Github!</a>
+</footer>
 </html>
