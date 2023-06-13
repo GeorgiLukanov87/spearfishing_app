@@ -9,12 +9,11 @@ body {
     font-family: "Helvetica Neue", sans-serif;
     min-height: 100vh;
 
-}
 
+}
 
 .container {
     display: flex;
-
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 10px;
@@ -26,15 +25,28 @@ body {
     text-decoration: none;
 }
 
+.logo img {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 6px;
+    box-shadow: 1px 1px 10px 1px black;
+}
+
+.logo img:hover {
+    scale: 1.1;
+    transition: linear 200ms;
+}
+
 .footer {
     text-align: center;
 }
 
 .nav-group {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
     list-style: none;
-
 
 }
 
@@ -42,15 +54,19 @@ body {
     text-decoration: none;
     border: 1px solid black;
     padding: 12px 10px;
-    border-radius: 14px;
-    background-color: #5e97ee;
-
-
+    border-radius: 10px;
+    background-color: #b9d5fd;
 
 }
 
 .nav-group a:hover {
     color: #ef4848;
     background-color: #0d1fe5;
+    transition: linear 250ms;
 
+}
+
+
+.nav-links {
+    font-size: 18px;
 }

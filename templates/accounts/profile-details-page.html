@@ -1,22 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>profile details</title>
-</head>
-<div>
-    <a href="{% url 'index' %}">HOME PAGE</a>
-</div>
-<body>
+{% extends 'base.html' %}
+{% block content %}
 
-<h1>profile details page pk= {{ request.user.pk }}</h1>
-<h2>Full Name: {{ object.get_full_name }}</h2>
-<h2>Email: {{ object.email }}</h2>
-<h2>Gender: {{ object.gender }}</h2>
+    <h1>profile details page pk= {{ request.user.pk }}</h1>
+    <h2>Full Name: {{ object.get_full_name }}</h2>
+    <h2>Email: {{ object.email }}</h2>
+    <h2>Gender: {{ object.gender }}</h2>
+    <br>
+    <a href="{% url 'profile edit' pk=object.pk%}"> Edit Profile</a>
 
-
-</body>
-</html>
+{% endblock %}
