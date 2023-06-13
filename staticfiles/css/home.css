@@ -45,7 +45,7 @@ body {
     margin-top: 10px;
 }
 
-.footer:hover a{
+.footer:hover a {
     zoom: 1.1;
     transition: linear 350ms;
 }
@@ -96,5 +96,22 @@ header {
     height: 100vh;
     position: absolute;
     z-index: -111;
+
+}
+
+.photo-wrapper {
+    display: flex;
+
+}
+
+.photo-wrapper img {
+
+    width: 350px;
+    height: 350px;
+    border-radius: 16px;
+    border: 2px solid black;
+    padding: 4px;
+    margin: 10px;
+    background-color: #ccc6c6;
 
 }
