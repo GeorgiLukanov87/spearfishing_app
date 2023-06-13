@@ -9,7 +9,11 @@
 </head>
 <body>
 
-<h1>profile details{{ request.user.pk }}</h1>
+<h1>profile details page pk= {{ request.user.pk }}</h1>
+<h2>Full Name: {{ object.get_full_name }}</h2>
+<h2>Email: {{ object.email }}</h2>
+<h2>Gender: {{ object.gender }}</h2>
+
 
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body>
+<h2>{{ request.user.pk }}</h2>
+<div>
+    <a href="{% url 'index' %}">Home Page</a>
+</div>
+
+<div>
+    <a href="{% url 'login' %}">LogIn</a>
+</div>
+
+<div>
+    <a href="{% url 'logout' %}">LogOut</a>
+</div>
+
+<div>
+    <a href="{% url 'register' %}">Register</a>
+</div>
+
+{#<div>#}
+{#    <a href="{% url 'profile details' %}">HOME PAGE</a>#}
+{#</div>#}
+{##}
+{#<div>#}
+{#    <a href="{% url 'profile delete' %}">HOME PAGE</a>#}
+{#</div>#}
+
+
+</body>
+</html>

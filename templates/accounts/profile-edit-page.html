@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit profile</title>
+</head>
+<body>
+<h1>Profile Edit Page</h1>
+<main>
+
+    <div class="edit-delete">
+        <h2>Edit Profile</h2>
+        <form action="{% url 'profile edit' pk=object.pk %}" method="post">
+            {% csrf_token %}
+
+            {% for field in form %}
+                <p class="error"> {{ field.errors }} </p>
+                <div class="label-input">
+                    <label>{{ field.label }}</label>
+                    {% if not field.label == "Gender:" %}
+                        {{ field }} {% else %}
+                        <div class="list-choice">
+                            <div class="list-choice-title">Gender</div>
+                            <div class="list-choice-objects">
+                                {% for type, value in form.fields.gender.choices %}
+                                    <label>
+                                        <input type="radio" value="{{ value }}" name="gender"
+                                                {% if form.gender.value == value %} checked {% endif %}/>
+                                        <span>{{ value }}</span>
+                                    </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <br>
+            {% endfor %}
+
+            <button class="edit-btn" type="submit">Edit</button>
+        </form>
+
+    </div>
+    <!-- End Edit Profile Section -->
+
+</main>
+
+
+</body>
+</html>

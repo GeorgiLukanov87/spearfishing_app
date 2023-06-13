@@ -10,6 +10,7 @@ UserModel = get_user_model()
 
 class SignInView(auth_views.LoginView):
     template_name = 'accounts/login-page.html'
+    success_url = reverse_lazy('index')
 
 
 class SingInView(generic.CreateView):
@@ -34,15 +35,14 @@ class UserDetailsView(generic.DetailView):
 
 
 class UserEditView(generic.UpdateView):
-    pass
-    # template_name = 'accounts/profile-edit-page.html'
-    # model = UserModel
-    # fields = ('first_name', 'last_name', 'email', 'gender',)
-    #
-    # def get_success_url(self):
-    #     return reverse_lazy('profile details', kwargs={
-    #         'pk': self.request.user.pk,
-    #     })
+    template_name = 'accounts/profile-edit-page.html'
+    model = UserModel
+    fields = ('first_name', 'last_name', 'email', 'gender',)
+
+    def get_success_url(self):
+        return reverse_lazy('profile details', kwargs={
+            'pk': self.request.user.pk,
+        })
 
 
 class UserDeleteView(generic.DeleteView):
