@@ -19,10 +19,10 @@ class CommentForm(forms.ModelForm):
 
 
 class SearchForm(forms.Form):
-    pet_name = forms.CharField(
+    user = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                'placeholder': 'Search by pet name...'
+                'placeholder': 'Search...'
             }
         )
     )

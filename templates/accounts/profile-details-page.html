@@ -17,10 +17,10 @@
         <hr>
 
         <div class="photo-wrapper">
+            <ul>
+                {% if object.photo_set.all %}
+                    {% for photo in object.photo_set.all %}
 
-            {% if object.photo_set.all %}
-                {% for photo in object.photo_set.all %}
-                    <ul>
                         <li class="users-photos"><img src="{{ photo.photo.url }}" alt="">
                             <div class="icons-wrapper">
                                 <div>
@@ -31,15 +31,15 @@
                                     <a href="{% url 'delete-photo' photo.pk %}"><i
                                             class="fa-solid fa-trash-can-arrow-up"
                                             style="color: #0065ff;"></i></a>
-
                                 </div>
-
                             </div>
                         </li>
-                    </ul>
-                {% endfor %}
-            {% endif %}
+                    {% endfor %}
+
+                {% endif %}
+            </ul>
         </div>
+
         <br>
         <hr>
         <p>

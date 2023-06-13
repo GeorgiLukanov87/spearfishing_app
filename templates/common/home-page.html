@@ -3,19 +3,44 @@
 {% block content %}
 
 
-{#            <div class="col-9">#}
-{#                <form class="searchbar" method="post">#}
-{#                    {% csrf_token %}#}
-{#                    {{ search_form }}#}
-{##}
-{#                    <div>#}
-{#                        <button>#}
-{#                            <img src="{% static 'images/search.png' %}" height="18" alt="img2">#}
-{#                        </button>#}
-{#                    </div>#}
-{##}
-{#                </form>#}
-{#            </div>#}
+    <div class="col-9">
+        <form class="searchbar" method="post">
+            {% csrf_token %}
+            {{ search_form }}
+
+            <div>
+                <button>
+                    <img src="{% static 'images/search.png' %}" height="18" alt="img2">
+                </button>
+            </div>
+
+        </form>
+    </div>
+    <div class="photo-wrapper">
+        <ul style="list-style: none">
+            {% if all_photos %}
+                {% for photo in all_photos %}
+
+                    <li class="users-photos"><img src="{{ photo.photo.url }}" alt="">
+                        <div class="icons-wrapper">
+                            <div>
+                                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+                                <i class="fa-solid fa-square-share-nodes "></i>
+                            </div>
+                            <div>
+                                <a href="{% url 'delete-photo' photo.pk %}"><i
+                                        class="fa-solid fa-trash-can-arrow-up"
+                                        style="color: #0065ff;"></i></a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
 
 
 
