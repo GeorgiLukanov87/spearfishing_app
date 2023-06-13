@@ -2,20 +2,21 @@
 {% load static %}
 {% block content %}
 
-    <main>
-        <div class="container">
-            <div class="col-9">
-                <form class="searchbar" method="post">
-                    {% csrf_token %}
-                    {{ search_form }}
 
-                    <button>
-                        <img src="{% static 'images/search.png' %}" height="18" alt="img2">
-                    </button>
-                </form>
+{#            <div class="col-9">#}
+{#                <form class="searchbar" method="post">#}
+{#                    {% csrf_token %}#}
+{#                    {{ search_form }}#}
+{##}
+{#                    <div>#}
+{#                        <button>#}
+{#                            <img src="{% static 'images/search.png' %}" height="18" alt="img2">#}
+{#                        </button>#}
+{#                    </div>#}
+{##}
+{#                </form>#}
+{#            </div>#}
 
-            </div>
-        </div>
-    </main>
+
 
 {% endblock %}

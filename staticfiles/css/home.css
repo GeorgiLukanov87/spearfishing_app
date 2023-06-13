@@ -12,12 +12,14 @@ body {
 
 }
 
+
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 10px;
+    margin: 20px;
     align-items: center;
+    gap: 26px;
 
 }
 
@@ -28,8 +30,8 @@ body {
 .logo img {
     border: 1px solid black;
     border-radius: 10px;
-    margin: 10px;
-    padding: 6px;
+    margin: 20px;
+    padding: 16px;
     box-shadow: 1px 1px 10px 1px black;
 }
 
@@ -40,22 +42,30 @@ body {
 
 .footer {
     text-align: center;
+    margin-top: 10px;
+}
+
+.footer:hover a{
+    zoom: 1.1;
+    transition: linear 350ms;
 }
 
 .nav-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;
     list-style: none;
 
 }
 
 .nav-group a {
     text-decoration: none;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 12px 10px;
     border-radius: 10px;
     background-color: #b9d5fd;
+    color: blue;
+
 
 }
 
@@ -63,10 +73,28 @@ body {
     color: #ef4848;
     background-color: #0d1fe5;
     transition: linear 250ms;
+    z-index: 100;
+    position: relative;
 
 }
 
 
 .nav-links {
     font-size: 18px;
+}
+
+/*background image*/
+header {
+    background-image: url("/staticfiles/images/pexels-pixabay-62307.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+#bubbles {
+    opacity: 0.4;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -111;
+
 }
