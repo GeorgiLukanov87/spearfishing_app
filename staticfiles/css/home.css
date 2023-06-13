@@ -96,7 +96,7 @@ header {
 }
 
 #bubbles {
-    opacity: 0.8;
+    opacity: 0.6;
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -156,7 +156,7 @@ header {
     border: 1px solid black;
     padding: 12px;
     background: rgb(185, 213, 253);
-    background: linear-gradient(90deg, rgba(185, 213, 253, 1) 0%, rgba(51, 140, 201, 1) 25%, rgba(51, 219, 8, 1) 70%, rgba(72, 135, 224, 1) 100%);
+    background: linear-gradient(90deg, rgba(185, 213, 253, 1) 0%, rgba(51, 140, 201, 1) 25%, rgb(171, 241, 153) 70%, rgba(72, 135, 224, 1) 100%);
     width: 80vw;
 }
 
@@ -182,4 +182,24 @@ header {
 
 .profile-details-wrapper {
     text-align: center;
+}
+
+.button-login{
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 10px;
+    text-decoration: none;
+
+
+    background-color: #474e50;
+    font-size: 18px;
+    color: white;
+    width: 100px;
+    margin:auto;
+}
+
+.footer i:hover{
+    scale: 1.4;
+    transition: 300ms;
 }

@@ -4,12 +4,14 @@
 
 
         <div class="profile-details-wrapper">
+            <h3>Profile Details:</h3>
 
-            <h2>Full Name: {{ object.get_full_name }}, pk= {{ request.user.pk }}</h2>
+            <h1>Full Name: {{ object.get_full_name }}, pk= {{ request.user.pk }}</h1>
             <h2>Email: {{ object.email }}</h2>
             <h2>Gender: {{ object.gender }}</h2>
         </div>
         <br>
+        <hr>
 
         <div class="photo-wrapper">
             {% if object.photo_set.all %}
@@ -32,6 +34,7 @@
             {% endif %}
         </div>
         <br>
+        <hr>
         <p>
             <a class="button-edit-profile" href="{% url 'profile edit' pk=object.pk %}"> Edit profile <i
                     class="fa-regular fa-user fa-bounce" style="color: #00f010;"></i></a>
