@@ -45,9 +45,14 @@ body {
     margin-top: 10px;
 }
 
-.footer:hover a {
-    zoom: 1.1;
-    transition: linear 350ms;
+.users-photos i:hover{
+    scale: 1.5;
+    cursor: pointer;
+}
+
+.button-edit-profile:hover{
+    scale: 1.1;
+        transition: linear 300ms;
 }
 
 .nav-group {
