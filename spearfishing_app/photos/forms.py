@@ -1,6 +1,7 @@
 from django import forms
 
 from spearfishing_app.common.models import Like, Comment
+from spearfishing_app.photos.disable_form_mixin import DisabledFormMixin
 from spearfishing_app.photos.models import Photo
 
 
@@ -20,11 +21,12 @@ class PhotoEditForm(forms.ModelForm):
         exclude = ['photo']
 
 
-class PhotoDeleteForm(PhotoEditForm):
-    
+class PhotoDeleteForm(DisabledFormMixin, PhotoEditForm):
+    disabled_fields = '__all__'
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self._disable_fields()
 
     def save(self, commit=True):
         if commit:

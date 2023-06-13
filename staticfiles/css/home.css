@@ -47,7 +47,17 @@ body {
 
 .footer {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 50px;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 2%, rgba(187, 188, 190, 1) 33%, rgba(121, 123, 124, 1) 61%, rgba(145, 143, 143, 1) 87%);
+    box-shadow: -1px -5px 15px 1px #1022f1;
+    font-size: 22px;
+    padding-bottom: 24px;
+
+}
+
+.footer span{
+    color: red;
 }
 
 .users-photos i:hover {
@@ -130,7 +140,7 @@ header {
     margin: 8px;
     border: 2px solid black;
     border-radius: 18px;
-    background-color: #796565;
+    background-color: #252424;
 }
 
 .icons-wrapper {
@@ -193,8 +203,6 @@ header {
     border-radius: 20px;
     padding: 10px;
     text-decoration: none;
-
-
     background-color: #474e50;
     font-size: 18px;
     color: white;
@@ -202,7 +210,9 @@ header {
     margin: auto;
 }
 
-.footer i:hover {
+.
+i:hover {
     scale: 1.4;
     transition: 300ms;
 }
+
