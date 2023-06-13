@@ -5,11 +5,12 @@
     <title>Home page</title>
 </head>
 <body>
+<div>
+    <a href="{% url 'index' %}">HOME PAGE</a>
+</div>
 <h2>user pk= {{ request.user.pk }}</h2>
 <h2>user username= {{ request.user.username }}</h2>
-<div>
-    <a href="{% url 'index' %}">Home Page</a>
-</div>
+
 
 <div>
     <a href="{% url 'login' %}">LogIn</a>
