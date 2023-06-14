@@ -22,8 +22,6 @@
             {% if all_photos %}
                 {% for photo in all_photos %}
 
-
-
                     <li class="users-photos">
 
                         <div class="profile-details-wrapper-home-page">
@@ -81,8 +79,7 @@
                                 </ul>
                             {% endif %}
 
-                            <form method="post" action="{% url 'add-comment' photo.id %}">
-                                {{ photo.id }}
+                            <form style="text-align: center" method="post" action="{% url 'add-comment' photo.id %}">
                                 {{ comment_form.as_p }}
                                 {% csrf_token %}
                                 <div>

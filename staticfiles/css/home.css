@@ -68,6 +68,9 @@ body {
 .button-edit-profile:hover {
     scale: 1.1;
     transition: linear 300ms;
+    color: red;
+    background-color: #ded8d8;
+
 }
 
 .nav-group {
