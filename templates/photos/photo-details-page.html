@@ -7,78 +7,84 @@
             {% if photo %}
 
 
-                    <li class="users-photos">
+                <li class="users-photos">
 
-                        <div class="profile-details-wrapper-home-page">
-                            <h4>
-                                <a href="{% url 'profile details' pk=photo.user.pk %}">
+                    <div class="profile-details-wrapper-home-page">
+                        <h4>
+                            <a href="{% url 'profile details' pk=photo.user.pk %}">
 
-                                    <i class="fa-solid fa-user" style="color: #f7f9fd"></i>
-                                    <span>{{ photo.user.get_full_name }}</span> , pk= {{ photo.user.pk }}
-                                </a>
-
-
-                            </h4>
-                            <h4><i class="fa-solid fa-envelope " style="color: #fcfcfc;"></i>: {{ photo.user.email }}
-                            </h4>
-                            <h3>Gender: {{ photo.user.gender }}</h3>
-                        </div>
-
-                        <img src="{{ photo.photo.url }}" alt="">
-
-                        <div class="icons-wrapper">
-                            <div>
-                                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                                <a href="{% url 'share' photo.pk %}">
-                                    <i class="fa-solid fa-square-share-nodes "></i>
-                                </a>
-
-                            </div>
-                            <div>
+                                <i class="fa-solid fa-user" style="color: #f7f9fd"></i>
+                                <span>{{ photo.user.get_full_name }}</span> , pk= {{ photo.user.pk }}
+                            </a>
 
 
-                                <a href="{% url 'photo-details' photo.pk %}"><i
-                                        class="fa-solid fa-circle-info fa-beat fa-xl" style="color: #09f809;"></i></a>
+                        </h4>
+                        <h4><i class="fa-solid fa-envelope " style="color: #fcfcfc;"></i>: {{ photo.user.email }}
+                        </h4>
+                        <h3>Gender: {{ photo.user.gender }}</h3>
+                    </div>
 
-                                {#                                <a href="{% url 'delete-photo' photo.pk %}"><i#}
-                                {#                                        class="fa-solid fa-trash-can-arrow-up"#}
-                                {#                                        style="color: #5d083f;"></i></a>#}
-                            </div>
+                    <img src="{{ photo.photo.url }}" alt="">
 
-                        </div>
-
+                    <div class="icons-wrapper">
                         <div>
-                            <hr>
-                            <br>
-                            <h2>Comments:</h2>
-                            {% if photo.comment_set.all %}
+                            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+                            <a href="{% url 'share' photo.pk %}">
+                                <i class="fa-solid fa-square-share-nodes "></i>
+                            </a>
 
-                                <ul style="list-style: none;color: deepskyblue;">
-                                    {% for comment in photo.comment_set.all %}
-                                        <li style="padding:8px">
-                                            <h3>
-                                                <a href="{% url 'profile details' pk=comment.user.pk %}">{{ comment.user }}:</a>
-                                            </h3>
-                                            {{ comment.text }}
-                                            <h6 style="color: #4ffa4f">
-                                                {{ comment.date_time_of_publication }}
-                                            </h6>
-
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            {% endif %}
-
-                            <form method="post" action="{% url 'add-comment' photo.id %}">
-                                {{ photo.id }}
-                                {{ comment_form.as_p }}
-                                {% csrf_token %}
-                                <div>
-                                    <button class="button-edit-profile" type="submit">Post comment</button>
-                                </div>
-                            </form>
                         </div>
-                    </li>
+                        {% if is_owner %}
+                            <div>
+
+
+                                <a href="{% url 'edit-photo' photo.pk %}"><i class="fa-solid fa-pen-to-square"
+                                                                             style="color: #102fef;"></i></a>
+
+
+                                <a href="{% url 'delete-photo' photo.pk %}"><i
+                                        class="fa-solid fa-trash-can-arrow-up"
+                                        style="color: #ea34ac;">
+                                </i></a>
+
+                            </div>
+
+
+                        {% endif %}
+                    </div>
+
+                    <div>
+                        <hr>
+                        <br>
+                        <h2>Comments:</h2>
+                        {% if photo.comment_set.all %}
+
+                            <ul style="list-style: none;color: deepskyblue;">
+                                {% for comment in photo.comment_set.all %}
+                                    <li style="padding:8px">
+                                        <h3>
+                                            <a href="{% url 'profile details' pk=comment.user.pk %}">{{ comment.user }}:</a>
+                                        </h3>
+                                        {{ comment.text }}
+                                        <h6 style="color: #4ffa4f">
+                                            {{ comment.date_time_of_publication }}
+                                        </h6>
+
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+
+                        <form method="post" action="{% url 'add-comment' photo.id %}">
+                            {{ photo.id }}
+                            {{ comment_form.as_p }}
+                            {% csrf_token %}
+                            <div>
+                                <button class="button-edit-profile" type="submit">Post comment</button>
+                            </div>
+                        </form>
+                    </div>
+                </li>
 
 
             {% endif %}

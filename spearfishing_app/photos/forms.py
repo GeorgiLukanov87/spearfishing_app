@@ -18,7 +18,7 @@ class PhotoCreateForm(PhotoBaseForm):
 class PhotoEditForm(forms.ModelForm):
     class Meta:
         model = Photo
-        exclude = ['photo']
+        exclude = ['photo','user']
 
 
 class PhotoDeleteForm(DisabledFormMixin, PhotoEditForm):
