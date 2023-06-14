@@ -139,7 +139,7 @@ header {
 }
 
 .photo-wrapper img {
-    width: 500px;
+    width: 750px;
     height: 500px;
     border-radius: 50%;
     border: 2px solid black;
@@ -220,6 +220,13 @@ header {
 .profile-details-wrapper-home-page h4 a {
     text-decoration: none;
     color: #ef2c2c;
+}
+
+.profile-details-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
 }
 
 .button-login {

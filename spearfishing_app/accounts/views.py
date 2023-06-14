@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect
 from django.contrib.auth import views as auth_views, get_user_model, login
 from django.urls import reverse_lazy
@@ -32,6 +33,31 @@ class SignOutView(auth_views.LogoutView):
 class UserDetailsView(generic.DetailView):
     model = UserModel
     template_name = 'accounts/profile-details-page.html'
+    photos_paginate_by = 2
+
+    def get_photos_page(self):
+        return self.request.GET.get('page', 1)
+
+    def get_paginated_photos(self):
+        page = self.get_photos_page()
+        photos = self.object.photo_set.all()
+        paginator = Paginator(photos, self.photos_paginate_by)
+        return paginator.get_page(page)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['is_owner'] = self.request.user == self.object
+
+        # very important about queries...fast operation !single query from db filtered
+        photos = self.object.photo_set.prefetch_related('like_set')
+
+        context['photos_count'] = photos.count()
+        context['likes_count'] = sum(x.like_set.count() for x in photos)
+
+        context['photos'] = self.get_paginated_photos()
+
+        return context
 
 
 class UserEditView(generic.UpdateView):

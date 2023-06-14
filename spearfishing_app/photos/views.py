@@ -7,6 +7,7 @@ from spearfishing_app.photos.models import Photo
 
 
 # photos/views.py
+
 def add_photo(request):
     if request.method == 'GET':
         form = PhotoCreateForm()
