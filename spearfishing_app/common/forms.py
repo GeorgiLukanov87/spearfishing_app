@@ -8,10 +8,8 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ['text']
         widgets = {
-            'text': forms.Textarea(
+            'text': forms.TextInput(
                 attrs={
-                    'cols': 40,
-                    'rows': 10,
                     'placeholder': 'Add comment...'
                 },
             ),
@@ -19,7 +17,7 @@ class CommentForm(forms.ModelForm):
 
 
 class SearchForm(forms.Form):
-    user = forms.CharField(
+    user_name = forms.CharField(
         widget=forms.TextInput(
             attrs={
                 'placeholder': 'Search...'

@@ -5,18 +5,17 @@
 
 
         <div class="profile-details-wrapper">
-
             <h3>Profile Details:</h3>
-
-            <h1>Full Name: {{ object.get_full_name }}, pk= {{ request.user.pk }}</h1>
-            <h2>Email: {{ object.email }}</h2>
-            <h2>Gender: {{ object.gender }}</h2>
+            <h2>Full Name: {{ object.get_full_name }}, pk= {{ request.user.pk }}</h2>
+            <h4>Email: {{ object.email }}</h4>
+            <h4>Gender: {{ object.gender }}</h4>
         </div>
 
         <br>
         <hr>
 
         <div class="photo-wrapper">
+
             <ul>
                 {% if object.photo_set.all %}
                     {% for photo in object.photo_set.all %}
@@ -34,6 +33,7 @@
                                 </div>
                             </div>
                         </li>
+
                     {% endfor %}
 
                 {% endif %}

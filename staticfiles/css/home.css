@@ -56,7 +56,7 @@ body {
 
 }
 
-.footer span{
+.footer span {
     color: red;
 }
 
@@ -126,8 +126,8 @@ header {
 }
 
 .photo-wrapper img {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     border: 2px solid black;
     margin: 10px;
@@ -140,7 +140,7 @@ header {
     margin: 8px;
     border: 2px solid black;
     border-radius: 18px;
-    background-color: #252424;
+    background-color: #257685;
 }
 
 .icons-wrapper {
@@ -193,8 +193,19 @@ header {
     color: white;
 }
 
-.profile-details-wrapper {
+.profile-details-wrapper-home-page {
     text-align: center;
+    color: #e8e6e6;
+    padding: 12px;
+    letter-spacing: 1.1px;
+}
+
+.profile-details-wrapper-home-page h4,h3{
+    padding:4px;
+}
+.profile-details-wrapper-home-page h4 a {
+    text-decoration: none;
+    color: #ef2c2c;
 }
 
 .button-login {
@@ -210,7 +221,7 @@ header {
     margin: auto;
 }
 
-.
+
 i:hover {
     scale: 1.4;
     transition: 300ms;

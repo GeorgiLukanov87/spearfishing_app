@@ -1,13 +1,12 @@
 {% load static %}
 <header>
-
     <nav class="navbar">
         <div class="container">
             <div class="logo">
                 <a href="{% url 'index' %}">
                     <img width="150px"
                          src="{% static 'images/underwater-hunter-skull-vector-illustration-head-of-skeleton-with-mask-and-crossed-spearguns-born-to-dive-text-seaside-activity-concept-for-scuba-d-2J2DPM1.jpg' %}"
-                         alt="img1">
+                         alt="nav-logo">
                 </a>
             </div>
 
@@ -18,49 +17,8 @@
                     {% if request.user.is_authenticated %}
 
                         <li class="nav-item">
-                            <a href="#">
-                                <i>Add Story</i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#">
-                                <i>Add SpearFishing Gun</i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#">
-                                <i>Add Trophy Fish</i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#">
+                            <a href="{% url 'add-photo' %}">
                                 <i>Add Photo</i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#">
-                                <i>Create Fish Trip</i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#">
-                                <i>Add equipment</i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#">
-                                <i>Share Location</i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">
-                                <i>Add equipment</i>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -68,7 +26,6 @@
                                 <i>Profile={{ request.user }}</i>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a href="{% url 'logout' %}">
                                 <i>Log out</i>
@@ -76,12 +33,12 @@
                         </li>
 
                     {% else %}
+
                         <li class="nav-item">
                             <a href="{% url 'login' %}">
                                 <i>Log in</i>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a href="{% url 'register' %}">
                                 <i>Register</i>

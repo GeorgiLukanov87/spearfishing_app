@@ -34,7 +34,6 @@ def index(request):
 
 @login_required
 def like_functionality(request, photo_id):
-    photo = Photo.objects.get(id=photo_id)
     liked_object = Like.objects.filter(to_photo_id=photo_id, user_id=request.user.pk)
 
     if liked_object:
@@ -53,7 +52,7 @@ def get_photo_url(request, photo_id):
 
 
 def share(request, photo_id):
-    photo_details_url = reverse('show photo details', kwargs={
+    photo_details_url = reverse('photo-details', kwargs={
         'pk': photo_id
     })
     pyperclip.copy(photo_details_url)
@@ -80,4 +79,4 @@ def add_comment(request, photo_id):
 
 @login_required
 def redirect_to_index(request):
-    return redirect('show index')
+    return redirect('index')
