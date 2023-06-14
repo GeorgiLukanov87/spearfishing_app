@@ -3,22 +3,22 @@
 
     <div class="login-register-div">
         <div class="login-register-box">
-            <h1>Spearfishin4Life</h1>
 
-            <form action="{% url 'register' %}" method="post">
 
+            <form style="text-align: center" action="{% url 'register' %}" method="post">
+                <h2>Welcome to Spearfishing4Life</h2>
                 <input type="hidden" name="next" value="{{ next }}">
 
                 {{ form.as_p }}
-
                 {% csrf_token %}
 
-                <button type="submit">Register</button>
+                <div>
+                    <button class="button-edit-profile" type="submit">Register</button>
+                </div>
             </form>
 
         </div>
         <div class="second-option">
-
             <p>Have an account? <a href="{% url 'login' %}">Log in</a></p>
         </div>
     </div>

@@ -73,6 +73,16 @@ body {
 
 }
 
+.second-option {
+    text-align: center;
+    font-size: 22px;
+
+}
+
+.second-option a {
+    text-decoration: none;
+}
+
 .nav-group {
     display: flex;
     flex-wrap: wrap;
@@ -203,9 +213,10 @@ header {
     letter-spacing: 1.1px;
 }
 
-.profile-details-wrapper-home-page h4,h3{
-    padding:4px;
+.profile-details-wrapper-home-page h4, h3 {
+    padding: 4px;
 }
+
 .profile-details-wrapper-home-page h4 a {
     text-decoration: none;
     color: #ef2c2c;

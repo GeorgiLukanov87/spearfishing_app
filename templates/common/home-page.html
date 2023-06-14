@@ -2,7 +2,6 @@
 {% load static %}
 {% block content %}
 
-
     <div class="col-9">
         <form class="searchbar" method="post">
             {% csrf_token %}
@@ -62,7 +61,6 @@
                             <br>
                             <h2>Comments:</h2>
                             {% if photo.comment_set.all %}
-
                                 <ul style="list-style: none;color: deepskyblue;">
                                     {% for comment in photo.comment_set.all %}
                                         <li style="padding:8px">
@@ -73,7 +71,6 @@
                                             <h6 style="color: #4ffa4f">
                                                 {{ comment.date_time_of_publication }}
                                             </h6>
-
                                         </li>
                                     {% endfor %}
                                 </ul>
@@ -93,7 +90,5 @@
             {% endif %}
         </ul>
     </div>
-
-
 
 {% endblock %}

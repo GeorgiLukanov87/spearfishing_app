@@ -6,9 +6,7 @@
         <ul style="list-style: none">
             {% if photo %}
 
-
                 <li class="users-photos">
-
                     <div class="profile-details-wrapper-home-page">
                         <h4>
                             <a href="{% url 'profile details' pk=photo.user.pk %}">
@@ -16,7 +14,6 @@
                                 <i class="fa-solid fa-user" style="color: #f7f9fd"></i>
                                 <span>{{ photo.user.get_full_name }}</span> , pk= {{ photo.user.pk }}
                             </a>
-
 
                         </h4>
                         <h4><i class="fa-solid fa-envelope " style="color: #fcfcfc;"></i>: {{ photo.user.email }}
@@ -37,18 +34,16 @@
                         {% if is_owner %}
                             <div>
 
-
-                                <a href="{% url 'edit-photo' photo.pk %}"><i class="fa-solid fa-pen-to-square"
-                                                                             style="color: #102fef;"></i></a>
-
+                                <a href="{% url 'edit-photo' photo.pk %}">
+                                    <i class="fa-solid fa-pen-to-square"
+                                       style="color: #102fef;"></i></a>
 
                                 <a href="{% url 'delete-photo' photo.pk %}"><i
                                         class="fa-solid fa-trash-can-arrow-up"
-                                        style="color: #ea34ac;">
+                                        style="color: #77004e;">
                                 </i></a>
 
                             </div>
-
 
                         {% endif %}
                     </div>
