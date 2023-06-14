@@ -40,7 +40,6 @@ class AppUser(auth_models.AbstractUser):
         validators=(
             validators.MinLengthValidator(FIRST_NAME_MIN_LEN),
             validate_only_letters,
-
         )
     )
 
@@ -59,7 +58,4 @@ class AppUser(auth_models.AbstractUser):
     gender = models.CharField(
         choices=Gender.choices(),
         max_length=Gender.max_len(),
-
     )
-
-

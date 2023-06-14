@@ -17,7 +17,7 @@ def index(request):
     if request.method == 'POST':
         search_form = SearchForm(request.POST)
         if search_form.is_valid():
-            all_photos = all_photos.filter(user__icontains=search_form.cleaned_data['user'])
+            all_photos = all_photos.filter(photo__icontains=search_form.cleaned_data['user_name'])
 
     context = {
         'all_photos': all_photos,
