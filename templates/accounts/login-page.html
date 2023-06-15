@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
+{% load placeholders %}
 {% block content %}
 
     <form action="{% url 'login' %}" method="post">
         <input type="hidden" name="next" value="{{ next }}">
-        {{ form.as_p }}
+
+        <label for="name">Name</label>
+        {{ form.username|placeholder:'Add name...' }}
+
+        <label for="password">Password</label>
+        {{ form.password|placeholder:'Add password...' }}
+
         {% csrf_token %}
         <button class="button-login" type="submit">Log in</button>
     </form>
