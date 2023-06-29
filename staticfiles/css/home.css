@@ -182,6 +182,10 @@ header {
 
 }
 
+.icons-wrapper a {
+    text-decoration: none;
+}
+
 /*profile container*/
 
 .profile-container {
