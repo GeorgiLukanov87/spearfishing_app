@@ -10,4 +10,4 @@ def events_list(request):
 
 
 def gift_page(request):
-    return render(request, 'gift-page.html')
+    return render(request, 'common/gift-page.html')

@@ -25,9 +25,7 @@
                 <br>
                 {% if request.user.equipment.additional_info %}
                     <h2>Additional information:
-                        <p>
-                            {{ request.user.equipment.additional_info }}
-                        </p>
+                        {{ request.user.equipment.additional_info }}
                     </h2>
                 {% endif %}
             </div>
@@ -59,19 +57,37 @@
                     {% for photo in photos %}
 
                         <li class="users-photos"><img src="{{ photo.photo.url }}" alt="">
+
                             <div class="icons-wrapper">
                                 <div>
-                                    <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+                                        <h4>likes: {{ photo.like_set.all.count }}</h4>
+                                    {% if not photo.like_set.all.count %}
+
+                                        <a href="{% url 'like' photo.id %}">
+                                            <i class="fa-solid fa-heart" style="color: #fdfdfd;"></i>
+                                        </a>
+
+                                    {% else %}
+
+                                        <a href="{% url 'like' photo.id %}">
+                                            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+                                        </a>
+
+                                    {% endif %}
+
                                     <i class="fa-solid fa-square-share-nodes "></i>
                                 </div>
+
                                 <div>
                                     {% if is_owner %}
                                         <a href="{% url 'delete-photo' photo.pk %}"><i
                                                 class="fa-solid fa-trash-can-arrow-up"
-                                                style="color: #0065ff;"></i></a>
+                                                style="color: #960202;"></i></a>
                                     {% endif %}
                                 </div>
                             </div>
+
+
                         </li>
 
                     {% endfor %}

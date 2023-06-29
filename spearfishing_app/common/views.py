@@ -23,8 +23,6 @@ def index(request):
         'all_photos': all_photos,
         'comment_form': comment_form,
         'search_form': search_form,
-
-
     }
 
     return render(
