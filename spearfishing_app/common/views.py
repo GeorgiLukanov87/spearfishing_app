@@ -1,4 +1,5 @@
 import pyperclip
+from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.urls import reverse
@@ -9,7 +10,9 @@ from spearfishing_app.photos.models import Photo
 
 
 # common/views.py
+
 def index(request):
+
     all_photos = Photo.objects.all()
     comment_form = CommentForm()
     search_form = SearchForm()
@@ -23,6 +26,7 @@ def index(request):
         'all_photos': all_photos,
         'comment_form': comment_form,
         'search_form': search_form,
+
     }
 
     return render(

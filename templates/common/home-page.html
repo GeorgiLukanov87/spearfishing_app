@@ -16,6 +16,7 @@
         </form>
     </div>
 
+
     <div class="photo-wrapper">
         <ul style="list-style: none">
             {% if all_photos %}
@@ -41,26 +42,26 @@
                         <img src="{{ photo.photo.url }}" alt="">
 
                         <div class="icons-wrapper">
-                                         <div>
-                                        <h4>likes: {{ photo.like_set.all.count }}</h4>
-                                    {% if not photo.like_set.all.count %}
+                            <div>
+                                <h4>likes: {{ photo.like_set.all.count }}</h4>
+                                {% if not photo.like_set.all.count %}
 
-                                        <a href="{% url 'like' photo.id %}">
-                                            <i class="fa-solid fa-heart" style="color: #fdfdfd;"></i>
-                                        </a>
-
-
-                                    {% else %}
-
-                                        <a href="{% url 'like' photo.id %}">
-                                            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                                        </a>
+                                    <a href="{% url 'like' photo.id %}">
+                                        <i class="fa-solid fa-heart" style="color: #fdfdfd;"></i>
+                                    </a>
 
 
-                                    {% endif %}
+                                {% else %}
 
-                                    <i class="fa-solid fa-square-share-nodes "></i>
-                                </div>
+                                    <a href="{% url 'like' photo.id %}">
+                                        <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+                                    </a>
+
+
+                                {% endif %}
+
+                                <i class="fa-solid fa-square-share-nodes "></i>
+                            </div>
                             <div>
                                 <a href="{% url 'photo-details' photo.pk %}">
                                     <i class="fa-solid fa-circle-info fa-beat fa-xl" style="color: #09f809;"></i>
@@ -76,7 +77,7 @@
                             {% if photo.comment_set.all %}
                                 <ul class="comment-container" style="list-style: none;color: #042cc9;">
                                     {% for comment in photo.comment_set.all %}
-                                        <li >
+                                        <li>
                                             <h3>From:
                                                 <a href="{% url 'profile details' pk=comment.user.pk %}">{{ comment.user }}:</a>
                                             </h3>

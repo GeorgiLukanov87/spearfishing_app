@@ -4,6 +4,9 @@
     <hr>
     <main>
 
+        {% if perms %}
+            <a href="#">Create Event</a>
+        {% endif %}
         {% if not events %}
             <h2>No events yet!</h2>
         {% else %}
@@ -30,7 +33,8 @@
                         Competitors:
                         {% for competitor in event.competitors.all %}
                             <ul style="list-style: none">
-                                <li><a style="text-decoration: none" href="{% url 'profile details' pk=competitor.pk %}"> {{ competitor }}</a></li>
+                                <li><a style="text-decoration: none"
+                                       href="{% url 'profile details' pk=competitor.pk %}"> {{ competitor }}</a></li>
                             </ul>
                         {% endfor %}
                     </h3>
