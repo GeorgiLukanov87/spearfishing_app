@@ -68,3 +68,15 @@ main{
     text-align: center;
 
 }
+
+.event-container img{
+    border: 1px solid #696666;
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px #363535;
+}
+
+.event-container img:hover{
+    scale: 1.05;
+    transition: 200ms linear;
+    cursor: pointer;
+}

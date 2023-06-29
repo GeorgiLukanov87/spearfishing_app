@@ -30,7 +30,9 @@ class Event(models.Model):
         null=True,
     )
 
-    start_date = models.DateField()
+    start_date = models.DateField(
+        default='2023-06-06'
+    )
 
     def __str__(self):
         return self.name

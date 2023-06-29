@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Events list:</h1>
+    <h1>Next Events:</h1>
     <hr>
     <main>
 
@@ -14,7 +14,8 @@
                     <h3>Name: {{ event.name }}</h3>
                     <h3>Location: {{ event.location }}</h3>
                     <h3>Created Date: {{ event.created }}</h3>
-                    <h3><img src="{{ event.image_url }}" alt="location img"></h3>
+                    <h3>Competition Starts: {{ event.start_date }}</h3>
+                    <h3><img style="width: 850px" src="{{ event.image_url }}" alt="location img"></h3>
                     <br>
                     <h1>Rewards:</h1>
                     <h2>Winner First Place: 1000$</h2>
@@ -28,8 +29,8 @@
                     <h3>
                         Competitors:
                         {% for competitor in event.competitors.all %}
-                            <ul>
-                                <li><a href="{% url 'profile details' pk=competitor.pk %}"> {{ competitor }}</a></li>
+                            <ul style="list-style: none">
+                                <li><a style="text-decoration: none" href="{% url 'profile details' pk=competitor.pk %}"> {{ competitor }}</a></li>
                             </ul>
                         {% endfor %}
                     </h3>

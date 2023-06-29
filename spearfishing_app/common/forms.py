@@ -7,6 +7,11 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['text']
+
+        labels = {
+            'text': ''
+        }
+
         widgets = {
             'text': forms.TextInput(
                 attrs={
@@ -24,3 +29,4 @@ class SearchForm(forms.Form):
             }
         )
     )
+
