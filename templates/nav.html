@@ -28,11 +28,13 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="{% url 'add-equipment' %}">
-                                <i>Add-Equipment</i>
-                            </a>
-                        </li>
+                        {% if not request.user.equipment %}
+                            <li class="nav-item">
+                                <a href="{% url 'add-equipment' %}">
+                                    <i>Add-Equipment</i>
+                                </a>
+                            </li>
+                        {% endif %}
 
                         <li class="nav-item">
                             <a href="{% url 'profile details' pk=request.user.pk %}">

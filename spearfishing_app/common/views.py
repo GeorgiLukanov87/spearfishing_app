@@ -24,6 +24,7 @@ def index(request):
         'comment_form': comment_form,
         'search_form': search_form,
 
+
     }
 
     return render(
