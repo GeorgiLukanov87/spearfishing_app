@@ -17,3 +17,5 @@ class UserCreateForm(auth_forms.UserCreationForm):
         field_classes = {
             'username': auth_forms.UsernameField,
         }
+
+

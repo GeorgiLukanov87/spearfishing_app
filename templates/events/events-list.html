@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Events list:</h1>
+    <hr>
+    {% if not events %}
+        <h2>No events yet!</h2>
+    {% else %}
+
+        {% for event in events %}
+            <div class="event-container">
+
+                <h3>Name: {{ event.name }}</h3>
+                <h3>Location: {{ event.location }}</h3>
+                <h3>Start date: {{ event.created }}</h3>
+                <h3><img src="{{ event.image_url }}" alt="location img"></h3>
+            </div>
+
+            <div>
+                <h3>
+                    Competitors:
+                    {% for competitor in event.competitors.all %}
+                        <ul>
+                            <li><a href="{% url 'profile details' pk=competitor.pk %}"> {{ competitor }}</a></li>
+                        </ul>
+                    {% endfor %}
+                </h3>
+            </div>
+            <hr>
+        {% endfor %}
+
+    {% endif %}
+{% endblock %}

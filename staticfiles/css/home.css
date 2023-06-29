@@ -248,3 +248,6 @@ i:hover {
     transition: 300ms;
 }
 
+.helptext{
+    display: none;
+}

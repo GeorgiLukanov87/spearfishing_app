@@ -13,6 +13,7 @@ urlpatterns = [
                   path('photos/', include('spearfishing_app.photos.urls')),
                   path('stories/', include('spearfishing_app.stories.urls')),
                   path('market/', include('spearfishing_app.market.urls')),
+                  path('equipment/', include('spearfishing_app.equipment.urls')),
 
                   # Add this for reach the images in projects dir.
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

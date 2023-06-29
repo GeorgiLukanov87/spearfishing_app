@@ -1,0 +1,13 @@
+.event-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+h1{
+    color: #0d1fe5;
+    margin: 20px;
+}
+

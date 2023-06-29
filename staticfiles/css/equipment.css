@@ -1,0 +1,10 @@
+.equipment{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.equipment img{
+    width: 350px;
+    height: 350px;
+}

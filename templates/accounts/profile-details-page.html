@@ -3,6 +3,24 @@
 {% block content %}
     <div class="profile-container">
 
+    <div class="equipment">
+        <h2>User Equipment:</h2>
+        <h1>Gun's details:</h1>
+        <h2>Gun Brand: {{ equipment.gun_model }}</h2>
+        <h2>Gun Material: {{ equipment.gun_material }}</h2>
+        <h2>Gun Length: {{ equipment.gun_length }}</h2>
+        <h2>Gun Image: <img src="{{ equipment.gun_image }}" alt="gun img"></h2>
+        <br>
+        <h2>Gun Bands: {{ equipment.bands }}</h2>
+        <h2>Gun Bands brand: {{ equipment.bands_brand }}</h2>
+        <h2>Gun bands image: <img src="{{ equipment.bands_image }}" alt="bands img"></h2>
+        <br>
+        <h2>Fins brand: {{ equipment.fins_model }}</h2>
+        <h2>Fins Material: {{ equipment.fins_material }}</h2>
+        <h2>Fins Image: <img src="{{ equipment.fins_image }}" alt="fins img"></h2>
+        <br>
+    </div>
+
         <div class="profile-details-wrapper">
             <h2>Profile Details:</h2>
             {% if object.get_full_name %}

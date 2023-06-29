@@ -48,6 +48,7 @@ class UserDetailsView(generic.DetailView):
         context = super().get_context_data(**kwargs)
 
         context['is_owner'] = self.request.user == self.object
+        context['equipment'] = self.object.equipment
 
         # very important about queries...fast operation !single query from db filtered
         photos = self.object.photo_set.prefetch_related('like_set')
