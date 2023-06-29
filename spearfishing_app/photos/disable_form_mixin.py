@@ -11,5 +11,5 @@ class DisabledFormMixin:
         for field_name in fields:
             if field_name in self.fields:
                 field = self.fields[field_name]
-                # field.widget.attrs['disabled'] = 'disabled'
+                field.widget.attrs['disabled'] = 'disabled'
                 field.widget.attrs['readonly'] = 'readonly'

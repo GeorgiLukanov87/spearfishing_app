@@ -18,7 +18,7 @@ class PhotoCreateForm(PhotoBaseForm):
 class PhotoEditForm(forms.ModelForm):
     class Meta:
         model = Photo
-        exclude = ['photo','user']
+        exclude = ['photo', 'user']
 
 
 class PhotoDeleteForm(DisabledFormMixin, PhotoEditForm):
@@ -30,9 +30,6 @@ class PhotoDeleteForm(DisabledFormMixin, PhotoEditForm):
 
     def save(self, commit=True):
         if commit:
-            # self.instance.tagged_users.clear()  # many-to-many
-            # Photo.objects.all().first().tagged_pets.clear()
-
             Like.objects.filter(to_photo_id=self.instance.id).delete()  # one-to-many
             Comment.objects.filter(to_photo_id=self.instance.id).delete()  # one-to-many
 
