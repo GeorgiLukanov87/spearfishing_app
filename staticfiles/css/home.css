@@ -110,7 +110,7 @@ header {
     border-radius: 10px;
     background-color: #b9d5fd;
     color: blue;
-        box-shadow: 0 0 5px 1px #000000;
+    box-shadow: 0 0 5px 1px #000000;
 
 
 }
@@ -288,7 +288,7 @@ i:hover {
 
 }
 
-.about-history article img:hover{
+.about-history article img:hover {
     scale: 1.05;
     transition: 200ms linear;
     cursor: pointer;
@@ -306,4 +306,20 @@ i:hover {
 .history-h1 {
     font-family: "Courier New", serif;
     font-size: 60px;
+}
+
+.photo-wrapper ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.col-9 {
+    position: relative;
+}
+
+.searchbar-button {
+    position: relative;
+    top: -43px;
+    right: -245px;
 }
