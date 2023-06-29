@@ -222,11 +222,14 @@ header {
     color: #ef2c2c;
 }
 
-.profile-details-wrapper{
+.profile-details-wrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: auto;
+    border: 3px solid black;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 20px auto auto;
 }
 
 .button-login {
@@ -248,6 +251,7 @@ i:hover {
     transition: 300ms;
 }
 
-.helptext{
+.helptext {
     display: none;
 }
+

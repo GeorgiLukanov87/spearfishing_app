@@ -7,3 +7,7 @@ def events_list(request):
     events = Event.objects.all()
     context = {'events': events, }
     return render(request, 'events/events-list.html', context)
+
+
+def gift_page(request):
+    return render(request, 'gift-page.html')

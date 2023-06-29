@@ -1,10 +1,24 @@
-.equipment{
+.equipment {
     display: flex;
     flex-direction: column;
-
+    gap: 12px;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 20px;
+    width: 50vw;
+    margin: auto;
+    background-color: #b9d5fd;
+    text-align: center;
+    font-family: "Arial Black", sans-serif;
 }
 
-.equipment img{
+.equipment img {
     width: 350px;
     height: 350px;
+    border: 2px solid black;
+    border-radius: 12px;
+    margin: auto;
+    box-shadow: 1px 1px 15px black;
+
+
 }

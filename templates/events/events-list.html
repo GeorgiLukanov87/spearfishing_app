@@ -2,36 +2,41 @@
 {% block content %}
     <h1>Events list:</h1>
     <hr>
-    {% if not events %}
-        <h2>No events yet!</h2>
-    {% else %}
+    <main>
 
-        {% for event in events %}
-            <div class="event-container">
+        {% if not events %}
+            <h2>No events yet!</h2>
+        {% else %}
 
-                <h3>Name: {{ event.name }}</h3>
-                <h3>Location: {{ event.location }}</h3>
-                <h3>Start date: {{ event.created }}</h3>
-                <h3><img src="{{ event.image_url }}" alt="location img"></h3>
-                <br>
-                <h1>Rewards:</h1>
-                <h2>Winner First Place: 1000$</h2>
-                <h2>2nd Place: 500$</h2>
-                <h2>3th Place: Gift from our partners "DiveInn.com"</h2>
-            </div>
+            {% for event in events %}
+                <div class="event-container">
 
-            <div>
-                <h3>
-                    Competitors:
-                    {% for competitor in event.competitors.all %}
-                        <ul>
-                            <li><a href="{% url 'profile details' pk=competitor.pk %}"> {{ competitor }}</a></li>
-                        </ul>
-                    {% endfor %}
-                </h3>
-            </div>
-            <hr>
-        {% endfor %}
+                    <h3>Name: {{ event.name }}</h3>
+                    <h3>Location: {{ event.location }}</h3>
+                    <h3>Created Date: {{ event.created }}</h3>
+                    <h3><img src="{{ event.image_url }}" alt="location img"></h3>
+                    <br>
+                    <h1>Rewards:</h1>
+                    <h2>Winner First Place: 1000$</h2>
+                    <h2>2nd Place: 500$</h2>
+                    <h2>3th Place: Gift from our partners "DiveInn.com"
+                        <a href="{% url 'gift-page' %}">Look it here</a>
+                    </h2>
+                </div>
 
-    {% endif %}
+                <div>
+                    <h3>
+                        Competitors:
+                        {% for competitor in event.competitors.all %}
+                            <ul>
+                                <li><a href="{% url 'profile details' pk=competitor.pk %}"> {{ competitor }}</a></li>
+                            </ul>
+                        {% endfor %}
+                    </h3>
+                </div>
+                <hr>
+            {% endfor %}
+
+        {% endif %}
+    </main>
 {% endblock %}

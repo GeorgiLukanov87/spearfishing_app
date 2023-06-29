@@ -1,4 +1,4 @@
-.event-container{
+.event-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -6,8 +6,65 @@
     margin: 20px;
 }
 
-h1{
+h1 {
     color: #0d1fe5;
     margin: 20px;
 }
 
+.winner-gift {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+
+.gift-article1 img {
+    border-radius: 20px;
+}
+
+.gift-article2 p {
+    font-family: Cambria, serif;
+    color: #0d1fe5;
+    font-size: 20px;
+}
+
+.gift-article2 h3 {
+    font-family: Candara, serif;
+    color: #095909;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.gift-article2 {
+    padding: 30px;
+    margin: auto;
+}
+
+.gift-span-numbers {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.gift-article2 h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.gift-article1 img{
+    border: 1px solid #8c8888;
+    box-shadow: 1px 1px 15px #b7b5b5;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 20px;
+    text-align: center;
+
+}
