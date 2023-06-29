@@ -17,12 +17,11 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    gap: 26px;
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 2%, rgba(187, 188, 190, 1) 33%, rgba(121, 123, 124, 1) 61%, rgba(145, 143, 143, 1) 87%);
-    box-shadow: 1px 4px 15px 2px #1022f1;
+    box-shadow: 1px 4px 15px 2px #33a1ef;
 
 
 }
@@ -34,10 +33,13 @@ body {
 .logo img {
     border: 1px solid black;
     border-radius: 60px;
-    margin: 20px;
+    margin: 8px;
     padding: 16px;
-    box-shadow: 1px 1px 12px 1px #4ffa4f;
+    box-shadow: 1px 1px 12px 1px #110a0a;
     background-color: white;
+    position: relative;
+    width: 150px;
+
 }
 
 .logo img:hover {
@@ -88,6 +90,7 @@ body {
     flex-wrap: wrap;
     gap: 16px;
     list-style: none;
+    margin: 22px;
 
 }
 
@@ -273,8 +276,17 @@ i:hover {
 }
 
 .about-history article img {
-    width: 500px;
-    height: 700px;
+    border-radius: 32px;
+    margin-top: 85px;
+    box-shadow: 1px 1px 20px gray;
+    border: 1px solid gray;
+
+}
+
+.about-history article img:hover{
+    scale: 1.05;
+    transition: 200ms linear;
+    cursor: pointer;
 }
 
 .about-history article p {
@@ -282,5 +294,11 @@ i:hover {
     font-size: 20px;
     font-family: Cambria, serif;
     padding: 26px;
+    text-shadow: 1px 1px 1px #ada9a9;
 
+}
+
+.history-h1 {
+    font-family: "Courier New", serif;
+    font-size: 60px;
 }
