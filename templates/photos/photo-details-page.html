@@ -25,11 +25,24 @@
 
                     <div class="icons-wrapper">
                         <div>
-                            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                            <a href="{% url 'share' photo.pk %}">
-                                <i class="fa-solid fa-square-share-nodes "></i>
-                            </a>
+                            <h4>likes: {{ photo.like_set.all.count }}</h4>
+                            {% if not photo.like_set.all.count %}
 
+                                <a href="{% url 'like' photo.id %}">
+                                    <i class="fa-solid fa-heart" style="color: #fdfdfd;"></i>
+                                </a>
+
+
+                            {% else %}
+
+                                <a href="{% url 'like' photo.id %}">
+                                    <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+                                </a>
+
+
+                            {% endif %}
+
+                            <i class="fa-solid fa-square-share-nodes "></i>
                         </div>
                         {% if is_owner %}
                             <div>

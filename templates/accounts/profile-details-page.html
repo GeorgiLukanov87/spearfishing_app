@@ -67,11 +67,13 @@
                                             <i class="fa-solid fa-heart" style="color: #fdfdfd;"></i>
                                         </a>
 
+
                                     {% else %}
 
                                         <a href="{% url 'like' photo.id %}">
                                             <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
                                         </a>
+
 
                                     {% endif %}
 
@@ -86,8 +88,6 @@
                                     {% endif %}
                                 </div>
                             </div>
-
-
                         </li>
 
                     {% endfor %}
