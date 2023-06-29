@@ -33,18 +33,19 @@ body {
 .logo img {
     border: 1px solid black;
     border-radius: 60px;
-    margin: 8px;
+    margin: 8px 12px;
     padding: 16px;
-    box-shadow: 1px 1px 12px 1px #110a0a;
+    box-shadow: 1px 1px 20px 1px #000000;
     background-color: white;
     position: relative;
-    width: 150px;
+    width: 125px;
 
 }
 
 .logo img:hover {
-    scale: 1.1;
-    transition: linear 200ms;
+    scale: 1.05;
+    transition: linear 150ms;
+    box-shadow: 1px 1px 10px 4px #33a1ef;
 }
 
 .footer {
@@ -83,6 +84,7 @@ body {
 
 .second-option a {
     text-decoration: none;
+
 }
 
 .nav-group {
@@ -92,11 +94,13 @@ body {
     list-style: none;
     margin: 22px;
 
+
 }
 
 header {
     border-bottom: 2px solid #ece2e2;
     margin-bottom: 50px;
+
 }
 
 .nav-group a {
@@ -106,6 +110,7 @@ header {
     border-radius: 10px;
     background-color: #b9d5fd;
     color: blue;
+        box-shadow: 0 0 5px 1px #000000;
 
 
 }
