@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="{% url 'delete-event' pk=event.pk %}" method="post">
+
+    {{ form }}
+    {% csrf_token %}
+    <button class="button-edit-profile" type="submit">Delete</button>
+    </form>
+
+{% endblock %}

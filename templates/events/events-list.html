@@ -2,11 +2,12 @@
 {% block content %}
     <h1>Next Events:</h1>
     <hr>
+    {% if perms %}
+        <a class="event-buttons" href="{% url 'create-event' %}">Create Event  <i class="fa-solid fa-calendar-plus fa-beat-fade fa-2xl" style="color: #033a96;"></i></a>
+    {% endif %}
+
     <main>
 
-        {% if perms %}
-            <a href="#">Create Event</a>
-        {% endif %}
         {% if not events %}
             <h2>No events yet!</h2>
         {% else %}
@@ -21,16 +22,18 @@
                     <h3><img style="width: 850px" src="{{ event.image_url }}" alt="location img"></h3>
                     <br>
                     <h1>Rewards:</h1>
-                    <h2>Winner First Place: 1000$</h2>
-                    <h2>2nd Place: 500$</h2>
-                    <h2>3th Place: Gift from our partners "DiveInn.com"
+                    <h2><i class="fa-solid fa-trophy fa-bounce fa-2xl" style="color: #ff7300;"></i>Winner First Place: 1000$</h2>
+                    <h2><i class="fa-solid fa-trophy fa-bounce fa-xl" style="color: #ff7300;"></i>2nd Place: 500$</h2>
+                    <h2><i class="fa-solid fa-trophy fa-bounce fa-lg" style="color: #ff7300;"></i>3th Place: Gift from our partners "DiveInn.com"
                         <a href="{% url 'gift-page' %}">Look it here</a>
                     </h2>
                 </div>
 
                 <div>
                     <h3>
+                        <i class="fa-solid fa-users fa-beat-fade fa-2xl"></i>
                         Competitors:
+
                         {% for competitor in event.competitors.all %}
                             <ul style="list-style: none">
                                 <li><a style="text-decoration: none"
@@ -39,7 +42,14 @@
                         {% endfor %}
                     </h3>
                 </div>
+                {% if perms %}
+                    <a class="event-buttons" href="{% url 'edit-event' pk=event.pk %}">Edit Event <i
+                            class="fa-solid fa-pen-to-square fa-fade fa-2xl" style="color: #005eff;"></i></a>
+                    <a class="event-buttons" href="{% url 'delete-event' pk=event.pk %}">Delete Event
+                    <i class="fa-solid fa-trash-can fa-bounce fa-2xl" style="color: #ff0000;"></i></a>
+                {% endif %}
                 <hr>
+
             {% endfor %}
 
         {% endif %}
