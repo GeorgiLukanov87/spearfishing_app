@@ -1,57 +1,76 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Next Events:</h1>
-    <hr>
     {% if perms %}
-        <a class="event-buttons" href="{% url 'create-event' %}">Create Event  <i class="fa-solid fa-calendar-plus fa-beat-fade fa-2xl" style="color: #033a96;"></i></a>
+        <div class="event-wrapper">
+
+            <a class="event-buttons" href="{% url 'create-event' %}">Create Event
+                <i class="fa-solid fa-calendar-plus fa-beat-fade fa-2xl" style="color: #005dfa;"></i></a>
+        </div>
     {% endif %}
 
-    <main>
+    {% if not events %}
+        <h2>No events yet!</h2>
+    {% else %}
 
-        {% if not events %}
-            <h2>No events yet!</h2>
-        {% else %}
+        {% for event in events %}
 
-            {% for event in events %}
-                <div class="event-container">
 
-                    <h3>Name: {{ event.name }}</h3>
-                    <h3>Location: {{ event.location }}</h3>
-                    <h3>Created Date: {{ event.created }}</h3>
-                    <h3>Competition Starts: {{ event.start_date }}</h3>
-                    <h3><img style="width: 850px" src="{{ event.image_url }}" alt="location img"></h3>
-                    <br>
-                    <h1>Rewards:</h1>
-                    <h2><i class="fa-solid fa-trophy fa-bounce fa-2xl" style="color: #ff7300;"></i>Winner First Place: 1000$</h2>
-                    <h2><i class="fa-solid fa-trophy fa-bounce fa-xl" style="color: #ff7300;"></i>2nd Place: 500$</h2>
-                    <h2><i class="fa-solid fa-trophy fa-bounce fa-lg" style="color: #ff7300;"></i>3th Place: Gift from our partners "DiveInn.com"
-                        <a href="{% url 'gift-page' %}">Look it here</a>
-                    </h2>
-                </div>
 
-                <div>
-                    <h3>
-                        <i class="fa-solid fa-users fa-beat-fade fa-2xl"></i>
-                        Competitors:
+            <div class="event-container">
+                <h3><span class="h3-details">Name: </span> {{ event.name }}</h3>
+                <h3><span class="h3-details">Location: </span> {{ event.location }}</h3>
+                <h3><span class="h3-details">Created Date:</span> {{ event.created }}</h3>
+                <h3><span class="h3-details">Competition Starts:</span> {{ event.start_date }}</h3>
+                <h3><img src="{{ event.image_url }}" alt="location img"></h3>
+                <br>
+                <h1>Rewards:</h1>
+                <h2><i class="fa-solid fa-trophy fa-bounce fa-2xl"
+                       style="color: #ff7300;"></i><span class="winners-span">Winner First Place:</span>
+                    1000$</h2>
+                <h2><i class="fa-solid fa-trophy fa-bounce fa-xl" style="color: #ff7300;"></i><span
+                        class="winners-span">2nd Place:</span>
+                    500$</h2>
+                <h2><i class="fa-solid fa-trophy fa-bounce fa-lg" style="color: #ff7300;"></i><span
+                        class="winners-span">3th Place:</span>
+                    Gift from
+                    our partners "DiveInn.com"
+                    <a class="gift-a" href="{% url 'gift-page' %}"> - Look it here!</a>
+                </h2>
+            </div>
 
-                        {% for competitor in event.competitors.all %}
+            <div>
+                <h3>
+                    <i class="fa-solid fa-users fa-beat-fade fa-2xl"></i>
+                    Competitors:
+
+
+
+                    {% for competitor in event.competitors.all %}
+                        <div class="competitors">
                             <ul style="list-style: none">
-                                <li><a style="text-decoration: none"
-                                       href="{% url 'profile details' pk=competitor.pk %}"> {{ competitor }}</a></li>
+                                <li>- <a style="text-decoration: none"
+                                         href="{% url 'profile details' pk=competitor.pk %}"> {{ competitor }}</a></li>
                             </ul>
-                        {% endfor %}
-                    </h3>
-                </div>
-                {% if perms %}
+                        </div>
+                    {% endfor %}
+
+
+                </h3>
+            </div>
+            {% if perms %}
+                <div class="event-wrapper">
                     <a class="event-buttons" href="{% url 'edit-event' pk=event.pk %}">Edit Event <i
-                            class="fa-solid fa-pen-to-square fa-fade fa-2xl" style="color: #005eff;"></i></a>
+                            class="fa-solid fa-pen-to-square fa-fade fa-xl" style="color: #005eff;"></i></a>
+                </div>
+
+                <div class="event-wrapper">
                     <a class="event-buttons" href="{% url 'delete-event' pk=event.pk %}">Delete Event
-                    <i class="fa-solid fa-trash-can fa-bounce fa-2xl" style="color: #ff0000;"></i></a>
-                {% endif %}
-                <hr>
+                        <i class="fa-solid fa-trash-can fa-bounce fa-2xl" style="color: #ff0000;"></i></a>
+                </div>
+            {% endif %}
+            <hr>
 
-            {% endfor %}
-
-        {% endif %}
-    </main>
+        {% endfor %}
+    {% endif %}
 {% endblock %}

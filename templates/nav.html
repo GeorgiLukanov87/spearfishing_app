@@ -13,7 +13,7 @@
             <div class="nav-links">
                 <ul class="nav-group">
 
-
+                        
                     {% if request.user.is_authenticated %}
 
                         <li class="nav-item">
@@ -61,6 +61,7 @@
                                 <i>Log in</i>
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a href="{% url 'register' %}">
                                 <i>Register</i>

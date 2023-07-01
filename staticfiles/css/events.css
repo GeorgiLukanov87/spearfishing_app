@@ -4,11 +4,18 @@
     gap: 12px;
     font-size: 20px;
     margin: 20px;
+    text-shadow: 1px 1px 1px gray;
+}
+
+.event-container h3 img {
+    width: 75%;
 }
 
 h1 {
     color: #0d1fe5;
     margin: 20px;
+    text-shadow: 1px 1px 1px black;
+
 }
 
 .winner-gift {
@@ -45,38 +52,98 @@ h1 {
     font-size: 30px;
 }
 
-.gift-article2 h2{
+.gift-article2 h2 {
     text-align: center;
     font-weight: bold;
     font-size: 30px;
     padding: 10px;
+    text-shadow: 1px 1px 1px black;
 }
 
-.gift-article1 img{
+.gift-article1 img {
     border: 1px solid #8c8888;
     box-shadow: 1px 1px 15px #b7b5b5;
 }
 
 
-main{
+main {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin: auto;
     border: 2px solid black;
     padding: 20px;
     text-align: center;
+    border-radius: 20px;
+    margin: 5%;
+
 
 }
 
-.event-container img{
+.event-container img {
     border: 1px solid #696666;
     border-radius: 10px;
     box-shadow: 1px 1px 15px #363535;
+
 }
 
-.event-container img:hover{
+.event-container img:hover {
     scale: 1.05;
     transition: 200ms linear;
     cursor: pointer;
 }
+
+.competitors {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid black;
+    border-radius: 22px;
+    margin: 20px auto;
+    width: 250px;
+    padding: 20px;
+    background-color: #b9d5fd;
+    box-shadow: 1px 1px 15px #363535;
+
+}
+
+.competitors a:hover {
+    color: red;
+    background-color: black;
+    padding: 6px;
+    transition: 200ms linear;
+    border-radius: 8px;
+}
+
+.gift-a {
+    text-decoration: none;
+    color: red;
+    text-shadow: 1px 1px 1px black;
+}
+
+.h3-details {
+    color: #043fee;
+}
+
+.winners-span {
+    color: #a80101;
+}
+
+.event-wrapper a {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 14px;
+    color: white;
+    text-decoration: none;
+    background-color: #1e9a01;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    font-size: 20px;
+}
+
+.event-wrapper a:hover {
+    background-color: white;
+    color: red;
+    text-shadow: 1px 1px 1px black;
+    transition: 200ms linear;
+}
+
