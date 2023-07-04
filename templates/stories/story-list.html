@@ -9,14 +9,18 @@
             <ul style="list-style: none">
 
                 <li>
+
                     {% if story.image_url %}
-                        Image: <img src="{{ story.image_url }}" alt="story img">
+                        <img src="{{ story.image_url }}" alt="story img">
                     {% else %}
-                        Image: <img src="{% static 'images/no-image-available.jpg' %}" alt="story img">
+                        <img src="{% static 'images/no-image-available.jpg' %}" alt="story img">
                     {% endif %}
-                    Title: {{ story.title }}
-                    Date: {{ story.date }}
-                    Creator: {{ story.creator }}
+                    <p>
+
+                        Title: {{ story.title }}
+                        Date: {{ story.date }}
+                        Creator: {{ story.creator }}
+                    </p>
                     <p>
                         Full Story:{{ story.description }}
                     </p>
