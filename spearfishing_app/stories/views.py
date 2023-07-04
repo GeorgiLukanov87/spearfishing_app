@@ -17,8 +17,9 @@ class StoryCreateCBV(generic.CreateView):
     success_url = reverse_lazy('index')
 
 
-def all_stories(request):
-    return render(request, 'stories/story-list.html')
+class StoryListCBV(generic.ListView):
+    template_name = 'stories/story-list.html'
+    model = Story
 
 
 class StoryEditCBV(generic.UpdateView):

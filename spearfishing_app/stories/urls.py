@@ -1,11 +1,11 @@
 from django.urls import path
 
-from spearfishing_app.stories.views import about, all_stories, StoryEditCBV, StoryDeleteCBV, details_story, \
+from spearfishing_app.stories.views import about, StoryListCBV, StoryEditCBV, StoryDeleteCBV, details_story, \
     StoryCreateCBV
 
 urlpatterns = (
     path('about/', about, name='about'),
-    path('', all_stories, name='all-stories'),
+    path('', StoryListCBV.as_view(), name='all-stories'),
 
     path('create/', StoryCreateCBV.as_view(), name='create-story'),
 

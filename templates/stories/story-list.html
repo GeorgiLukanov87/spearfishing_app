@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h1>Story List</h1>
+    {% if object_list %}
+        <h1>Story List</h1>
+        {% for story in object_list %}
 
+            <ul style="list-style: none">
+
+                <li>
+                    Title: {{ story.title }}
+                    Date: {{ story.date }}
+                    <p>
+                        Full Story:{{ story.description }}
+                    </p>
+
+                </li>
+            </ul>
+        {% endfor %}
+    {% endif %}
 {% endblock %}
