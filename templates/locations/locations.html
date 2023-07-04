@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+    <button type="button">
+        <a href="{% url 'index' %}">Go back to index</a>
+    </button>
+
+    <div>
+        <ul>
+            <li>
+                <a href="{% url 'locations' %}">Map</a>
+            </li>
+
+            <li>
+                {#TODO#}
+                <a href="#">Weather</a>
+            </li>
+
+        </ul>
+        <form method="POST">
+
+            {% csrf_token %}
+            {{ form }}
+
+            <button type="submit">Search</button>
+        </form>
+
+    </div>
+
+
+    <div>
+        <div>
+            <div>
+                {{ m|safe }}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
