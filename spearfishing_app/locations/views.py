@@ -6,6 +6,7 @@ from spearfishing_app.locations.forms import SearchLocationForm
 from spearfishing_app.locations.models import Search
 
 import folium
+import requests
 
 
 def locations(request):
@@ -213,3 +214,38 @@ def locations(request):
         'form': form,
     }
     return render(request, 'locations/locations.html', context)
+
+
+def weather(request):
+    api_key = 'e9a97357148479e6439c5ba4333e96ee'
+    current_weather_url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
+
+    if request.method == 'POST':
+        city = request.POST['city']
+        if city == '':
+            return render(request, 'locations/weather.html')
+        
+        weather_data = fetch_weather_and_forecast(city, api_key, current_weather_url)
+
+        context = {
+            'weather_data': weather_data,
+        }
+
+        return render(request, 'locations/weather.html', context)
+    else:
+        return render(request, 'locations/weather.html')
+
+
+def fetch_weather_and_forecast(city, api_key, current_weather_url):
+    response = requests.get(current_weather_url.format(city, api_key)).json()
+
+    weather_data = {
+        'city': city,
+        'temperature': round(response['main']['temp'] - 273.15, 2),
+        'description': response['weather'][0]['description'],
+        'icon': response['weather'][0]['icon'],
+        'wind': response['wind']['speed'],
+        'clouds': response['clouds']['all'],
+    }
+
+    return weather_data
