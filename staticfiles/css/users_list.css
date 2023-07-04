@@ -1,0 +1,18 @@
+.users-list-ul {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 12px;
+
+}
+
+.users-list-ul li a {
+    text-decoration: none;
+}
+
+.ul-list-wrapper {
+    width: 500px;
+    margin: auto;
+
+}

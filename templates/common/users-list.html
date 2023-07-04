@@ -13,13 +13,16 @@
     </form>
 
     <div class="lists">
-        <div>
+        <div class="ul-list-wrapper">
             <h2>Users List:</h2>
-            <ul style="list-style: none">
+            <ul class="users-list-ul" style="list-style: none">
                 {% for user in object_list %}
-                    <li>
-                        <a href="{% url 'profile details' user.pk %}">{{ user.pk }} {{ user.get_full_name }}</a>
-                        <a href="{% url 'profile delete' user.pk %}">Delete</a>
+                    <li class="users-list-li">
+                        <a href="{% url 'profile details' user.pk %}">Users
+                            PK={{ user.pk }}, Full Name: {{ user.get_full_name }}</a>
+                        <div>
+                            <a href="{% url 'profile delete' user.pk %}">Delete</a>
+                        </div>
                     </li>
                 {% endfor %}
             </ul>
