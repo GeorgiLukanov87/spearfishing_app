@@ -3,16 +3,18 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.urls import reverse
+from django.views import generic
 
 from spearfishing_app.common.forms import CommentForm, SearchForm
 from spearfishing_app.common.models import Like
 from spearfishing_app.photos.models import Photo
 
+UserModel = get_user_model()
+
 
 # common/views.py
 
 def index(request):
-
     all_photos = Photo.objects.all()
     comment_form = CommentForm()
     search_form = SearchForm()
@@ -84,3 +86,21 @@ def add_comment(request, photo_id):
 @login_required
 def redirect_to_index(request):
     return redirect('index')
+
+
+class AllUsersCBV(generic.ListView):
+    template_name = 'common/users-list.html'
+    model = UserModel
+    paginate_by = 5
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        search = self.request.GET.get('search', '')
+        queryset = queryset.filter(username__icontains=search)
+        return queryset
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['search'] = self.request.GET.get('search', '')
+        return context

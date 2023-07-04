@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <form action="{% url 'users-list' %}?page={{ page_obj.number }}">
+        <input name="search" value="{{ search }}">
+        <button>Search by title</button>
+    </form>
+
+    <div class="lists">
+        <div>
+            <h2>Users List:</h2>
+            <ul style="list-style: none">
+                {% for user in object_list %}
+                    <li>
+                        <a href="{% url 'profile details' user.pk %}">{{ user.pk }} {{ user.get_full_name }}</a>
+                        <a href="{% url 'profile delete' user.pk %}">Delete</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}">&lt;</a>
+    {% else %}
+        <a>&lt;</a>
+    {% endif %}
+
+    {{ page_obj.number }} / {{ paginator.num_pages }}
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}&search={{ search }}">&gt;</a>
+    {% else %}
+        <a>&gt;</a>
+    {% endif %}
+
+{% endblock %}

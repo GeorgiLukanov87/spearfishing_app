@@ -110,7 +110,8 @@
                         </li>
 
                     {% endfor %}
-
+                {% else %}
+                    <img src="{% static 'images/NoPhotoAvailable.png' %}" alt="gun img">
                 {% endif %}
             </ul>
         </div>

@@ -29,3 +29,8 @@ form input {
     font-size: 18px;
     border-radius: 6px;
 }
+
+.login-register-box ul li {
+    display: none;
+
+}

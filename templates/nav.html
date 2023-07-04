@@ -13,8 +13,15 @@
             <div class="nav-links">
                 <ul class="nav-group">
 
-
                     {% if request.user.is_authenticated %}
+
+                        {% if request.user.is_authenticated and request.user.is_staff %}
+                            <li class="nav-item">
+                                <a href="{% url 'users-list' %}">
+                                    <i>Users List</i>
+                                </a>
+                            </li>
+                        {% endif %}
 
                         <li class="nav-item">
                             <a href="{% url 'add-photo' %}">
