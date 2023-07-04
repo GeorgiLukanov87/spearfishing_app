@@ -78,9 +78,9 @@ def add_comment(request, photo_id):
             comment.user = request.user
             comment.save()
 
-        return redirect(
-            request.META['HTTP_REFERER'] + f'#{photo_id}'
-        )
+        return redirect(request.META['HTTP_REFERER'] + f'#{photo_id}')
+    else:
+        return redirect('index')
 
 
 @login_required
