@@ -1,35 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-    <button type="button">
-        <a href="{% url 'index' %}">Go back to index</a>
-    </button>
 
     <div>
-        <ul>
-            <li>
-                <a href="{% url 'locations' %}">Map</a>
-            </li>
-
-            <li>
-                {#TODO#}
-                <a href="#">Weather</a>
-            </li>
-
-        </ul>
-        <form method="POST">
-
+        <form class="location-searchbar" method="POST">
             {% csrf_token %}
             {{ form }}
-
             <button type="submit">Search</button>
         </form>
-
     </div>
-
 
     <div>
         <div>
-            <div>
+            <div class="map-wrapper">
                 {{ m|safe }}
             </div>
         </div>
