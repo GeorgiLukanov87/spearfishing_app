@@ -70,13 +70,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    border: 2px solid black;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
     margin: 5%;
-
-
 }
 
 .event-container img {

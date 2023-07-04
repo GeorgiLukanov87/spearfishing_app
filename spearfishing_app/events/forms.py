@@ -9,7 +9,8 @@ class EventBaseForm(forms.ModelForm):
         fields = '__all__'
         labels = {
             'image_url': 'Image URL',
-            'start_date': 'Start Date'
+            'start_date': 'Start Date',
+            'competitors': 'Add Competitors',
         }
 
         widgets = {

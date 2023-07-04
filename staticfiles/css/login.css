@@ -3,7 +3,7 @@ form {
     flex-direction: column;
     border: 1px solid black;
     gap: 8px;
-    width: 353px;
+    width: 385px;
     margin: 20px auto;
     padding: 26px;
     background: rgb(185, 213, 253);
@@ -23,8 +23,9 @@ form button:hover {
 
 form input {
     width: 280px;
-    padding:10px;
+    padding: 10px;
     color: #4b1010;
-    background-color: #ffffff;
+    background-color: #eae5e5;
     font-size: 18px;
+    border-radius: 6px;
 }

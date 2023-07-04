@@ -192,16 +192,14 @@ header {
     display: flex;
     flex-direction: column;
     margin-left: 10%;
-    border-radius: 12px;
-    border: 1px solid black;
+    /*border-radius: 32px;*/
+    /*border: 1px solid black;*/
     padding: 12px;
-
     width: 80vw;
 }
 
 .profile-container ul {
     list-style: none;
-
 }
 
 
@@ -269,13 +267,14 @@ i:hover {
 }
 
 .comment-container li {
-    background-color: #8a8585;
+    background-color: #adabab;
     width: 250px;
     height: 150px;
     margin: 12px auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
+    padding: 8px;
 }
 
 .about-history {

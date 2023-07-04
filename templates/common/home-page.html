@@ -43,7 +43,8 @@
 
                         <div class="icons-wrapper">
                             <div>
-                                <h4>likes: {{ photo.like_set.all.count }}</h4>
+                                <h4>likes: <span
+                                        style="color: red;font-weight: bold"> {{ photo.like_set.all.count }}</span></h4>
                                 {% if not photo.like_set.all.count %}
 
                                     <a href="{% url 'like' photo.id %}">
@@ -75,7 +76,7 @@
                             <br>
                             <h2>Comments:</h2>
                             {% if photo.comment_set.all %}
-                                <ul class="comment-container" style="list-style: none;color: #042cc9;">
+                                <ul class="comment-container" style="list-style: none;color: #103be5;">
                                     {% for comment in photo.comment_set.all %}
                                         <li>
                                             <h3>From:
