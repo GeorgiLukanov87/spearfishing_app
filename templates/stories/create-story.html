@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
-
     <form action="{% url 'create-story' %}" method="post">
         <h1>Create story</h1>
+
         {{ form.as_p }}
         {% csrf_token %}
+
         <div>
             <button type="submit" class="button-edit-profile">Create New Story</button>
         </div>
