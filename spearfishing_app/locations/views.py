@@ -30,7 +30,7 @@ def locations(request):
 
     # Create Map Object
     if lat and lng:
-        m = folium.Map(location=[lat, lng], zoom_start=7)
+        m = folium.Map(location=[lat, lng], zoom_start=8)
     else:
         m = folium.Map(location=[39.18475207792338, -0.21667029996640755], zoom_start=9)
 
