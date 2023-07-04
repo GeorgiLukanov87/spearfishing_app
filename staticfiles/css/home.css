@@ -156,6 +156,13 @@ header {
 
 }
 
+img:hover {
+    scale: 1.025;
+    cursor: pointer;
+    transition: linear 150ms;
+
+}
+
 .photo-wrapper li {
     padding-left: 10px;
     margin: 8px;
