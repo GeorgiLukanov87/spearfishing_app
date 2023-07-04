@@ -3,7 +3,10 @@
 {% block content %}
 
     {% if object_list %}
-        <h1>Story List</h1>
+        <h1>Stories about some spearfishing moments...
+            Hold your breath and Enjoy :)
+        
+        </h1>
         {% for story in object_list %}
 
             <ul style="list-style: none">
@@ -19,7 +22,10 @@
 
                         Title: {{ story.title }}
                         Date: {{ story.date }}
-                        Creator: {{ story.creator }}
+                    <p>
+
+                        <a href="{{ story.creator }}">Creator: {{ story.creator }}</a>
+
                     </p>
                     <p>
                         Full Story:{{ story.description }}
@@ -27,6 +33,8 @@
 
                 </li>
             </ul>
+            <hr>
+
         {% endfor %}
     {% endif %}
 {% endblock %}
