@@ -335,8 +335,14 @@ i:hover {
 
 .searchbar-button {
     position: relative;
-    top: -43px;
-    right: -245px;
+    top: -48.5px;
+    right: -129px;
+}
+
+.searchbar-button img {
+    width: 30px;
+    height: 30px;
+
 }
 
 #id_description {
