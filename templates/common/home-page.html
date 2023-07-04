@@ -60,8 +60,10 @@
 
 
                                 {% endif %}
+                                <a href="{% url 'share' photo.id %}">
+                                    <i class="fa-solid fa-square-share-nodes "></i>
+                                </a>
 
-                                <i class="fa-solid fa-square-share-nodes "></i>
                             </div>
                             <div>
                                 <a href="{% url 'photo-details' photo.pk %}">

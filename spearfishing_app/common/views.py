@@ -49,12 +49,13 @@ def like_functionality(request, photo_id):
             to_photo_id=photo_id,
             user_id=request.user.pk,
         )
+        return redirect(request.META['HTTP_REFERER'] + f'photos/{photo_id}')
 
-    return redirect(request.META['HTTP_REFERER'] + f'#{photo_id}')
+    return redirect('index')
 
 
 def get_photo_url(request, photo_id):
-    return request.META['HTTP_REFERER'] + f'#photo-{photo_id}'
+    return request.META['HTTP_REFERER'] + f'photos/{photo_id}'
 
 
 def share(request, photo_id):
