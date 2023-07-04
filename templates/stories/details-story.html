@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
-    <h1>Details story</h1>
+    <div>
+        <a class="button-edit-profile" href="{% url 'all-stories' %}"><- Back to Stories</a>
+    </div>
 
     {% if story.image_url %}
         <img src="{{ story.image_url }}" alt="story img">

@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+    <div>
 
+        <a class="button-edit-profile" href="{% url 'create-story' %}"
+           style="font-size: 20px;font-weight: bold"> Add new story
+            <i
+                    class="fa-regular fa-image fa-flip"
+                    style="color: #ff0000;font-size: 30px;display: flex;flex-direction: column;padding: 6px"></i></a>
+    </div>
     {% if object_list %}
         <h1>Stories about some spearfishing moments...
             Hold your breath and Enjoy :)
@@ -30,7 +37,10 @@
                     <p>
                         Full Story:{{ story.description }}
                     </p>
-                    <a href="{% url 'details-story' pk=story.pk %}">Story details</a>
+                    <a class="button-edit-profile" href="{% url 'details-story' pk=story.pk %}">Show Story-Details
+                        <i class="fa-solid fa-circle-info fa-fade fa-xl" style="color: #f50018;"></i>
+                    </a>
+
 
                 </li>
             </ul>
