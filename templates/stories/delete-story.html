@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+
     <form action="{% url 'delete-story' pk=object.pk %}" method="post">
+
         {% csrf_token %}
         <h1>Delete story</h1>
+
         <button class="button-edit-profile" type="submit">Delete Story</button>
     </form>
 
