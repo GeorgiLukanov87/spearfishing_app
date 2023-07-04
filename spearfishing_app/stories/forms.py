@@ -37,3 +37,7 @@ class StoryBaseForm(forms.ModelForm):
 
 class StoryCreateForm(StoryBaseForm):
     pass
+
+
+class StoryEditForm(StoryBaseForm):
+    pass

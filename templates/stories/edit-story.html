@@ -1,6 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h1>Edit story</h1>
+    <form action="{% url 'edit-story' pk=object.pk %}" method="post">
+        <h1>Edit story</h1>
+
+        {{ form.as_p }}
+        {% csrf_token %}
+
+        <div>
+            <button type="submit" class="button-edit-profile">Edit Story</button>
+        </div>
+    </form>
+
+    <div>
+        <button type="submit" class="button-edit-profile">
+            <a href="{% url 'delete-story' pk=object.pk %}"> Delete Story</a>
+            
+        </button>
+    </div>
+
 
 {% endblock %}

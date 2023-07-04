@@ -1,8 +1,12 @@
+from django.contrib.auth import get_user_model
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from spearfishing_app.stories.forms import StoryBaseForm
+from spearfishing_app.stories.forms import StoryBaseForm, StoryEditForm
+from spearfishing_app.stories.models import Story
+
+UserModel = get_user_model()
 
 
 # stories/views.py
@@ -17,12 +21,28 @@ def all_stories(request):
     return render(request, 'stories/story-list.html')
 
 
-def edite_story(request, pk):
-    return render(request, 'stories/edit-story.html')
+class StoryEditCBV(generic.UpdateView):
+    template_name = 'stories/edit-story.html'
+    model = Story
+    form_class = StoryEditForm
+    pk_url_kwarg = 'pk'
+    context_object_name = 'story'
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['user_profile'] = UserModel
+    #     return context
+
+    def get_success_url(self):
+        return reverse_lazy('details-story', kwargs={
+            'pk': self.object.pk,
+        })
 
 
-def delete_story(request, pk):
-    return render(request, 'stories/delete-story.html')
+class StoryDeleteCBV(generic.DeleteView):
+    template_name = 'stories/delete-story.html'
+    model = Story
+    success_url = reverse_lazy('index')
 
 
 def details_story(request, pk):
