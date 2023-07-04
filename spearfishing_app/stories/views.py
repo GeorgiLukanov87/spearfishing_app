@@ -46,8 +46,9 @@ class StoryDeleteCBV(generic.DeleteView):
     success_url = reverse_lazy('index')
 
 
-def details_story(request, pk):
-    return render(request, 'stories/details-story.html')
+class StoryDetailsCBV(generic.DetailView):
+    model = Story
+    template_name = 'stories/details-story.html'
 
 
 def about(request):

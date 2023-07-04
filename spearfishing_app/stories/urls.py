@@ -1,6 +1,6 @@
 from django.urls import path
 
-from spearfishing_app.stories.views import about, StoryListCBV, StoryEditCBV, StoryDeleteCBV, details_story, \
+from spearfishing_app.stories.views import about, StoryListCBV, StoryEditCBV, StoryDeleteCBV, StoryDetailsCBV, \
     StoryCreateCBV
 
 urlpatterns = (
@@ -11,7 +11,7 @@ urlpatterns = (
 
     path('edit/<int:pk>/', StoryEditCBV.as_view(), name='edit-story'),
     path('delete/<int:pk>/', StoryDeleteCBV.as_view(), name='delete-story'),
-    path('details/<int:pk>/', details_story, name='details-story'),
+    path('details/<int:pk>/', StoryDetailsCBV.as_view(), name='details-story'),
 )
 
 """
