@@ -14,6 +14,7 @@ class SignInView(auth_views.LoginView):
     success_url = reverse_lazy('index')
 
 
+# gogo$12345$newpass
 class SingInView(generic.CreateView):
     template_name = 'accounts/register-page.html'
     form_class = UserCreateForm

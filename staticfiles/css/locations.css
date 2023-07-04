@@ -4,6 +4,15 @@
 }
 
 .map-wrapper {
-    width: 100%;
+    width: 75%;
+    margin: auto;
+    border: 2px solid #032c9d;
+}
+
+.h2-maps {
+    color: #0334ad;
+    font-size: 36px;
+    text-shadow: 1px 1px 1px #020202;
+    font-family: "Malgun Gothic", serif;
 }
 

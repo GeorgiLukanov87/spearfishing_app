@@ -34,6 +34,7 @@ def locations(request):
 
     tooltip = "See more details!"
 
+    # STATIC Markers:
     folium.Marker(
         [39.18475207792338, -0.21667029996640755],
         popup="<i>Cullera Playa LOCATION: 39.18475207792338, -0.21667029996640755</i>", tooltip=tooltip

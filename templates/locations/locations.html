@@ -2,20 +2,22 @@
 {% block content %}
 
     <div>
-        <form class="location-searchbar" method="POST">
-            {% csrf_token %}
-            {{ form }}
-            <button type="submit">Search</button>
-        </form>
-    </div>
-
-    <div>
-        <div>
-            <div class="map-wrapper">
-                {{ m|safe }}
-            </div>
+        <h2 class="h2-maps">Top shared locations from our users!</h2>
+        <br>
+        <div class="map-wrapper">
+            {{ m|safe }}
         </div>
     </div>
+    <div>
 
+        <h2 class="h2-maps">Search new Locations here:</h2>
+        <form class="location-searchbar" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button style="background-color: #8f8b8b;color: red;border-radius: 6px;padding: 6px;font-weight: bold"
+                    type="submit">Search
+            </button>
+        </form>
+    </div>
 
 {% endblock %}
