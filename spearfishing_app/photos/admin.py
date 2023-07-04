@@ -5,4 +5,4 @@ from spearfishing_app.photos.models import Photo
 
 @admin.register(Photo)
 class PhotoAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('id', 'user', 'location', 'date_of_publication')
