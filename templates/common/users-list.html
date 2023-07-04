@@ -2,8 +2,14 @@
 {% block content %}
 
     <form action="{% url 'users-list' %}?page={{ page_obj.number }}">
-        <input name="search" value="{{ search }}">
-        <button>Search by title</button>
+
+        <label for="name">Search by Username:
+            <input name="search" placeholder="Add username..." value="{{ search }}">
+        </label>
+
+        <div>
+            <button class="button-edit-profile">Search</button>
+        </div>
     </form>
 
     <div class="lists">
