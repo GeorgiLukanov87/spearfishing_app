@@ -50,6 +50,11 @@ class StoryDetailsCBV(generic.DetailView):
     model = Story
     template_name = 'stories/details-story.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['is_owner'] = self.request.user == self.object.creator
+        return context
+
 
 def about(request):
     return render(request, 'common/about.html')

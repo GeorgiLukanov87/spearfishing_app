@@ -30,15 +30,8 @@
                     <p>
                         Full Story:{{ story.description }}
                     </p>
-                    <p>
+                    <a href="{% url 'details-story' pk=story.pk %}">Story details</a>
 
-                        <a class="button-edit-profile" href="{% url 'edit-story' pk=story.pk %}"> Edit story <i
-                                class="fa-regular fa-user fa-bounce" style="color: #00f010;"></i></a>
-                        <a class="button-edit-profile" href="{% url 'create-story' %}"> Add new story <i
-                                class="fa-regular fa-image fa-flip" style="color: #02dac8;"></i></a>
-                        <a class="button-edit-profile" href="{% url 'delete-story' pk=story.pk %}"> Delete story <i
-                                class="fa-solid fa-trash fa-fade" style="color: #ff0000;"></i></a>
-                    </p>
                 </li>
             </ul>
             <hr>
