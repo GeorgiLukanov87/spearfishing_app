@@ -331,3 +331,10 @@ i:hover {
     top: -43px;
     right: -245px;
 }
+
+#id_description {
+    padding: 8px;
+    font-weight: bold;
+    color: #4f4e4e;
+
+}
