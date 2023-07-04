@@ -17,6 +17,8 @@ def locations(request):
             return redirect('locations')
     else:
         form = SearchLocationForm()
+        m = folium.Map(location=[39.18475207792338, -0.21667029996640755], zoom_start=9)
+
     address = Search.objects.all().last()
     location = geocoder.osm(address)
     lat = location.lat
@@ -24,17 +26,17 @@ def locations(request):
     country = location.country
     if lat == None or lng == None:
         address.delete()
-        return HttpResponse('You address input is invalid')
+        return render(request, 'locations/wrong-data.html')
 
     # Create Map Object
-    m = folium.Map(location=[39.18475207792338, -0.21667029996640755], zoom_start=9)
+    if lat and lng:
+        m = folium.Map(location=[lat, lng], zoom_start=7)
+    else:
+        m = folium.Map(location=[39.18475207792338, -0.21667029996640755], zoom_start=9)
 
-    folium.Marker([lat, lng], tooltip='See more details!',
-                  popup=country).add_to(m)
+    folium.Marker([lat, lng], tooltip='See more details!', popup=country).add_to(m)
     # Get HTML Representation of Map Object
-
     tooltip = "See more details!"
-
     # STATIC Markers:
     folium.Marker(
         [39.18475207792338, -0.21667029996640755],
@@ -224,7 +226,7 @@ def weather(request):
         city = request.POST['city']
         if city == '':
             return render(request, 'locations/weather.html')
-        
+
         weather_data = fetch_weather_and_forecast(city, api_key, current_weather_url)
 
         context = {
