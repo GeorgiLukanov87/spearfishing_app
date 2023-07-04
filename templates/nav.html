@@ -27,6 +27,12 @@
                         {% endif %}
 
                         <li class="nav-item">
+                            <a href="{% url 'add-photo' %}">
+                                <i>Add Photo</i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
                             <a href="{% url 'events-list' %}">
                                 <i>Events</i>
                             </a>
@@ -38,17 +44,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="{% url 'all-stories' %}">
-                                <i>Stories</i>
-                            </a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a href="{% url 'add-photo' %}">
-                                <i>Add Photo</i>
-                            </a>
-                        </li>
                         <li class="nav-item">
                             <a href="{% url 'locations' %}">
                                 <i>Locations</i>
@@ -68,12 +64,19 @@
                                 <i>Profile={{ request.user }}</i>
                             </a>
                         </li>
+                        
+                        <li class="nav-item">
+                            <a href="{% url 'all-stories' %}">
+                                <i>Stories</i>
+                            </a>
+                        </li>
 
                         <li class="nav-item">
                             <a href="{% url 'about' %}">
                                 <i>About</i>
                             </a>
                         </li>
+
 
                         <li class="nav-item">
                             <a href="{% url 'logout' %}">
