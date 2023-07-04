@@ -69,7 +69,7 @@ h1 {
 main {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 60px;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
