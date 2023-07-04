@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from spearfishing_app.stories.models import Story
+
+
+@admin.register(Story)
+class StoryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'date', 'creator',)

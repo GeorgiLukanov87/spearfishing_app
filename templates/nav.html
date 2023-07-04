@@ -10,24 +10,21 @@
                 </a>
             </div>
 
+            {# check if user has perm/add_event #}
+            <h1>Event-perm : {{ has_perms }}</h1>
+
             <div class="nav-links">
                 <ul class="nav-group">
 
                     {% if request.user.is_authenticated %}
 
-                        {% if request.user.is_authenticated and request.user.is_staff %}
+                        {% if request.user.is_authenticated and request.user.is_superuser %}
                             <li class="nav-item">
-                                <a href="{% url 'users-list' %}">
+                                <a style="background-color: #09cb04" href="{% url 'users-list' %}">
                                     <i>Users List</i>
                                 </a>
                             </li>
                         {% endif %}
-
-                        <li class="nav-item">
-                            <a href="{% url 'add-photo' %}">
-                                <i>Add Photo</i>
-                            </a>
-                        </li>
 
                         <li class="nav-item">
                             <a href="{% url 'events-list' %}">
@@ -35,6 +32,11 @@
                             </a>
                         </li>
 
+                        <li class="nav-item">
+                            <a href="{% url 'add-photo' %}">
+                                <i>Add Photo</i>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="{% url 'locations' %}">
                                 <i>Locations</i>

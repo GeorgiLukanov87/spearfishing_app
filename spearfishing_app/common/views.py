@@ -28,7 +28,7 @@ def index(request):
         'all_photos': all_photos,
         'comment_form': comment_form,
         'search_form': search_form,
-
+        'has_perms': request.user.has_perm('events.add_event'),
     }
 
     return render(
@@ -102,5 +102,6 @@ class AllUsersCBV(generic.ListView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
+
         context['search'] = self.request.GET.get('search', '')
         return context

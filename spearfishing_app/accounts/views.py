@@ -77,7 +77,7 @@ class UserEditView(generic.UpdateView):
 class UserDeleteView(generic.DeleteView):
     template_name = 'accounts/profile-delete-page.html'
     model = UserModel
-    success_url = reverse_lazy('show index')
+    success_url = reverse_lazy('index')
 
 
 def to_github(request):
