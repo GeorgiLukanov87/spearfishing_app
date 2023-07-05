@@ -9,6 +9,22 @@ class PhotoBaseForm(forms.ModelForm):
     class Meta:
         model = Photo
         fields = '__all__'
+        labels = {
+            'user': 'Owner'
+        }
+
+        widgets = {
+            'description': forms.Textarea(
+                attrs={
+                    'placeholder': 'Add description...'
+                }
+            ),
+            'location': forms.TextInput(
+                attrs={
+                    'placeholder': 'Add location...'
+                }
+            ),
+        }
 
 
 class PhotoCreateForm(PhotoBaseForm):
