@@ -7,7 +7,7 @@ from spearfishing_app.events.models import Event
 
 
 def events_list(request):
-    print(request.user.is_staff)
+    # print(request.user.is_staff)
     events = Event.objects.all()
     context = {
         'events': events,

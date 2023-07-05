@@ -1,18 +1,44 @@
 .users-list-ul {
     border: 1px solid black;
+    border-radius: 50px;
     display: flex;
-    flex-direction: column;
-    padding: 20px;
+    padding: 30px;
+    flex-wrap: wrap;
     gap: 12px;
+    text-align: start;
+    letter-spacing: 1px;
+    font-size: 18px;
+
 
 }
 
 .users-list-ul li a {
     text-decoration: none;
+    padding: 10px;
+    color: #2a2929;
+
+}
+
+.users-list-ul li {
+    border: 1px solid black;
+    border-radius: 12px;
+    padding-right: 6px;
+    margin: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    background-color: white;
+    width: 100%;
 }
 
 .ul-list-wrapper {
-    width: 50%;
+    width: 45%;
     margin: auto;
+}
+
+.div-border {
+    border-top: 2px solid black;
 
 }

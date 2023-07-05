@@ -26,8 +26,8 @@ INSTALLED_APPS = [
     'spearfishing_app.locations',
     'spearfishing_app.stories',
     'spearfishing_app.photos',
-
     'spearfishing_app.equipment',
+
 ]
 
 MIDDLEWARE = [
@@ -64,6 +64,17 @@ WSGI_APPLICATION = 'spearfishing_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "spearfishing4life_db",
+#         "USER": "postgres",
+#         "PASSWORD": "********",
+#         "HOST": "127.0.0.1",
+#         "PORT": "5432",
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -99,14 +110,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# the folder will be named staticfiles
 STATICFILES_DIRS = (
     BASE_DIR / 'staticfiles/',
 )
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# always use the extended User
+# always use the extended User and get it using get_user_model()
 AUTH_USER_MODEL = 'accounts.AppUser'
 
 LOGIN_REDIRECT_URL = reverse_lazy('index')

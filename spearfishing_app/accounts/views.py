@@ -9,12 +9,12 @@ from spearfishing_app.accounts.forms import UserCreateForm
 UserModel = get_user_model()
 
 
+# lukanov2 : gogo$12345$newpass
+
 class SignInView(auth_views.LoginView):
     template_name = 'accounts/login-page.html'
     success_url = reverse_lazy('index')
 
-
-# lukanov2 : gogo$12345$newpass
 
 class SingInView(generic.CreateView):
     template_name = 'accounts/register-page.html'

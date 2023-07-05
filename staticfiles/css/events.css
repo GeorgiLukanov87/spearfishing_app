@@ -8,7 +8,45 @@
 }
 
 .event-container h3 img {
-    width: 75%;
+    width: 100%;
+
+}
+
+.event-buttons {
+    box-shadow: 1px 1px 7px #0a0a0a;
+}
+
+.competitors {
+    font-size: 16px;
+}
+
+.rewards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: #04eaea solid 3px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px #0a0a0a;
+}
+
+.h1-winners-pool {
+    font-family: Oxygen, cursive;
+    box-shadow: 1px 1px 7px #0a0a0a;
+    padding: 12px;
+    background-color: #ced0d2;
+    border-radius: 20px;
+}
+
+.event-container {
+    display: flex;
+    border: 3px solid #595757;
+    padding: 5%;
+    gap: 50px;
+    border-radius: 30px;
+    background-color: #b9d5fd;
+    box-shadow: 1px 1px 15px #0a0a0a;
+    margin: 0 12%;
 }
 
 h1 {
