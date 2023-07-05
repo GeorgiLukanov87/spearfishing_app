@@ -8,10 +8,8 @@ from spearfishing_app.photos.models import Photo
 class PhotoBaseForm(forms.ModelForm):
     class Meta:
         model = Photo
-        fields = '__all__'
-        labels = {
-            'user': 'Owner'
-        }
+        # fields = '__all__'
+        exclude = ['user', ]
 
         widgets = {
             'description': forms.Textarea(

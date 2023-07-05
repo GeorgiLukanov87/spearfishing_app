@@ -70,7 +70,6 @@ def share(request, photo_id):
 def add_comment(request, photo_id):
     if request.method == 'POST':
         photo = Photo.objects.filter(pk=photo_id).get()
-
         form = CommentForm(request.POST)
 
         if form.is_valid():

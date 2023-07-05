@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.urls import reverse
 
@@ -7,14 +8,16 @@ from spearfishing_app.photos.models import Photo
 
 
 # photos/views.py
-
+@login_required
 def add_photo(request):
     if request.method == 'GET':
         form = PhotoCreateForm()
     else:
         form = PhotoCreateForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            photo = form.save(commit=False)
+            photo.user = request.user
+            photo.save()
             return redirect('index')
 
     context = {
