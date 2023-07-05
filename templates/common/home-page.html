@@ -81,10 +81,10 @@
                                 <ul class="comment-container" style="list-style: none;color: #103be5;">
                                     {% for comment in photo.comment_set.all %}
                                         <li>
-                                            <h3>From:
+                                            <h4>From:
                                                 <a href="{% url 'profile details' pk=comment.user.pk %}">{{ comment.user }}:</a>
-                                            </h3>
-                                            <h2>{{ comment.text }}</h2>
+                                            </h4>
+                                            <h4>{{ comment.text }}</h4>
                                             <h6 style="color: #4ffa4f">
                                                 {{ comment.date_time_of_publication }}
                                             </h6>

@@ -277,10 +277,11 @@ i:hover {
     background-color: #adabab;
     width: 210px;
     height: 120px;
-    margin: 12px auto;
+    margin: 4px auto;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    align-items: start;
+    gap: 24px;
     padding: 8px;
 }
 
