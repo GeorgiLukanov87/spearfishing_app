@@ -352,4 +352,10 @@ i:hover {
 
 }
 
+body > main > div.col-9 > form > label {
+    display: none;
+}
 
+body > main > div.col-9 > form {
+    height: 100px;
+}

@@ -22,10 +22,10 @@ class CommentForm(forms.ModelForm):
 
 
 class SearchForm(forms.Form):
-    search_photo = forms.CharField(
+    user_name = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                'placeholder': 'Search...'
+                'placeholder': 'Search photo...'
             }
         )
     )
