@@ -4,49 +4,58 @@
     <div class="profile-container">
 
         {% if request.user.equipment %}
-            <div class="equipment">
-                <h2>User Equipment:</h2>
-                <h1>Gun's details:</h1>
-                <h2>Gun Brand: {{ request.user.equipment.gun_model }}</h2>
-                <h2>Gun Material: {{ request.user.equipment.gun_material }}</h2>
-                <h2>Gun Length: {{ request.user.equipment.gun_length }}</h2>
+            <div class="equipment-wrapper">
+                <div class="equipment">
 
-                {% if request.user.equipment.gun_image %}
-                    <img src="{{ request.user.equipment.gun_image }}" alt="gun img">
-                {% else %}
-                    <img src="{% static 'images/no-image-available.jpg' %}" alt="gun img">
+                    <div class="equipment-containers">
+                        <h3>User Equipment:</h3>
+                        <h2>Gun's details:</h2>
+                        <h3>Gun Brand: {{ request.user.equipment.gun_model }}</h3>
+                        <h3>Gun Material: {{ request.user.equipment.gun_material }}</h3>
+                        <h3>Gun Length: {{ request.user.equipment.gun_length }}</h3>
 
-                {% endif %}
+                        <div>
+                            {% if request.user.equipment.gun_image %}
+                                <img src="{{ request.user.equipment.gun_image }}" alt="gun img">
+                            {% else %}
+                                <img src="{% static 'images/no-image-available.jpg' %}" alt="gun img">
+                            {% endif %}
+                        </div>
+                    </div>
 
-                <br>
-                <hr>
-                <h1>Band's details:</h1>
-                <h2>Gun Bands: {{ request.user.equipment.bands }}</h2>
-                <h2>Gun Bands brand: {{ request.user.equipment.bands_brand }}</h2>
+                    <div class="equipment-containers">
+                        <h2>Band's details:</h2>
+                        <h3>Gun Bands: {{ request.user.equipment.bands }}</h3>
+                        <h3>Gun Bands brand: {{ request.user.equipment.bands_brand }}</h3>
 
-                {% if request.user.equipment.bands_image %}
-                    <img src="{{ request.user.equipment.bands_image }}" alt="bands img">
-                {% else %}
-                    <img src="{% static 'images/no-image-available.jpg' %}" alt="gun img">
-                {% endif %}
+                        <div>
+                            {% if request.user.equipment.bands_image %}
+                                <img src="{{ request.user.equipment.bands_image }}" alt="bands img">
+                            {% else %}
+                                <img src="{% static 'images/no-image-available.jpg' %}" alt="gun img">
+                            {% endif %}
+                        </div>
+                    </div>
 
-                <br>
-                <hr>
-                <h2>Fins brand: {{ request.user.equipment.fins_model }}</h2>
-                <h2>Fins Material: {{ request.user.equipment.fins_material }}</h2>
+                    <div class="equipment-containers">
+                        <h3>Fins brand: {{ request.user.equipment.fins_model }}</h3>
+                        <h3>Fins Material: {{ request.user.equipment.fins_material }}</h3>
 
-                {% if request.user.equipment.fins_image %}
-                    <img src="{{ request.user.equipment.fins_image }}" alt="fins img">
-                {% else %}
-                    <img src="{% static 'images/no-image-available.jpg' %}" alt="gun img">
-                {% endif %}
+                        <div>
+                            {% if request.user.equipment.fins_image %}
+                                <img src="{{ request.user.equipment.fins_image }}" alt="fins img">
+                            {% else %}
+                                <img src="{% static 'images/no-image-available.jpg' %}" alt="gun img">
+                            {% endif %}
+                        </div>
+                    </div>
 
-                <br>
-                {% if request.user.equipment.additional_info %}
-                    <h2>Additional information:
-                        {{ request.user.equipment.additional_info }}
-                    </h2>
-                {% endif %}
+                    {% if request.user.equipment.additional_info %}
+                        <h2>Additional information:
+                            {{ request.user.equipment.additional_info }}
+                        </h2>
+                    {% endif %}
+                </div>
             </div>
         {% else %}
             <h1>No equipment added yet!</h1>
@@ -67,7 +76,7 @@
         </div>
 
         <br>
-        <hr>
+
 
         <div class="photo-wrapper">
 
@@ -117,7 +126,7 @@
         </div>
 
         <br>
-        <hr>
+
         <p>
             {% if is_owner %}
                 <a class="button-edit-profile" href="{% url 'profile edit' pk=object.pk %}"> Edit profile <i
