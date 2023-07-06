@@ -141,12 +141,11 @@ body {
 .nav-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
     list-style: none;
-    margin: 22px;
-
+    margin-right: 16px;
 
 }
+
 
 header {
     border-bottom: 2px solid #ece2e2;
@@ -157,12 +156,11 @@ header {
 .nav-group a {
     text-decoration: none;
     border: 2px solid black;
-    padding: 12px 12px;
-    border-radius: 10px;
+    padding: 16px 16px;
     background-color: #b9d5fd;
     color: blue;
     box-shadow: 0 0 5px 1px #605e5e;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     font-family: "Arial Black", sans-serif;
     text-shadow: 0 0 1px #f8efef;
@@ -174,18 +172,21 @@ header {
     align-items: center;
 }
 
+.nav-item {
+
+}
 
 .nav-group a:hover {
     color: red;
-    background-color: #0572bd;
+    background-image: url("bg-images/4.gif");
+    background-size: cover;
     transition: linear 125ms;
     z-index: 100;
     position: relative;
-    padding-bottom: 28px;
-
+    padding-bottom: 55px;
+    padding-top: 55px;
     border-bottom: 5px solid red;
     border-top: 5px solid red;
-
 
 }
 

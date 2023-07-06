@@ -14,37 +14,45 @@
     {% else %}
 
         {% for event in events %}
-
             <div class="event-container">
-                <h3><span class="h3-details">Name: </span> {{ event.name }}</h3>
-                <h3><span class="h3-details">Location: </span> {{ event.location }}</h3>
-                <h3><span class="h3-details">Created Date:</span> {{ event.created }}</h3>
-                <h3><span class="h3-details">Competition Starts:</span> {{ event.start_date }}</h3>
-                <h3><img src="{{ event.image_url }}" alt="location img"></h3>
+
+                <div class="event-details-wrapper">
+                    <h3><img src="{{ event.image_url }}" alt="location img"></h3>
+                    <div class="event-details-wrapper1">
+
+                        <h3><span class="h3-details">Name: </span> {{ event.name }}</h3>
+                        <h3><span class="h3-details">Location: </span> {{ event.location }}</h3>
+                        <h3><span class="h3-details">Created Date:</span> {{ event.created }}</h3>
+                        <h3><span class="h3-details">Competition Starts:</span> {{ event.start_date }}</h3>
+                    </div>
+
+                </div>
 
                 <div class="rewards-wrapper">
                     <div>
                         <h1 class="h1-winners-pool">Winner's pool rewards:</h1>
-
                     </div>
+
                     <h2><i class="fa-solid fa-trophy fa-bounce fa-xl"
                            style="color: #ff7300;"></i> <span class="winners-span"> Winner First Place:</span>
                         1000$</h2>
                     <h2><i class="fa-solid fa-trophy fa-bounce fa-lg" style="color: #ff7300;"> </i><span
                             class="winners-span">2nd Place:</span>
                         500$</h2>
-                    <h2><i class="fa-solid fa-trophy fa-bounce" style="color: #ff7300;"> </i><span
-                            class="winners-span">3th Place:</span>
+                    <h2><i class="fa-solid fa-trophy fa-bounce" style="color: #ff7300;"> </i>
+                        <span class="winners-span">3th Place:</span>
                         Gift from
-                        our partners "DiveInn.com"
-                        <a class="gift-a" href="{% url 'gift-page' %}" target="_blank"> - Look it here!</a>
+                        our partners -
+                        <a class="gift-a" href="https://www.tradeinn.com/diveinn/es" target="_blank"> "DiveInn.com" </a>
+                        <a class="gift-a" href="{% url 'gift-page' %}" target="_blank"> -> LOOK THE GIFT HERE <- </a>
                     </h2>
                 </div>
 
                 <div>
-                    <h3>
-                        <i class="fa-solid fa-users fa-beat-fade fa-2xl"></i>
-                        Competitors:
+                    <i class="fa-solid fa-users fa-beat-fade fa-2xl"></i>
+                    Competitors:
+                    <h3 class="competitors-wrapper">
+
 
                         {% for competitor in event.competitors.all %}
                             <div class="competitors">

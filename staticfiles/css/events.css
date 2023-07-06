@@ -107,11 +107,11 @@ h1 {
 main {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 50px;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
-    margin: 5%;
+    margin: 4.75%;
 }
 
 .event-container img {
@@ -122,22 +122,26 @@ main {
 }
 
 .event-container img:hover {
-    scale: 1.05;
+    scale: 1.02;
     transition: 200ms linear;
     cursor: pointer;
 }
 
 .competitors {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     border: 2px solid black;
     border-radius: 22px;
     margin: 20px auto;
-    width: 250px;
-    padding: 20px;
+    width: 150px;
+    padding: 10px;
     background-color: #b9d5fd;
     box-shadow: 1px 1px 15px #363535;
+
+}
+
+.competitors-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 
 }
 
@@ -153,7 +157,22 @@ main {
     text-decoration: none;
     color: red;
     text-shadow: 1px 1px 1px black;
+
 }
+
+.event-details-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+}
+
+.event-details-wrapper1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 
 .h3-details {
     color: #043fee;
@@ -191,4 +210,6 @@ main {
     font-weight: bold;
     text-align: center;
     background-color: #b9d5fd;
+    display: flex;
+
 }
