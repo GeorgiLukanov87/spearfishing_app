@@ -13,7 +13,7 @@ class UserEditForm(auth_forms.UserChangeForm):
 class UserCreateForm(auth_forms.UserCreationForm):
     class Meta:
         model = UserModel
-        fields = ('username', 'email')
+        fields = ('username', 'email', 'profile_image_url',)
         field_classes = {
             'username': auth_forms.UsernameField,
         }

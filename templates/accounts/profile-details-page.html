@@ -63,8 +63,24 @@
 
         <div class="profile-details-wrapper">
             <h2>Profile Details:</h2>
+
+            {% if object.profile_image_url %}
+                <div>
+
+                    <img class="profile-image" src="{{ object.profile_image_url }}" alt="profile picture">
+                </div>
+            {% else %}
+                <div>
+
+                    <img class="profile-image"
+                         src="{% static 'images/blank-avatar-profile-picture-vector-45161169.jpg' %}"
+                         alt="profile picture">
+                </div>
+            {% endif %}
+
             {% if object.get_full_name %}
-                <h1>Full Name: {{ object.get_full_name }}, pk= {{ request.user.pk }}</h1>
+                <h1>Full Name: {{ object.get_full_name }}</h1>
+                <h1>Username: {{ object.username }}</h1>
             {% else %}
                 <h1>Username: {{ object.username }}, pk= {{ request.user.pk }}</h1>
 

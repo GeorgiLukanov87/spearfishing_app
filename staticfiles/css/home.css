@@ -361,3 +361,9 @@ body > main > div.col-9 > form > label {
 body > main > div.col-9 > form {
     height: 100px;
 }
+
+.profile-image {
+    width: 50%;
+    height: 50%;
+    
+}
