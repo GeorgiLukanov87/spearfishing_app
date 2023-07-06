@@ -24,7 +24,7 @@
     </p>
 
     <p>
-        {% if is_owner %}
+        {% if is_owner or request.user.is_staff %}
             <a class="button-edit-profile" href="{% url 'edit-story' pk=story.pk %}"> Edit story <i
                     class="fa-regular fa-user fa-bounce" style="color: #00f010;"></i></a>
             <a class="button-edit-profile" href="{% url 'create-story' %}"> Add new story <i

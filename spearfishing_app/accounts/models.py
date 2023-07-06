@@ -59,3 +59,8 @@ class AppUser(auth_models.AbstractUser):
         choices=Gender.choices(),
         max_length=Gender.max_len(),
     )
+
+    profile_image_url = models.URLField(
+        null=True,
+        blank=True
+    )

@@ -6,10 +6,10 @@ UserModel = get_user_model()
 
 
 class Story(models.Model):
-    STORY_TITLE_MAX_LEN = 30
+    STORY_TITLE_MAX_LEN = 50
     STORY_TITLE_MIN_LEN = 3
 
-    STORY_DESCRIPTION_MAX_LEN = 300
+    STORY_DESCRIPTION_MAX_LEN = 1500
     STORY_DESCRIPTION_MIN_LEN = 3
 
     title = models.CharField(

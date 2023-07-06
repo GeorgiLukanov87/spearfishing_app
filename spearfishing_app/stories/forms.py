@@ -40,4 +40,6 @@ class StoryCreateForm(StoryBaseForm):
 
 
 class StoryEditForm(StoryBaseForm):
-    pass
+    class Meta:
+        model = Story
+        exclude = ('creator',)
