@@ -2,13 +2,13 @@
 {% load static %}
 {% block content %}
     <div class="profile-container">
-
+        <h1>User Equipment:</h1>
         {% if request.user.equipment %}
             <div class="equipment-wrapper">
                 <div class="equipment">
 
                     <div class="equipment-containers">
-                        <h3>User Equipment:</h3>
+
                         <h2>Gun's details:</h2>
                         <h3>Gun Brand: {{ request.user.equipment.gun_model }}</h3>
                         <h3>Gun Material: {{ request.user.equipment.gun_material }}</h3>
