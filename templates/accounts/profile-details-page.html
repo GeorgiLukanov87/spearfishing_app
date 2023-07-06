@@ -114,7 +114,6 @@
                             </div>
                             <div class="icons-wrapper">
                                 <div>
-                                    <h4>likes: {{ photo.like_set.all.count }}</h4>
                                     {% if not photo.like_set.all.count %}
 
                                         <a href="{% url 'like' photo.id %}">
@@ -129,20 +128,21 @@
                                         </a>
 
                                     {% endif %}
+                                    <h4>likes: {{ photo.like_set.all.count }}</h4>
 
                                 </div>
 
-                                <div>
+                                <div class="profile-icon-2">
 
                                     <a href="{% url 'photo-details' photo.pk %}">
-                                        <i class="fa-solid fa-circle-info fa-beat fa-xl"
+                                        <i class="fa-solid fa-circle-info fa-fade fa-xl"
                                            style="color: #09f809;"></i>
                                     </a>
 
                                     {% if is_owner %}
                                         <a href="{% url 'delete-photo' photo.pk %}"><i
-                                                class="fa-solid fa-trash-can-arrow-up"
-                                                style="color: #960202;"></i></a>
+                                                class="fa-solid fa-trash-can-arrow-up fa-bounce fa-xl"
+                                                style="color: #770272;"></i></a>
                                     {% endif %}
 
                                 </div>
