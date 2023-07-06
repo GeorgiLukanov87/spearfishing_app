@@ -5,35 +5,41 @@
         <a class="button-edit-profile" href="{% url 'all-stories' %}"><- Back to Stories</a>
     </div>
 
-    {% if story.image_url %}
-        <img src="{{ story.image_url }}" alt="story img">
-    {% else %}
-        <img src="{% static 'images/no-image-available.jpg' %}" alt="story img">
-    {% endif %}
-    <p>
+    <div class="stories-wrapper2-global">
 
-        Title: {{ story.title }}
-        Date: {{ story.date }}
-    <p>
+        <div class="stories-wrapper2">
 
-        <a href="{% url 'profile details' pk=object.creator.pk %}">Creator: {{ story.creator }}</a>
+            {% if story.image_url %}
+                <img src="{{ story.image_url }}" alt="story img">
+            {% else %}
+                <img src="{% static 'images/no-image-available.jpg' %}" alt="story img">
+            {% endif %}
+        </div>
+        <p class="story-details-p">
+            Title: {{ story.title }}, Date: {{ story.date }}
+        <p>
 
-    </p>
-    <p>
-        Full Story:{{ story.description }}
-    </p>
+        <p class="story-details-p-1">
+            <a href="{% url 'profile details' pk=object.creator.pk %}">Creator: {{ story.creator }}</a>
+        </p>
 
-    <p>
-        {% if is_owner or request.user.is_staff %}
-            <a class="button-edit-profile" href="{% url 'edit-story' pk=story.pk %}"> Edit story <i
-                    class="fa-regular fa-user fa-bounce" style="color: #00f010;"></i></a>
-            <a class="button-edit-profile" href="{% url 'create-story' %}"> Add new story <i
-                    class="fa-regular fa-image fa-flip" style="color: #02dac8;"></i></a>
-            <a class="button-edit-profile" href="{% url 'delete-story' pk=story.pk %}"> Delete story <i
-                    class="fa-solid fa-trash fa-fade" style="color: #ff0000;"></i></a>
-        {% endif %}
-    </p>
 
+        <div class="details-story-wrapper">
+            <p>{{ story.description }}</p>
+        </div>
+
+        <p>
+            {% if is_owner or request.user.is_staff %}
+                <a class="button-edit-profile" href="{% url 'edit-story' pk=story.pk %}"> Edit story <i
+                        class="fa-regular fa-user fa-bounce" style="color: #00f010;"></i></a>
+                <a class="button-edit-profile" href="{% url 'create-story' %}"> Add new story <i
+                        class="fa-regular fa-image fa-flip" style="color: #02dac8;"></i></a>
+                <a class="button-edit-profile" href="{% url 'delete-story' pk=story.pk %}"> Delete story <i
+                        class="fa-solid fa-trash fa-fade" style="color: #ff0000;"></i></a>
+            {% endif %}
+        </p>
+
+    </div>
 
 
 {% endblock %}

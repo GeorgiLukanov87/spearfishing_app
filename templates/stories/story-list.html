@@ -49,7 +49,7 @@
 
                             <article>
                                 <p class="stories-description">
-                                    Full Story:{{ story.description|truncatewords:70 }}
+                                    {{ story.description|truncatewords:70 }}
                                 </p>
                                 <div>
                                     <a class="button-edit-profile" href="{% url 'details-story' pk=story.pk %}">
