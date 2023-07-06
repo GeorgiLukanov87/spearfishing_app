@@ -54,9 +54,58 @@ body {
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 2%, rgba(187, 188, 190, 1) 33%, rgba(121, 123, 124, 1) 61%, rgba(145, 143, 143, 1) 87%);
     box-shadow: -1px -5px 15px 1px #1022f1;
-    font-size: 22px;
+    font-size: 16px;
     padding-bottom: 24px;
 
+}
+
+.footer-wrapper h3 {
+    color: blue;
+    padding-bottom: 12px;
+}
+
+.f1 p, a {
+    color: #000000;
+    font-size: 18px;
+}
+
+.f1 p:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.f1 p a:hover {
+    color: red;
+    text-shadow: 1px 1px 10px #fafafa;
+}
+
+.footer-wrapper h3:hover {
+    color: red;
+    cursor: pointer;
+    scale: 1.02;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 14px;
+    border-top: 2px solid #050505;
+}
+
+.f1-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding-left: 12px;
+}
+
+.f1 {
+    font-size: 18px;
+}
+
+.f1 a {
+    font-size: 20px;
 }
 
 .footer span {
@@ -366,7 +415,6 @@ body > main > div.col-9 > form {
     width: 40%;
     height: 40%;
     border: 2px solid black;
-
 
 }
 
