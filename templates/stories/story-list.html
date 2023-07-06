@@ -3,14 +3,12 @@
 {% block content %}
 
     <div id="body-wrapper">
-
         <div>
             <a class="button-edit-profile" href="{% url 'create-story' %}"
-               style="font-size: 20px;font-weight: bold"> Add new story
+               style="font-size: 16px;font-weight: bold;box-shadow: 1px 1px 15px #02d1f5"> Add story
 
                 <i class="fa-regular fa-image fa-flip"
-                   style="color: #ff0000;font-size: 30px;display: flex;flex-direction: column;padding: 6px">
-
+                   style="color: #009cff;font-size: 30px;display: flex;flex-direction: column;padding: 6px">
                 </i>
             </a>
         </div>
@@ -22,31 +20,49 @@
             </h1>
 
             {% for story in object_list %}
-
                 <ul style="list-style: none">
-
                     <li>
-                        {% if story.image_url %}
-                            <img src="{{ story.image_url }}" alt="story img">
-                        {% else %}
-                            <img src="{% static 'images/no-image-available.jpg' %}" alt="story img">
-                        {% endif %}
-                        <p>
+                        <div class="stories-wrapper">
 
-                            Title: {{ story.title }}
-                            Date: {{ story.date }}
-                        <p>
-                            <a href="{% url 'profile details' pk=story.creator.pk %}">Creator: {{ story.creator }}</a>
-                        </p>
-                        <p>
-                            Full Story:{{ story.description }}
-                        </p>
-                        <a class="button-edit-profile" href="{% url 'details-story' pk=story.pk %}">Show Story-Details
-                            <i class="fa-solid fa-circle-info fa-fade fa-xl" style="color: #f50018;"></i>
-                        </a>
+                            <article>
 
+                                {% if story.image_url %}
+                                    <a href="{{ story.image_url }}" target="_blank">
+                                        <img src="{{ story.image_url }}" alt="story img">
+                                    </a>
+                                {% else %}
+                                    <img src="{% static 'images/no-image-available.jpg' %}" alt="story img">
+                                {% endif %}
+
+                                <p>
+                                <div class="stories-titles">
+
+                                    <div>
+                                        <a class="story-creator" href="{% url 'profile details' pk=story.creator.pk %}">Creator: {{ story.creator }}</a>
+                                    </div>
+
+                                    Title: {{ story.title }}
+                                    Date: {{ story.date }}
+                                    <p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <p class="stories-description">
+                                    Full Story:{{ story.description|truncatewords:70 }}
+                                </p>
+                                <div>
+                                    <a class="button-edit-profile" href="{% url 'details-story' pk=story.pk %}">
+                                        Read Full Story...
+                                        <i class="fa-solid fa-circle-info fa-fade fa-xl" style="color: #23ff00;"></i>
+                                    </a>
+                                </div>
+
+                            </article>
+                        </div>
                     </li>
                 </ul>
+
             {% endfor %}
         {% endif %}
 

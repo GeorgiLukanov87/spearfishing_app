@@ -29,14 +29,13 @@
                                 <a href="{% url 'profile details' pk=photo.user.pk %}">
 
                                     <i class="fa-solid fa-user" style="color: #f7f9fd"></i>
-                                    <span>{{ photo.user.get_full_name }}</span> , pk= {{ photo.user.pk }}
+                                    <span>{{ photo.user.username }}</span>
                                 </a>
 
 
                             </h4>
                             <h4><i class="fa-solid fa-envelope " style="color: #fcfcfc;"></i>: {{ photo.user.email }}
                             </h4>
-                            <h3>Gender: {{ photo.user.gender }}</h3>
                         </div>
 
                         <img src="{{ photo.photo.url }}" alt="">
