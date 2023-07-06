@@ -182,3 +182,13 @@ main {
     transition: 200ms linear;
 }
 
+#id_competitors {
+    width: 200px;
+    height: 250px;
+    padding: 10px;
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #b9d5fd;
+}

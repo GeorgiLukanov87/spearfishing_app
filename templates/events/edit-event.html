@@ -2,9 +2,10 @@
 {% block content %}
     <form action="{% url 'edit-event' pk=event.pk %}" method="post">
 
-    {{ form }}
-    {% csrf_token %}
-    <button class="button-edit-profile" type="submit">Edit  <i class="fa-solid fa-pen-to-square fa-fade fa-2xl" style="color: #2ca3ef;"></i></button>
+        {{ form }}
+        {% csrf_token %}
+        <button class="button-edit-profile" type="submit">Edit <i class="fa-solid fa-pen-to-square fa-fade fa-xl"
+                                                                  style="color: #2ca3ef;"></i></button>
     </form>
 
 {% endblock %}

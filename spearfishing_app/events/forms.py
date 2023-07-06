@@ -6,7 +6,8 @@ from spearfishing_app.events.models import Event
 class EventBaseForm(forms.ModelForm):
     class Meta:
         model = Event
-        fields = '__all__'
+        exclude = ('start_date',)
+        # fields = '__all__'
         labels = {
             'image_url': 'Image URL',
             'start_date': 'Start Date',
