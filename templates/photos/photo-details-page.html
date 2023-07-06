@@ -95,7 +95,6 @@
                         {% endif %}
 
                         <form method="post" action="{% url 'add-comment' photo.id %}">
-                            {{ photo.id }}
                             {{ comment_form.as_p }}
                             {% csrf_token %}
                             <div>

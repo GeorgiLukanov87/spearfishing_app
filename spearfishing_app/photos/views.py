@@ -1,6 +1,5 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from django.urls import reverse
 
 from spearfishing_app.common.forms import CommentForm
 from spearfishing_app.photos.forms import PhotoCreateForm, PhotoEditForm, PhotoDeleteForm

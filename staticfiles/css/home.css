@@ -363,7 +363,10 @@ body > main > div.col-9 > form {
 }
 
 .profile-image {
-    width: 50%;
-    height: 50%;
-    
+    width: 40%;
+    height: 40%;
+    border: 2px solid black;
+
+
 }
+
