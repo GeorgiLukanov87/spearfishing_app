@@ -84,8 +84,18 @@
                 {% if photos %}
                     {% for photo in photos %}
 
-                        <li class="users-photos"><img src="{{ photo.photo.url }}" alt="">
+                        <li class="users-photos"><img src="{{ photo.photo.url }}" alt="img">
+                            <div>
+                                <h3>Location: {{ photo.location }}</h3>
 
+                                <h3>Description:
+
+                                    <p>
+                                        {{ photo.description }}
+                                    </p>
+
+                                </h3>
+                            </div>
                             <div class="icons-wrapper">
                                 <div>
                                     <h4>likes: {{ photo.like_set.all.count }}</h4>
@@ -102,18 +112,23 @@
                                             <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
                                         </a>
 
-
                                     {% endif %}
 
-                                    <i class="fa-solid fa-square-share-nodes "></i>
                                 </div>
 
                                 <div>
+
+                                    <a href="{% url 'photo-details' photo.pk %}">
+                                        <i class="fa-solid fa-circle-info fa-beat fa-xl"
+                                           style="color: #09f809;"></i>
+                                    </a>
+
                                     {% if is_owner %}
                                         <a href="{% url 'delete-photo' photo.pk %}"><i
                                                 class="fa-solid fa-trash-can-arrow-up"
                                                 style="color: #960202;"></i></a>
                                     {% endif %}
+
                                 </div>
                             </div>
                         </li>

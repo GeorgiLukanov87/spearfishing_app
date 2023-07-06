@@ -18,7 +18,7 @@ def add_photo(request):
             photo = form.save(commit=False)
             photo.user = request.user
             photo.save()
-            return redirect('index')
+            return redirect('profile details', photo.user.pk)
 
     context = {
         'form': form,
@@ -72,7 +72,7 @@ def edit_photo(request, pk):
     return get_post_photo_form(
         request,
         PhotoEditForm(request.POST or None, instance=photo),
-        success_url=reverse('index'),
+        success_url=f'/photos/{photo.pk}/',
         template_path='photos/photo-edit-page.html',
         pk=pk,
     )
@@ -84,7 +84,7 @@ def delete_photo(request, pk):
     return get_post_photo_form(
         request,
         PhotoDeleteForm(request.POST or None, instance=photo),
-        success_url=reverse('index'),
+        success_url=f'/accounts/profile/{photo.user.pk}',
         template_path='photos/photo-delete-page.html',
         pk=pk,
     )
