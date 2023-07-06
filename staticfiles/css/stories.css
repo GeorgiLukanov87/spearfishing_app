@@ -23,7 +23,7 @@
     padding: 16px;
     margin: 10px;
     width: 25vw;
-    height: 40vh;
+
 }
 
 .stories-wrapper2 {
@@ -32,8 +32,7 @@
 }
 
 .stories-wrapper2 img {
-    width: 100%;
-    height: 100%;
+    width: 60%;
     box-shadow: 1px 1px 20px #2234ad;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -49,6 +48,9 @@
     font-size: 28px;
     font-weight: bold;
     color: red;
+    text-decoration: none;
+    border-bottom: 4px solid #ff0000;
+    padding-bottom: 6px;
 }
 
 .stories-wrapper2-global {
@@ -71,6 +73,7 @@
     box-shadow: 1px 1px 20px #2234ad;
     font-size: 22px;
     font-family: "Times New Roman", sans-serif;
+    text-shadow: 1px 1px 2px #807f7f;
 }
 
 .stories-wrapper {
@@ -83,6 +86,10 @@
     font-weight: bold;
     margin: 8px;
     font-family: "Candara Light", sans-serif;
+}
+
+.stories-titles div {
+    margin-bottom: 12px;
 }
 
 .stories-description {
@@ -98,5 +105,6 @@
     font-weight: bold;
     color: red;
     border-bottom: 3px solid red;
+
 
 }
