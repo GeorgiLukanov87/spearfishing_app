@@ -15,3 +15,12 @@
     text-shadow: 1px 1px 1px #020202;
     font-family: "Malgun Gothic", serif;
 }
+
+
+.weather-wrapper-global {
+    background-image: url("bg-images/9.gif");
+    background-size: 50% 200%;
+    padding: 50px;
+    border-radius: 50px;
+
+}

@@ -1,5 +1,4 @@
 import geocoder
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 from spearfishing_app.locations.forms import SearchLocationForm
@@ -24,7 +23,7 @@ def locations(request):
     lat = location.lat
     lng = location.lng
     country = location.country
-    if lat == None or lng == None:
+    if lat is None or lng is None:
         address.delete()
         return render(request, 'locations/wrong-data.html')
 
@@ -228,6 +227,8 @@ def weather(request):
             return render(request, 'locations/weather.html')
 
         weather_data = fetch_weather_and_forecast(city, api_key, current_weather_url)
+        if weather_data is None:
+            return render(request, 'locations/wrong-data1.html')
 
         context = {
             'weather_data': weather_data,
@@ -240,6 +241,8 @@ def weather(request):
 
 def fetch_weather_and_forecast(city, api_key, current_weather_url):
     response = requests.get(current_weather_url.format(city, api_key)).json()
+    if len(response) <= 2:
+        return
 
     weather_data = {
         'city': city,

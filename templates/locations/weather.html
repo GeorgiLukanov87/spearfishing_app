@@ -1,39 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <form method="post">
-        {% csrf_token %}
+    <div class="weather-wrapper-global">
 
-        <label for="city">Check the weather in:
-            <input type="text" name="city" placeholder="Enter city name...">
-        </label>
+        <form method="post">
+            {% csrf_token %}
 
-        <div>
-            <button class="button-edit-profile" type="submit">Check WEATHER</button>
-        </div>
-
-    </form>
-
-    <article id="weather-wrapper">
-        {% if weather_data %}
-            <div style="background-color: #eee7e7;display: flex;flex-direction: column;gap:8px;font-size: 22px;border:1px solid black;border-radius: 10%;width: 500px;margin: auto">
-
-            <h1>{{ weather_data.city|upper }}</h1>
-            <h2>Temp: <span style="color: #e15b07"> {{ weather_data.temperature }}°C </span></h2>
-            <h2>Wind: <span style="color: #2839e8"> {{ weather_data.wind }} km/h </span></h2>
-            <h2>{{ weather_data.description }}</h2>
-            <h2>Clouds: {{ weather_data.clouds }}%</h2>
+            <label for="city">Check the weather in:
+                <input type="text" name="city" placeholder="Enter city name...">
+            </label>
 
             <div>
-                <img style="width: 105px" src="https://openweathermap.org/img/w/{{ weather_data.icon }}.png"
-                     alt="{{ weather_data.description }}">
+                <button class="button-edit-profile" type="submit">Check WEATHER</button>
             </div>
 
-        {% else %}
-            <h1 style="font-size: 30px">No city selected: Please Enter city name!</h1>
-        {% endif %}
+        </form>
 
-        </div>
-    </article>
+        <article id="weather-wrapper">
+            {% if weather_data %}
+                <div style="background-color: #eee7e7;display: flex;flex-direction: column;gap:8px;font-size: 22px;border:1px solid black;border-radius: 10%;width: 500px;margin: auto">
+
+                <h1>{{ weather_data.city|upper }}</h1>
+                <h2>Temp: <span style="color: #e15b07"> {{ weather_data.temperature }}°C </span></h2>
+                <h2>Wind: <span style="color: #2839e8"> {{ weather_data.wind }} km/h </span></h2>
+                <h2>{{ weather_data.description }}</h2>
+                <h2>Clouds: {{ weather_data.clouds }}%</h2>
+
+                <div>
+                    <img style="width: 105px" src="https://openweathermap.org/img/w/{{ weather_data.icon }}.png"
+                         alt="{{ weather_data.description }}">
+                </div>
+
+            {% else %}
+                <h1 style="font-size: 30px">No city selected: Please Enter city name!</h1>
+            {% endif %}
+
+            </div>
+        </article>
+    </div>
 
 {% endblock %}
