@@ -9,11 +9,6 @@
 
                     <div class="equipment-containers">
 
-                        <h2>Gun's details:</h2>
-                        <h3>Gun Brand: {{ request.user.equipment.gun_model }}</h3>
-                        <h3>Gun Material: {{ request.user.equipment.gun_material }}</h3>
-                        <h3>Gun Length: {{ request.user.equipment.gun_length }}</h3>
-
                         <div>
                             {% if request.user.equipment.gun_image %}
                                 <img src="{{ request.user.equipment.gun_image }}" alt="gun img">
@@ -21,13 +16,15 @@
                                 <img src="{% static 'images/no-image-available.jpg' %}" alt="gun img">
                             {% endif %}
                         </div>
+
+                        <h4>Gun Brand: {{ request.user.equipment.gun_model }}</h4>
+                        <h4>Gun Material: {{ request.user.equipment.gun_material }}</h4>
+                        <h4>Gun Length: {{ request.user.equipment.gun_length }}</h4>
+
+
                     </div>
 
                     <div class="equipment-containers">
-                        <h2>Band's details:</h2>
-                        <h3>Gun Bands: {{ request.user.equipment.bands }}</h3>
-                        <h3>Gun Bands brand: {{ request.user.equipment.bands_brand }}</h3>
-
                         <div>
                             {% if request.user.equipment.bands_image %}
                                 <img src="{{ request.user.equipment.bands_image }}" alt="bands img">
@@ -35,12 +32,15 @@
                                 <img src="{% static 'images/no-image-available.jpg' %}" alt="gun img">
                             {% endif %}
                         </div>
+
+                        <h4>Gun Bands: {{ request.user.equipment.bands }}</h4>
+                        <h4>Gun Bands brand: {{ request.user.equipment.bands_brand }}</h4>
+
+
                     </div>
 
-                    <div class="equipment-containers">
-                        <h3>Fins brand: {{ request.user.equipment.fins_model }}</h3>
-                        <h3>Fins Material: {{ request.user.equipment.fins_material }}</h3>
 
+                    <div class="equipment-containers">
                         <div>
                             {% if request.user.equipment.fins_image %}
                                 <img src="{{ request.user.equipment.fins_image }}" alt="fins img">
@@ -48,13 +48,23 @@
                                 <img src="{% static 'images/no-image-available.jpg' %}" alt="gun img">
                             {% endif %}
                         </div>
+                        <h4>Fins brand: {{ request.user.equipment.fins_model }}</h4>
+                        <h4>Fins Material: {{ request.user.equipment.fins_material }}</h4>
                     </div>
 
+
+
                     {% if request.user.equipment.additional_info %}
-                        <h2>Additional information:
-                            {{ request.user.equipment.additional_info }}
-                        </h2>
+                        <div class="equipment-containers">
+                            <h4>Additional information:
+
+                                <p>
+                                    {{ request.user.equipment.additional_info }}
+                                </p>
+                            </h4>
+                        </div>
                     {% endif %}
+
                 </div>
             </div>
         {% else %}
@@ -71,7 +81,6 @@
                 </div>
             {% else %}
                 <div>
-
                     <img class="profile-image"
                          src="{% static 'images/blank-avatar-profile-picture-vector-45161169.jpg' %}"
                          alt="profile picture">
@@ -79,8 +88,8 @@
             {% endif %}
 
             {% if object.get_full_name %}
-                <h1>Full Name: {{ object.get_full_name }}</h1>
-                <h1>Username: {{ object.username }}</h1>
+                <h2>Full Name: {{ object.get_full_name }}</h2>
+                <h2>Username: {{ object.username }}</h2>
             {% else %}
                 <h1>Username: {{ object.username }}, pk= {{ request.user.pk }}</h1>
 

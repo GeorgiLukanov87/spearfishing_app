@@ -6,7 +6,7 @@
         <div class="sure-buttons">
             <form action="{% url 'profile delete' pk=object.pk %}" method="post">
                 <h2>
-                    Are you sure you want to delete your profile?
+                    Are you sure you want to delete profile?
                 </h2>
                 {% csrf_token %}
                 <button class="button-edit-profile" style="color: red;font-size: 22px;width: 100px">Yes</button>

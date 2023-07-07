@@ -33,9 +33,9 @@ body {
 
 .logo img {
     border: 1px solid black;
-    border-radius: 60px;
+
     margin: 8px 12px;
-    padding: 16px;
+
     box-shadow: 1px 1px 20px 1px #000000;
     background-color: white;
     position: relative;
@@ -180,7 +180,7 @@ header {
 .nav-group a:hover {
     color: red;
     background-image: url("bg-images/4.gif");
-    background-size: cover;
+    background-size: 100% 112%;
     transition: linear 125ms;
     z-index: 100;
     position: relative;
@@ -234,7 +234,6 @@ img:hover {
     padding-left: 10px;
     margin: 8px;
     border: 2px solid black;
-    border-radius: 18px;
     background-color: #257685;
 }
 
@@ -341,15 +340,26 @@ i:hover {
 }
 
 .comment-container li {
-    background-color: #adabab;
-    width: 250px;
-    height: 150px;
+    background-color: #dad7d7;
+    width: 450px;
+    height: 250px;
     margin: 4px auto;
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 14px;
-    padding: 8px;
+    gap: 12px;
+    padding: 18px;
+    overflow: auto;
+    font-family: Roboto, cursive, sans-serif;
+
+}
+
+.comment-container li:hover {
+    background-image: url("bg-images/bubles-floating.gif");
+    background-size: 9cm;
+
+    font-size: 22px;
+
 
 }
 
