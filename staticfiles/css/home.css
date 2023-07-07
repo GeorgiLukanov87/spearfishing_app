@@ -357,8 +357,7 @@ i:hover {
 .comment-container li:hover {
     background-image: url("bg-images/bubles-floating.gif");
     background-size: 9cm;
-
-    font-size: 22px;
+    font-size: 20px;
 
 
 }
