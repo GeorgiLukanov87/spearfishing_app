@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <form action="{% url 'create-story' %}" method="post">
-        <h1>Create story</h1>
+    <div class="create-story-bg">
 
-        {{ form.as_p }}
-        {% csrf_token %}
+        <form action="{% url 'create-story' %}" method="post">
+            <h1>Create story</h1>
 
-        <div>
-            <button type="submit" class="button-edit-profile">Create New Story</button>
-        </div>
-    </form>
+            {{ form.as_p }}
+            {% csrf_token %}
 
+            <div>
+                <button type="submit" class="button-edit-profile">Create New Story</button>
+            </div>
+        </form>
+
+    </div>
 {% endblock %}

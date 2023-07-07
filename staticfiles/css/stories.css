@@ -120,3 +120,24 @@
 .gif-story1 {
     margin-bottom: 30px;
 }
+
+.gif-story2:hover {
+    padding: 75px 50px;
+    background-image: url("bg-images/bg3.gif");
+    background-size: cover;
+    transition: 300ms linear;
+    font-weight: bold;
+    border: 3px solid #000000;
+    border-radius: 100%;
+
+}
+
+.create-story-bg {
+    background-image: url("bg-images/underwater-ship.jpg");
+    border-radius: 50%;
+    background-size: 100% 100%;
+    border: 1px solid black;
+    box-shadow: 0 0 20px 10px #444242;
+
+
+}

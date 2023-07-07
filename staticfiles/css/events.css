@@ -107,11 +107,12 @@ h1 {
 main {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
-    margin: 4.75%;
+    margin-bottom: 6.1%;
+
 }
 
 .event-container img {
