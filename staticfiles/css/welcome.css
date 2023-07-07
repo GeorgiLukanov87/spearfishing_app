@@ -1,0 +1,16 @@
+.welcome-msg {
+    font-family: Roboto, cursive;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px #625d5d;
+}
+
+.welcome-title, .p-and-l {
+    color: red;
+}
+
+.welcome-title:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px #f1f1f1;
+
+}

@@ -1,0 +1,8 @@
+.add-photo-wrapper {
+    background-image: url("bg-images/divers-photos.jpg");
+    background-size: 100% 100%;
+    border-radius: 20%;
+    border: 3px solid black;
+
+
+}

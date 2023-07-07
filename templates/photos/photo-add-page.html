@@ -2,15 +2,20 @@
 {% block content %}
 
     <main>
-        <div class="edit-delete edit-photo">
-            <form class="add-photo-form" method="post" enctype="multipart/form-data">
-                <h2>Add photo</h2>
 
-                {{ form.as_p }}
-                {% csrf_token %}
+        <div class="add-photo-wrapper">
 
-                <button class="button-edit-profile" type="submit">Add Photo</button>
-            </form>
+            <div class="edit-delete edit-photo">
+                <form class="add-photo-form" method="post" enctype="multipart/form-data">
+                    <h2>Add photo</h2>
+
+                    {{ form.as_p }}
+                    {% csrf_token %}
+
+                    <button class="button-edit-profile" type="submit">Add Photo</button>
+                </form>
+            </div>
+
         </div>
 
     </main>
