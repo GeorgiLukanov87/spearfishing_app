@@ -11,11 +11,13 @@ UserModel = get_user_model()
 
 # lukanov2 : gogo$12345$newpass
 
+
 class SignInView(auth_views.LoginView):
     template_name = 'accounts/login-page.html'
     success_url = reverse_lazy('index')
 
 
+# Old version,sometimes giving error: "user has no clas _meta"
 # class SingInView(generic.CreateView):
 #     template_name = 'accounts/register-page.html'
 #     form_class = UserCreateForm
@@ -42,6 +44,7 @@ class SingInView(generic.CreateView):
     form_class = UserCreateForm
     success_url = reverse_lazy('index')
 
+    # When new user is created,auto-login
     def form_valid(self, form):
         response = super().form_valid(form)
         user = form.save()
