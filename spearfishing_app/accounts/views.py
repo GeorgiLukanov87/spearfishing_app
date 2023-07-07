@@ -16,15 +16,36 @@ class SignInView(auth_views.LoginView):
     success_url = reverse_lazy('index')
 
 
+# class SingInView(generic.CreateView):
+#     template_name = 'accounts/register-page.html'
+#     form_class = UserCreateForm
+#     success_url = reverse_lazy('index')
+#
+#     # when new user is created,auto-login
+#     # def post(self, request, *args, **kwargs):
+#     #     response = super().post(request, *args, **kwargs)
+#     #     login(request, self.object)
+#     #     return response
+#
+#     def post(self, request, *args, **kwargs):
+#         form = self.get_form()
+#         if form.is_valid():
+#             user = form.save()
+#             login(request, user)
+#             return self.form_valid(form)
+#         else:
+#             return self.form_invalid(form)
+
+# CHAT GPT HELP !
 class SingInView(generic.CreateView):
     template_name = 'accounts/register-page.html'
     form_class = UserCreateForm
     success_url = reverse_lazy('index')
 
-    # when new user is created,auto-login
-    def post(self, request, *args, **kwargs):
-        response = super().post(request, *args, **kwargs)
-        login(request, self.object)
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        user = form.save()
+        login(self.request, user)
         return response
 
 

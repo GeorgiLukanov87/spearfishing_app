@@ -1,23 +1,29 @@
 from spearfishing_app.accounts.models import AppUser
-
 from django.core.exceptions import ValidationError
+from django.contrib.auth import get_user_model
+from django.test import RequestFactory
 from django.test import TestCase
+from django.urls import reverse, resolve
+from spearfishing_app.accounts.views import SingInView, SignInView, SignOutView, UserDetailsView, UserEditView, \
+    UserDeleteView, to_github
+
+UserModel = get_user_model()
 
 
 class AppUserModelTests(TestCase):
     def test_last_name_min_length(self):
         with self.assertRaises(ValidationError):
-            user = AppUser(last_name='D')
+            user = UserModel(last_name='D')
             user.full_clean()
 
     def test_last_name_max_length(self):
         with self.assertRaises(ValidationError):
-            user = AppUser(last_name='L' * (AppUser.LAST_NAME_MAX_LEN + 1))
+            user = UserModel(last_name='L' * (UserModel.LAST_NAME_MAX_LEN + 1))
             user.full_clean()
 
     def test_last_name_only_letters(self):
         with self.assertRaises(ValidationError):
-            user = AppUser(last_name='Doe123')
+            user = UserModel(last_name='Doe123')
             user.full_clean()
 
     def test_email_unique(self):
@@ -40,25 +46,6 @@ class AppUserModelTests(TestCase):
         with self.assertRaises(ValidationError):
             user = AppUser(gender='invalid')
             user.full_clean()
-
-
-from django.contrib.auth import get_user_model
-from django.contrib.auth.models import AnonymousUser
-from django.test import TestCase, RequestFactory
-from django.urls import reverse
-
-from spearfishing_app.accounts.forms import UserCreateForm
-from spearfishing_app.accounts.views import (
-    SingInView,
-    SignInView,
-    SignOutView,
-    UserDetailsView,
-    UserEditView,
-    UserDeleteView,
-    to_github,
-)
-
-UserModel = get_user_model()
 
 
 class AccountsViewTests(TestCase):
@@ -84,8 +71,7 @@ class AccountsViewTests(TestCase):
         }
         response = self.client.post(url, data=data, follow=True)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'index.html')
-        self.assertTrue(response.context['user'].is_authenticated)
+        self.assertTemplateUsed(response, 'common/home-page.html')
 
     def test_sing_in_view_invalid_form(self):
         url = reverse('register')
@@ -93,6 +79,7 @@ class AccountsViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'accounts/register-page.html')
         self.assertFormError(response, 'form', 'username', 'This field is required.')
+        self.assertFalse(response.context['user'].is_authenticated)
 
     def test_sign_in_view(self):
         url = reverse('login')
@@ -104,7 +91,7 @@ class AccountsViewTests(TestCase):
         url = reverse('logout')
         response = self.client.get(url, follow=True)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'index.html')
+        self.assertTemplateUsed(response, 'common/home-page.html')
         self.assertFalse(response.context['user'].is_authenticated)
 
     def test_user_details_view(self):
@@ -130,3 +117,33 @@ class AccountsViewTests(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, 'https://github.com/GeorgiLukanov87')
+
+
+class UrlsTestCase(TestCase):
+    def test_register_url_resolves(self):
+        url = reverse('register')
+        self.assertEqual(resolve(url).func.view_class, SingInView)
+
+    def test_login_url_resolves(self):
+        url = reverse('login')
+        self.assertEqual(resolve(url).func.view_class, SignInView)
+
+    def test_logout_url_resolves(self):
+        url = reverse('logout')
+        self.assertEqual(resolve(url).func.view_class, SignOutView)
+
+    def test_profile_details_url_resolves(self):
+        url = reverse('profile details', args=[1])  # Replace 1 with the appropriate user ID
+        self.assertEqual(resolve(url).func.view_class, UserDetailsView)
+
+    def test_profile_edit_url_resolves(self):
+        url = reverse('profile edit', args=[1])  # Replace 1 with the appropriate user ID
+        self.assertEqual(resolve(url).func.view_class, UserEditView)
+
+    def test_profile_delete_url_resolves(self):
+        url = reverse('profile delete', args=[1])  # Replace 1 with the appropriate user ID
+        self.assertEqual(resolve(url).func.view_class, UserDeleteView)
+
+    def test_to_github_url_resolves(self):
+        url = reverse('go to github')
+        self.assertEqual(resolve(url).func, to_github)
