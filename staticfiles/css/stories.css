@@ -106,5 +106,17 @@
     color: red;
     border-bottom: 3px solid red;
 
+}
 
+.gif-story1:hover {
+    padding: 100px 115px;
+    background-image: url("bg-images/bg1.gif");
+    color: red;
+    font-weight: bold;
+    border: 3px solid black;
+
+}
+
+.gif-story1 {
+    margin-bottom: 30px;
 }

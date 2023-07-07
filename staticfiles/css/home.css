@@ -183,10 +183,10 @@ header {
     transition: linear 125ms;
     z-index: 100;
     position: relative;
-    padding-bottom: 55px;
-    padding-top: 55px;
+    padding-bottom: 57px;
+    padding-top: 65px;
     border-bottom: 5px solid red;
-    border-top: 5px solid red;
+
 
 }
 
@@ -435,3 +435,8 @@ body > main > div.col-9 > form {
 
 }
 
+.bg-about {
+    background-image: url("bg-images/bg3.gif");
+
+
+}
