@@ -6,6 +6,7 @@
 }
 
 body {
+
     font-family: "Helvetica Neue", sans-serif;
     min-height: 100vh;
     background: rgb(255, 255, 255);
@@ -432,11 +433,4 @@ body > main > div.col-9 > form {
     width: 40%;
     height: 40%;
     border: 2px solid black;
-
-}
-
-.bg-about {
-    background-image: url("bg-images/bg3.gif");
-
-
 }
