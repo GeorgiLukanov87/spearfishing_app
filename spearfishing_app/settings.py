@@ -121,6 +121,7 @@ AUTH_USER_MODEL = 'accounts.AppUser'
 
 LOGIN_REDIRECT_URL = reverse_lazy('index')
 
+LOGOUT_REDIRECT_URL = reverse_lazy('index')
 # to save and reach uploaded media-files.
 MEDIA_URL = '/media/'
 
