@@ -6,7 +6,8 @@ from spearfishing_app.stories.models import Story
 class StoryBaseForm(forms.ModelForm):
     class Meta:
         model = Story
-        fields = "__all__"
+        # fields = "__all__"
+        exclude = ('creator',)
 
         labels = {
             'title': '',

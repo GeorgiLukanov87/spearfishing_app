@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from spearfishing_app.stories.forms import StoryBaseForm, StoryEditForm
+from spearfishing_app.stories.forms import StoryBaseForm, StoryEditForm, StoryCreateForm
 from spearfishing_app.stories.models import Story
 
 UserModel = get_user_model()
@@ -13,8 +13,14 @@ UserModel = get_user_model()
 
 class StoryCreateCBV(generic.CreateView):
     template_name = 'stories/create-story.html'
-    form_class = StoryBaseForm
+    form_class = StoryCreateForm
     success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.creator = self.request.user
+        self.object.save()
+        return super().form_valid(form)
 
 
 class StoryListCBV(generic.ListView):
