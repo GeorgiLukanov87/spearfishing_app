@@ -136,8 +136,9 @@ main {
     border: 2px solid black;
     border-radius: 22px;
     margin: 20px auto;
-    width: 150px;
-    padding: 10px;
+    width: 200px;
+    height: 75px;
+    padding: 12px;
     background-color: #b9d5fd;
     box-shadow: 1px 1px 15px #363535;
 
@@ -152,10 +153,20 @@ main {
 
 .competitors a:hover {
     color: red;
-    background-color: black;
-    padding: 6px;
+    text-decoration: underline;
     transition: 200ms linear;
     border-radius: 8px;
+}
+
+.competitors-li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.competitors:hover {
+    background-color: #f3efef;
+    color: red;
 }
 
 .gift-a {
@@ -219,4 +230,10 @@ main {
     background-color: #b9d5fd;
     display: flex;
 
+}
+
+.competitors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

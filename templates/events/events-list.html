@@ -57,9 +57,14 @@
                         {% for competitor in event.competitors.all %}
                             <div class="competitors">
                                 <ul style="list-style: none">
-                                    <li>- <a style="text-decoration: none"
-                                             href="{% url 'profile details' pk=competitor.pk %}"> {{ competitor }}</a>
+
+                                    <li class="competitors-li">
+                                        <a style="text-decoration: none"
+                                           href="{% url 'profile details' pk=competitor.pk %}">
+                                            <div>{{ forloop.counter }}: {{ competitor }}</div>
+                                        </a>
                                     </li>
+
                                 </ul>
                             </div>
                         {% endfor %}
