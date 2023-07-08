@@ -14,7 +14,7 @@ UserModel = get_user_model()
 class StoryCreateCBV(generic.CreateView):
     template_name = 'stories/create-story.html'
     form_class = StoryCreateForm
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('all-stories')
 
     def form_valid(self, form):
         self.object = form.save(commit=False)

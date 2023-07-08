@@ -43,5 +43,5 @@ class Story(models.Model):
 
     creator = models.ForeignKey(
         UserModel,
-        on_delete=models.PROTECT
+        on_delete=models.CASCADE,
     )

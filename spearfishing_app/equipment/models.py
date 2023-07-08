@@ -145,6 +145,6 @@ class Equipment(models.Model):
 
     owner = models.OneToOneField(
         UserModel,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         primary_key=True,
     )
