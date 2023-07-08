@@ -71,7 +71,7 @@ class AccountsViewTests(TestCase):
         }
         response = self.client.post(url, data=data, follow=True)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'common/home-page.html')
+        self.assertTemplateUsed(response, 'accounts/register-page.html')
 
     def test_sing_in_view_invalid_form(self):
         url = reverse('register')
