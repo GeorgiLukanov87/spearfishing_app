@@ -6,7 +6,8 @@ from spearfishing_app.equipment.models import Equipment
 class EquipmentBaseForm(forms.ModelForm):
     class Meta:
         model = Equipment
-        fields = '__all__'
+        # fields = '__all__'
+        exclude = ('owner',)
 
 
 class EquipmentAddForm(EquipmentBaseForm):

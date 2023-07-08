@@ -9,7 +9,9 @@ def add_equipment(request):
     else:
         form = EquipmentAddForm(request.POST)
         if form.is_valid():
-            form.save()
+            equipment = form.save(commit=False)
+            equipment.owner = request.user
+            equipment.save()
             return redirect('index')
 
     context = {'form': form, }
