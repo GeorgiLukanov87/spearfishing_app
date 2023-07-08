@@ -35,13 +35,18 @@
 .del-comment {
     color: red;
     position: relative;
-    left: 166px;
-    top: -75px;
+    left: 174px;
+    top: -67px;
     text-decoration: none;
     display: inline-block;
     border: 1px solid #000000;
     padding: 6px;
-    background-color: #3d3b3b;
+    background-color: #000000;
     font-size: 16px;
+    border-top-left-radius: 6px;
+}
+
+.del-comment:hover {
+    opacity: 0.8;
 }
 
