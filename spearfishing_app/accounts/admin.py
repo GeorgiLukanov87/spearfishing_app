@@ -28,7 +28,8 @@ class UserAdmin(auth_admin.UserAdmin):
                     'first_name',
                     'last_name',
                     'email',
-                    'gender'
+                    'gender',
+                    'profile_image_url',
                 ),
             },
         ),
