@@ -31,3 +31,17 @@
     color: #00bb10;
     font-size: 16px;
 }
+
+.del-comment {
+    color: red;
+    position: relative;
+    left: 166px;
+    top: -75px;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #000000;
+    padding: 6px;
+    background-color: #3d3b3b;
+    font-size: 16px;
+}
+

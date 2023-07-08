@@ -93,6 +93,19 @@
                                                     {{ comment.date_time_of_publication }}
                                                 </h6>
                                             </li>
+
+                                            {% if request.user.is_staff %}
+                                                <a style="text-decoration: none"
+                                                   href="{% url 'delete-comment' photo.pk comment.pk %}">
+                                                    <div class="comment-del-wrapper">
+                                                        <h2 class="del-comment"><i
+                                                                class="fa-solid fa-trash-can-arrow-up fa-flip fa-sm"
+                                                                style="color: #ff0000;"></i> comment
+                                                        </h2>
+                                                    </div>
+                                                </a>
+                                            {% endif %}
+
                                         {% endfor %}
                                     </ul>
                                 {% endif %}

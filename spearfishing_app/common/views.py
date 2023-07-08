@@ -1,12 +1,13 @@
 import pyperclip
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.views import generic
 
 from spearfishing_app.common.forms import CommentForm, SearchForm
-from spearfishing_app.common.models import Like
+from spearfishing_app.common.models import Like, Comment
 from spearfishing_app.photos.models import Photo
 
 UserModel = get_user_model()
@@ -80,6 +81,14 @@ def add_comment(request, photo_id):
         return redirect(request.META['HTTP_REFERER'] + f'#{photo_id}')
     else:
         return redirect('index')
+
+
+@login_required()
+def delete_comment(request, photo_id, comment_pk):
+    photo = get_object_or_404(Photo, pk=photo_id)
+    comment = Comment.objects.filter(to_photo=photo, pk=comment_pk)
+    comment.delete()
+    return redirect(request.META['HTTP_REFERER'] + f'#{photo_id}')
 
 
 @login_required
