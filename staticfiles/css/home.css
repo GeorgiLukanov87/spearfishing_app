@@ -363,7 +363,7 @@ i:hover {
 }
 
 .comment-container li:hover {
-    font-size: 20px;
+    background-color: #ffffff;
 }
 
 .comment-container li a {

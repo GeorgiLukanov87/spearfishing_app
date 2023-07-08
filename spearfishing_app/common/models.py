@@ -7,7 +7,7 @@ UserModel = get_user_model()
 
 
 class Comment(models.Model):
-    COMMENT_TEXT_MAX_LEN = 300
+    COMMENT_TEXT_MAX_LEN = 1500
     text = models.CharField(
         max_length=COMMENT_TEXT_MAX_LEN,
         null=False,
