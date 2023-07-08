@@ -78,13 +78,14 @@
                 <h2>Full Name: {{ object.get_full_name }}</h2>
                 <h2>Username: {{ object.username }}</h2>
             {% else %}
-                <h1>Username: {{ object.username }}, pk= {{ request.user.pk }}</h1>
+                <h1> Username: {{ object.username }}, pk= {{ request.user.pk }}</h1>
 
             {% endif %}
             <h4>Email: {{ object.email }}</h4>
             {% if object.gender %}
                 <h4>Gender: {{ object.gender }}</h4>
             {% endif %}
+
             <p>
                 {% if is_owner %}
                     <a class="button-edit-profile" href="{% url 'profile edit' pk=object.pk %}"> Edit profile <i
@@ -95,6 +96,7 @@
                             class="fa-solid fa-trash fa-fade" style="color: #ff0000;"></i></a>
                 {% endif %}
             </p>
+
         </div>
 
         <br>

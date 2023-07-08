@@ -175,9 +175,6 @@ header {
     align-items: center;
 }
 
-.nav-item {
-
-}
 
 .nav-group a:hover {
     color: red;
@@ -190,9 +187,7 @@ header {
     padding-top: 65px;
     border-bottom: 5px solid red;
 
-
 }
-
 
 .nav-links {
     font-size: 18px;
@@ -317,6 +312,16 @@ img:hover {
     padding: 10px;
     margin: 20px auto auto;
     width: 60%;
+    background-color: #88bff6;
+    font-family: "Palatino Linotype", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+div.profile-details-wrapper > h4:nth-child(6) {
+    border-bottom: 3px dotted black;
+    padding-bottom: 14px;
+
 }
 
 .button-login {
@@ -358,11 +363,7 @@ i:hover {
 }
 
 .comment-container li:hover {
-    background-image: url("bg-images/bubles-floating.gif");
-    background-size: 9cm;
     font-size: 20px;
-
-
 }
 
 .comment-container li a {

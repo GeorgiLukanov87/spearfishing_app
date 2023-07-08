@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    border: #04eaea solid 3px;
+    border: #3d3c3c solid 2px;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 1px 1px 20px #0a0a0a;
@@ -36,6 +36,10 @@
     padding: 12px;
     background-color: #ced0d2;
     border-radius: 20px;
+    width: 50%;
+    margin: 30px auto;
+    font-size: 34px;
+
 }
 
 .event-container {
@@ -164,14 +168,15 @@ main {
 .event-details-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 33px;
+    justify-content: space-around;
 }
 
 .event-details-wrapper1 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 6px;
 }
 
 
@@ -185,7 +190,7 @@ main {
 
 .event-wrapper a {
     border: 1px solid black;
-    padding: 20px;
+    padding: 14px;
     border-radius: 14px;
     color: white;
     text-decoration: none;
@@ -193,6 +198,7 @@ main {
     font-weight: bold;
     text-shadow: 1px 1px 1px black;
     font-size: 20px;
+
 }
 
 .event-wrapper a:hover {
