@@ -36,10 +36,8 @@
             <ul class="users-list-ul" style="list-style: none">
                 {% for user in object_list %}
 
-
-
                     <li class="users-list-li">
-                        <a href="{% url 'profile details' user.pk %}">
+                        <a target="_blank" href="{% url 'profile details' user.pk %}">
                             <h3>Status:
                                 {% if user.is_superuser %}
                                     {{ user.username }} : superuser

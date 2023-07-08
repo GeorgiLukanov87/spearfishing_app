@@ -31,7 +31,16 @@ form input {
     border-radius: 6px;
 }
 
-.login-register-box ul li {
+.helptext {
     display: none;
+}
 
+body > main > div > div.login-register-box > form > ul {
+    display: none;
+    text-decoration: none;
+}
+
+body > main > div > div.login-register-box > form > ul.errorlist {
+    display: block;
+    color: red;
 }

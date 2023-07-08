@@ -6,7 +6,6 @@
         {% if request.user.equipment %}
             <div class="equipment-wrapper">
                 <div class="equipment">
-
                     <div class="equipment-containers">
 
                         <div>
@@ -20,8 +19,6 @@
                         <h4>Gun Brand: {{ request.user.equipment.gun_model }}</h4>
                         <h4>Gun Material: {{ request.user.equipment.gun_material }}</h4>
                         <h4>Gun Length: {{ request.user.equipment.gun_length }}</h4>
-
-
                     </div>
 
                     <div class="equipment-containers">
@@ -36,9 +33,7 @@
                         <h4>Gun Bands: {{ request.user.equipment.bands }}</h4>
                         <h4>Gun Bands brand: {{ request.user.equipment.bands_brand }}</h4>
 
-
                     </div>
-
 
                     <div class="equipment-containers">
                         <div>
@@ -51,9 +46,9 @@
                         <h4>Fins brand: {{ request.user.equipment.fins_model }}</h4>
                         <h4>Fins Material: {{ request.user.equipment.fins_material }}</h4>
                     </div>
-
                 </div>
             </div>
+
         {% else %}
             <h1>No equipment added yet!</h1>
         {% endif %}
@@ -73,14 +68,20 @@
                 </div>
             {% endif %}
 
+            <h4>Likes: {{ object.like_set.all.count }}</h4>
+            <h4>Photos: {{ object.photo_set.all.count }}</h4>
+            <h4>Comments: {{ object.comment_set.all.count }}</h4>
+            <h4>Stories: {{ object.story_set.all.count }}</h4>
+
             {% if object.get_full_name %}
                 <h2>Full Name: {{ object.get_full_name }}</h2>
                 <h2>Username: {{ object.username }}</h2>
             {% else %}
                 <h1> Username: {{ object.username }}, pk= {{ request.user.pk }}</h1>
-
             {% endif %}
+
             <h4>Email: {{ object.email }}</h4>
+
             {% if object.gender %}
                 <h4>Gender: {{ object.gender }}</h4>
             {% endif %}
@@ -95,19 +96,14 @@
                             class="fa-solid fa-trash fa-fade" style="color: #ff0000;"></i></a>
                 {% endif %}
             </p>
-
         </div>
-
         <br>
-
-
         <div class="photo-wrapper">
-
             <ul>
                 {% if photos %}
                     {% for photo in photos %}
-
                         <li class="users-photos">
+
                             <div class="comment-description">
                                 <h3><span class="location-comment">Location</span>: {{ photo.location }}</h3>
                                 <h3><span class="description-comment">Description</span>:
@@ -118,8 +114,6 @@
                             </div>
 
                             <img src="{{ photo.photo.url }}" alt="img">
-
-
                             <div class="icons-wrapper">
                                 <div>
                                     {% if not photo.like_set.all.count %}
@@ -127,7 +121,6 @@
                                         <a href="{% url 'like' photo.id %}">
                                             <i class="fa-solid fa-heart" style="color: #fdfdfd;"></i>
                                         </a>
-
 
                                     {% else %}
 
@@ -163,10 +156,7 @@
                 {% endif %}
             </ul>
         </div>
-
         <br>
-
-
         {# PAGINATOR #}
         <div class="pagination">
                 <span class="step-links">
@@ -188,8 +178,5 @@
         </div>
         {# END PAGINATOR #}
     </div>
-
-
-
 
 {% endblock %}

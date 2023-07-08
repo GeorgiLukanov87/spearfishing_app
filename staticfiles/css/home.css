@@ -343,9 +343,6 @@ i:hover {
     transition: 300ms;
 }
 
-.helptext {
-    display: none;
-}
 
 .comment-container li {
     background-color: #dad7d7;
