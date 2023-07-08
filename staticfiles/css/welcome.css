@@ -1,12 +1,14 @@
 .welcome-msg {
-    font-family: Roboto, cursive;
-    font-size: 18px;
+    font-family: "Palatino Linotype", sans-serif;
+    font-size: 20px;
     letter-spacing: 1px;
     text-shadow: 1px 1px 4px #625d5d;
+    line-height: 1.27;
 }
 
 .welcome-title, .p-and-l {
     color: red;
+
 }
 
 .welcome-title:hover {
@@ -14,3 +16,14 @@
     text-shadow: 0 0 5px #f1f1f1;
 
 }
+
+.p-and-l {
+    font-size: 32px;
+
+}
+
+.sp-and-d, .sp-and-d {
+    font-size: 32px;
+    color: blue;
+}
+
