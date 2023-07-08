@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div class="wrong-datas">
+        <div style="border: 3px solid red;width: 800px;margin: auto;padding: 10px;border-radius: 8px">
 
-    <div style="border: 3px solid red;width: 800px;margin: auto;padding: 10px;border-radius: 8px">
+            <h1><i class="fa-solid fa-circle-xmark fa-fade fa-2xl" style="color: #f50000;"></i>
+                Your address input is invalid!
+                <i class="fa-solid fa-circle-xmark fa-fade fa-2xl" style="color: #f50000;"></i></h1>
 
-        <h1><i class="fa-solid fa-circle-xmark fa-fade fa-2xl" style="color: #f50000;"></i>
-            Your address input is invalid!
-            <i class="fa-solid fa-circle-xmark fa-fade fa-2xl" style="color: #f50000;"></i></h1>
-        
-        <h1>Please,Click <a href="{% url 'locations' %}">HERE</a> to try again!
+            <h1>Please,Click <a href="{% url 'locations' %}">HERE</a> to try again!
 
-        </h1>
-
+            </h1>
+        </div>
     </div>
 {% endblock %}

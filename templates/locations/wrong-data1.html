@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <div style="border: 3px solid red;width: 800px;margin: auto;padding: 10px;border-radius: 8px">
+    <div class="wrong-datas">
 
-        <h1><i class="fa-solid fa-circle-xmark fa-fade fa-xl" style="color: #f50000;"></i>
-            Your input is invalid!
-            <i class="fa-solid fa-circle-xmark fa-fade fa-xl" style="color: #f50000;"></i></h1>
+        <div style="border: 3px solid red;width: 800px;margin: auto;padding: 10px;border-radius: 8px">
 
-        <h1>Click <a href="{% url 'weather' %}">HERE</a> to try again!
+            <h1><i class="fa-solid fa-circle-xmark fa-fade fa-xl" style="color: #f50000;"></i>
+                Your input is invalid!
+                <i class="fa-solid fa-circle-xmark fa-fade fa-xl" style="color: #f50000;"></i></h1>
 
-        </h1>
+            <h1>Click <a href="{% url 'weather' %}">HERE</a> to try again!
+
+            </h1>
+        </div>
 
     </div>
 {% endblock %}
