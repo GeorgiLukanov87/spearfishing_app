@@ -49,7 +49,7 @@ class StoryEditCBV(generic.UpdateView):
 class StoryDeleteCBV(generic.DeleteView):
     template_name = 'stories/delete-story.html'
     model = Story
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('all-stories')
 
 
 class StoryDetailsCBV(generic.DetailView):
