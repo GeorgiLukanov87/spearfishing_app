@@ -10,6 +10,21 @@
 
         <label for="password">Password</label>
         {{ form.password|placeholder:'Add password...' }}
+        <div id="toggleButtonForPasswordLoginPage">
+            <p>
+                <input type="checkbox" onclick="togglePass()">
+            </p>
+
+            <div id="toggle-show">
+                show
+            </div>
+
+            <div id="toggle-hide">
+                hide
+            </div>
+
+
+        </div>
 
         {% csrf_token %}
         <button class="button-login" type="submit">Log in</button>
@@ -18,5 +33,24 @@
     <div class="second-option">
         <p>Don't have account? <a href="{% url 'register' %}">Register</a></p>
     </div>
+
+    <script>
+        function togglePass() {
+            const toggleShowElement = document.getElementById('toggle-show');
+            const toggleHideElement = document.getElementById('toggle-hide');
+            const x = document.getElementById("id_password");
+
+            if (x.type === "password") {
+                x.type = "text";
+                toggleShowElement.style.display = 'none'
+                toggleHideElement.style.display = 'block'
+            } else {
+                x.type = "password";
+                toggleShowElement.style.display = 'block'
+                toggleHideElement.style.display = 'none'
+            }
+        }
+
+    </script>
 
 {% endblock %}

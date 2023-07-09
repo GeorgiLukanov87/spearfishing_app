@@ -44,3 +44,13 @@ body > main > div > div.login-register-box > form > ul.errorlist {
     display: block;
     color: red;
 }
+
+#toggle-hide {
+    display: none;
+}
+
+#toggleButtonForPasswordLoginPage {
+    position: relative;
+    right: -125px;
+    top: -5px;
+}
