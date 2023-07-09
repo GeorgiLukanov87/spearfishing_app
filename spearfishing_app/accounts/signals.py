@@ -19,7 +19,7 @@ def send_email_on_successful_sign_up(instance, created, **kwargs):
     })
 
     send_mail(
-        subject='Welcome to Petstagram!',
+        subject='Welcome to Spearfishing-4-Life Brotherhood! :) Enjoy!',
         message=strip_tags(email_content),
         html_message=email_content,
         from_email=settings.DEFAULT_FROM_EMAIL,
