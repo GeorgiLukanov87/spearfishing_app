@@ -22,4 +22,4 @@ urlpatterns = (
 )
 
 # need to add this to work with signals->
-# from .signals import *
+from .signals import *
