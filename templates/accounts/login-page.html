@@ -11,17 +11,15 @@
         <label for="password">Password</label>
         {{ form.password|placeholder:'Add password...' }}
         <div id="toggleButtonForPasswordLoginPage">
-            <p>
-                <input type="checkbox" onclick="togglePass()">
-            </p>
 
-            <div id="toggle-show">
+
+            <button type="button" id="toggle-show" onclick="togglePass()">
                 show
-            </div>
+            </button>
 
-            <div id="toggle-hide">
+            <button type="button" id="toggle-hide" onclick="togglePass()">
                 hide
-            </div>
+            </button>
 
 
         </div>

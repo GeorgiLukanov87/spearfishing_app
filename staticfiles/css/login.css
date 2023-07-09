@@ -52,5 +52,11 @@ body > main > div > div.login-register-box > form > ul.errorlist {
 #toggleButtonForPasswordLoginPage {
     position: relative;
     right: -125px;
-    top: -5px;
+}
+
+#toggleButtonForPasswordLoginPage button {
+    color: #0015ff;
+    width: 44px;
+    height: 30px;
+    font-weight: bold;
 }
