@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <div  class="login-register-div">
+    <div class="login-register-div">
 
         <div class="login-register-box">
 
@@ -11,6 +11,14 @@
                 <input type="hidden" name="next" value="{{ next }}">
 
                 {{ form.as_p }}
+                {#TODO#}
+                
+                {{ form.username }}
+                {{ form.email }}
+                {{ form.profile_image_url }}
+                {{ form.password1 }}
+                {{ form.password2 }}
+
                 {% csrf_token %}
 
                 <div>
