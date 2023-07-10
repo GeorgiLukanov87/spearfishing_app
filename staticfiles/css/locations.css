@@ -10,22 +10,26 @@
 }
 
 .h2-maps {
-    color: #0334ad;
-    font-size: 36px;
+
+    font-size: 26px;
     text-shadow: 1px 1px 1px #020202;
-    font-family: "Malgun Gothic", serif;
+
 }
 
 
 .weather-wrapper-global {
     background-image: url("bg-images/9.gif");
     background-size: 50% 200%;
-    padding: 75px;
+    padding: 80px;
     border-radius: 50px;
-    box-shadow: 0 0 20px 10px #838383;
+    box-shadow: 0 0 20px 10px #b9b7b7;
 
 }
 
 .wrong-datas {
-    margin: 100px;
+    margin: 140px;
+}
+
+.wrong-datas div {
+    padding: 20px;
 }

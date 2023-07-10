@@ -14,8 +14,8 @@
     flex-direction: column;
     background-color: #ddf6f2;
     padding: 4px;
-    border: 1px solid #0d1fe5;
-    box-shadow: 1px 1px 20px #2234ad;
+    border: 1px solid #000000;
+
 }
 
 .stories-wrapper img {
@@ -33,10 +33,10 @@
 
 .stories-wrapper2 img {
     width: 60%;
-    box-shadow: 1px 1px 20px #2234ad;
+
     margin-bottom: 10px;
     margin-top: 10px;
-    border: 1px solid #2234ad;
+    border: 1px solid #000000;
 }
 
 .story-details-p {
@@ -81,11 +81,11 @@
 }
 
 .stories-titles {
-    font-size: 26px;
+    font-size: 18px;
     padding: 12px;
     font-weight: bold;
     margin: 8px;
-    font-family: "Candara Light", sans-serif;
+
 }
 
 .stories-titles div {
@@ -101,10 +101,10 @@
 
 .story-creator {
     text-decoration: none;
-    font-size: 32px;
+    font-size: 20px;
     font-weight: bold;
-    color: red;
-    border-bottom: 3px solid red;
+    color: #6b6969;
+    border-bottom: 2px solid #000000;
 
 }
 
@@ -113,7 +113,7 @@
     background-image: url("bg-images/bg1.gif");
     color: red;
     font-weight: bold;
-    border: 3px solid black;
+
 
 }
 
@@ -127,14 +127,12 @@
     background-size: cover;
     transition: 300ms linear;
     font-weight: bold;
-    border: 3px solid #000000;
     border-radius: 100%;
 
 }
 
 .create-story-bg {
     background-image: url("bg-images/underwater-ship.jpg");
-    border-radius: 50%;
     background-size: 100% 100%;
     border: 1px solid black;
     box-shadow: 0 0 20px 10px #444242;

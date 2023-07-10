@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Next Events:</h1>
+    <h2>Next Events:</h2>
     {% if perms %}
         <div class="event-wrapper">
 
             <a class="event-buttons" href="{% url 'create-event' %}">Create Event
-                <i class="fa-solid fa-calendar-plus fa-beat-fade fa-xl" style="color: #005dfa;"></i></a>
+                <i class="fa-solid fa-calendar-plus  fa-xl" style="color: #005dfa;"></i></a>
         </div>
     {% endif %}
 
@@ -30,16 +30,16 @@
 
                 <div class="rewards-wrapper">
                     <div>
-                        <h1 class="h1-winners-pool">Winner's pool rewards:</h1>
+                        <h2 class="h1-winners-pool">Winner's pool rewards:</h2>
                     </div>
 
-                    <h2><i class="fa-solid fa-trophy fa-bounce fa-xl"
+                    <h2><i class="fa-solid fa-trophy  fa-xl"
                            style="color: #ff7300;"></i> <span class="winners-span"> Winner First Place:</span>
                         1000$</h2>
-                    <h2><i class="fa-solid fa-trophy fa-bounce fa-lg" style="color: #ff7300;"> </i><span
+                    <h2><i class="fa-solid fa-trophy  fa-lg" style="color: #ff7300;"> </i><span
                             class="winners-span">2nd Place:</span>
                         500$</h2>
-                    <h2><i class="fa-solid fa-trophy fa-bounce" style="color: #ff7300;"> </i>
+                    <h2><i class="fa-solid fa-trophy " style="color: #ff7300;"> </i>
                         <span class="winners-span">3th Place:</span>
                         Gift from
                         our partners -
@@ -49,7 +49,7 @@
                 </div>
 
                 <div>
-                    <i class="fa-solid fa-users fa-beat-fade fa-2xl"></i>
+                    <i class="fa-solid fa-users fa-2xl"></i>
                     Competitors:
                     <h3 class="competitors-wrapper">
 
@@ -74,12 +74,12 @@
                 {% if perms %}
                     <div class="event-wrapper">
                         <a class="event-buttons" href="{% url 'edit-event' pk=event.pk %}">Edit Event <i
-                                class="fa-solid fa-pen-to-square fa-fade fa-xl" style="color: #005eff;"></i></a>
+                                class="fa-solid fa-pen-to-square  fa-xl" style="color: #005eff;"></i></a>
                     </div>
 
                     <div class="event-wrapper">
                         <a class="event-buttons" href="{% url 'delete-event' pk=event.pk %}">Delete Event
-                            <i class="fa-solid fa-trash-can fa-bounce fa-xl" style="color: #ff0000;"></i></a>
+                            <i class="fa-solid fa-trash-can  fa-xl" style="color: #ff0000;"></i></a>
                     </div>
                     </div>
                 {% endif %}

@@ -11,25 +11,54 @@
                 <input type="hidden" name="next" value="{{ next }}">
 
                 {{ form.as_p }}
-                {#TODO#}
-
-                {#                {{ form.username }}#}
-                {#                {{ form.email }}#}
-                {#                {{ form.profile_image_url }}#}
-                {#                {{ form.password1 }}#}
-                {#                {{ form.password2 }}#}
-
                 {% csrf_token %}
+
+                <div id="toggleButtonForPasswordLoginPage">
+                    <button type="button" id="toggle-show" onclick="togglePass()">
+                        show
+                    </button>
+                    <button type="button" id="toggle-hide" onclick="togglePass()">
+                        hide
+                    </button>
+                </div>
 
                 <div>
                     <button class="button-edit-profile" type="submit">Register</button>
                 </div>
             </form>
-
         </div>
         <div class="second-option">
             <p>Have an account? <a href="{% url 'login' %}">Log in</a></p>
         </div>
     </div>
+
+    <script>
+        function togglePass() {
+            const toggleShowElement = document.getElementById('toggle-show');
+            const toggleHideElement = document.getElementById('toggle-hide');
+            const pass1 = document.getElementById("id_password1");
+            const pass2 = document.getElementById("id_password2");
+
+            if (pass1.type === "password") {
+                pass1.type = "text";
+                toggleShowElement.style.display = 'none'
+                toggleHideElement.style.display = 'block'
+            } else {
+                pass1.type = "password";
+                toggleShowElement.style.display = 'block'
+                toggleHideElement.style.display = 'none'
+            }
+
+            if (pass2.type === "password") {
+                pass2.type = "text";
+                toggleShowElement.style.display = 'none'
+                toggleHideElement.style.display = 'block'
+            } else {
+                pass2.type = "password";
+                toggleShowElement.style.display = 'block'
+                toggleHideElement.style.display = 'none'
+            }
+        }
+    </script>
 
 {% endblock %}

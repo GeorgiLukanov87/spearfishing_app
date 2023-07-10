@@ -4,7 +4,7 @@
     <div class="create-story-bg">
 
         <form action="{% url 'create-story' %}" method="post">
-            <h1>Create story</h1>
+            <h3>Create new story</h3>
 
             {{ form.as_p }}
             {% csrf_token %}

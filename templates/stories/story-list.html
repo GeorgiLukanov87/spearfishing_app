@@ -3,18 +3,13 @@
 {% block content %}
 
     <div id="body-wrapper">
-        <div>
-            <a class="button-edit-profile gif-story2" href="{% url 'create-story' %}"
-               style="font-size: 16px;font-weight: bold;box-shadow: 1px 1px 15px #02d1f5"> Add new story
-            </a>
 
-        </div>
-
+        <a class="button-edit-profile gif-story2" href="{% url 'create-story' %}"
+           style="font-size: 16px;font-weight: bold"> Add new story
+        </a>
+    
         {% if object_list %}
-            <h1>Stories about spearfishing moments shared by our Brothers...
-                <p> Hold your breath and enjoy :)
-                </p>
-            </h1>
+
 
             {% for story in object_list %}
                 <ul style="list-style: none">

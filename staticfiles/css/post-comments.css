@@ -1,52 +1,42 @@
 .comment-description {
     border: 1px solid black;
-    background-color: #c2b0b0;
-    width: 50%;
+    background-color: #d7d5d5;
+    width: 35%;
     margin: 10px auto;
     border-radius: 10px;
-    font-family: "Palatino Linotype", sans-serif;
+
 
 }
 
 .comment-description h3:nth-child(1) {
-    color: blue;
     border-bottom: 1px solid black;
     font-size: 16px;
 }
 
 .comment-description h3:nth-child(2) {
-    background-color: #656262;
+    background-color: #d7d5d5;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     color: black;
     font-size: 16px;
 }
 
-.location-comment {
-    color: red;
-    font-size: 16px;
-}
-
-.description-comment {
-    color: #00bb10;
-    font-size: 16px;
-}
 
 .del-comment {
-    color: red;
+    color: #cecbcb;
     position: relative;
-    left: 174px;
-    top: -67px;
+    right: -181px;
+    top: -30px;
     text-decoration: none;
     display: inline-block;
     border: 1px solid #000000;
     padding: 6px;
     background-color: #000000;
-    font-size: 16px;
-    border-top-left-radius: 6px;
+    font-size: 12px;
+
 }
 
 .del-comment:hover {
-    background-color: #8f8e8e;
+    background-color: #1e1d1d;
 }
 

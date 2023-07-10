@@ -36,7 +36,7 @@
 
                                 </h4>
                                 <h4><i class="fa-solid fa-envelope "
-                                       style="color: #fcfcfc;"></i>: {{ photo.user.email }}
+                                       style="color: #fcfcfc;"></i> {{ photo.user.email }}
                                 </h4>
                             </div>
 
@@ -70,7 +70,7 @@
 
                                 <div>
                                     <a href="{% url 'photo-details' photo.pk %}">
-                                        <i class="fa-solid fa-circle-info fa-beat fa-xl" style="color: #09f809;"></i>
+                                        <i class="fa-solid fa-circle-info fa-xl" style="color: #09f809;"></i>
                                     </a>
                                 </div>
 
@@ -82,10 +82,10 @@
 
                                 <h2>Comments:</h2>
                                 {% if photo.comment_set.all %}
-                                    <ul class="comment-container" style="list-style: none;color: #103be5;">
+                                    <ul class="comment-container" style="list-style: none;">
                                         {% for comment in photo.comment_set.all %}
                                             <li style="padding:8px">
-                                                <h4>From:
+                                                <h4>
                                                     <a href="{% url 'profile details' pk=comment.user.pk %}">{{ comment.user }}:</a>
                                                 </h4>
                                                 <h4>{{ comment.text }}</h4>
@@ -98,9 +98,7 @@
                                                 <a style="text-decoration: none"
                                                    href="{% url 'delete-comment' photo.pk comment.pk %}">
                                                     <div class="comment-del-wrapper">
-                                                        <h2 class="del-comment"><i
-                                                                class="fa-solid fa-trash-can-arrow-up fa-flip fa-sm"
-                                                                style="color: #ff0000;"></i> comment
+                                                        <h2 class="del-comment">del comment
                                                         </h2>
                                                     </div>
                                                 </a>

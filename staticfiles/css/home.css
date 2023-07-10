@@ -6,7 +6,6 @@
 }
 
 body {
-
     font-family: "Helvetica Neue", sans-serif;
     min-height: 100vh;
     background: rgb(255, 255, 255);
@@ -44,9 +43,9 @@ body {
 }
 
 .logo img:hover {
-    scale: 1.05;
+    scale: 1.011;
     transition: linear 150ms;
-    box-shadow: 1px 1px 10px 4px #33a1ef;
+    box-shadow: 1px 1px 10px 4px #828383;
 }
 
 .footer {
@@ -61,12 +60,11 @@ body {
 }
 
 .footer-wrapper h3 {
-    color: blue;
     padding-bottom: 12px;
 }
 
 .f1 p, a {
-    color: #000000;
+    color: #343434;
     font-size: 18px;
 }
 
@@ -77,21 +75,21 @@ body {
 
 .f1 p a:hover {
     color: red;
-    text-shadow: 0 0 15px #fafafa;
+
 }
 
 .footer-wrapper h3:hover {
     color: red;
     cursor: pointer;
     scale: 1.02;
-    text-shadow: 1px 1px 2px #000000;
+
 }
 
 .footer-wrapper {
     display: flex;
     justify-content: space-evenly;
-    padding-top: 14px;
-    border-top: 2px solid #050505;
+    padding-top: 8px;
+
 
 }
 
@@ -158,10 +156,10 @@ header {
 
 .nav-group a {
     text-decoration: none;
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 16px 16px;
     background-color: #b9d5fd;
-    color: blue;
+    color: black;
     box-shadow: 0 0 5px 1px #605e5e;
     font-size: 20px;
     font-weight: bold;
@@ -207,29 +205,23 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
 
-
 }
 
 .photo-wrapper img {
-    width: 750px;
-    height: 500px;
-    border-radius: 50%;
-    border: 2px solid black;
+    width: 40vw;
+
+    border: 1px solid black;
     margin: 10px;
     background-color: #ccc6c6;
 
 }
 
 img:hover {
-    scale: 1.025;
     cursor: pointer;
-    transition: linear 150ms;
-
 }
 
 .photo-wrapper li {
-    padding-left: 10px;
-    margin: 8px;
+
     border: 2px solid black;
     background-color: #257685;
 }
@@ -289,7 +281,6 @@ img:hover {
 
 .profile-details-wrapper-home-page {
     text-align: center;
-    color: #e8e6e6;
     padding: 12px;
     letter-spacing: 1.1px;
 }
@@ -307,19 +298,19 @@ img:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 16px;
     padding: 10px;
     margin: 20px auto auto;
     width: 60%;
-    background-color: #88bff6;
+    background-color: #d7d5d5;
     font-family: "Palatino Linotype", sans-serif;
     font-size: 22px;
     font-weight: bold;
 }
 
 div.profile-details-wrapper > h4:nth-child(6) {
-    border-bottom: 3px dotted black;
+    border-bottom: 1px solid black;
     padding-bottom: 14px;
 
 }
@@ -338,12 +329,6 @@ div.profile-details-wrapper > h4:nth-child(6) {
 }
 
 
-i:hover {
-    scale: 1.4;
-    transition: 300ms;
-}
-
-
 .comment-container li {
     background-color: #dad7d7;
     width: 450px;
@@ -355,13 +340,8 @@ i:hover {
     gap: 12px;
     padding: 18px;
     overflow: auto;
-    font-family: Roboto, cursive, sans-serif;
-
 }
 
-.comment-container li:hover {
-    background-color: #ffffff;
-}
 
 .comment-container li a {
     text-decoration: none;
@@ -382,30 +362,20 @@ i:hover {
 
 }
 
-.about-history article img:hover {
-    scale: 1.05;
-    transition: 200ms linear;
-    cursor: pointer;
-}
-
 .about-history article p {
-    color: #2c2a2a;
     font-size: 20px;
-    font-family: Cambria, serif;
-    padding: 26px;
-    text-shadow: 1px 1px 1px #ada9a9;
+    padding: 8px;
 
 }
 
 .history-h1 {
-    font-family: "Courier New", serif;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .photo-wrapper ul {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 }
 
 .col-9 {
