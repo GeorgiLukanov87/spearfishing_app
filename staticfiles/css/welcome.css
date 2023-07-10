@@ -1,9 +1,9 @@
 .welcome-msg {
-    font-family: "Palatino Linotype", sans-serif;
+
     font-size: 20px;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 4px #625d5d;
-    line-height: 1.27;
+    text-shadow: 1px 1px 3px #625d5d;
+    line-height: 1.50;
 }
 
 .welcome-title, .p-and-l {

@@ -21,7 +21,7 @@
 
                         {% if request.user.is_authenticated and request.user.is_superuser %}
                             <li class="nav-item">
-                                <a style="background-color: #09cb04" href="{% url 'users-list' %}">
+                                <a href="{% url 'users-list' %}">
                                     <i>Users List</i>
                                 </a>
                             </li>
