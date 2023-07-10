@@ -10,7 +10,6 @@ body {
     min-height: 100vh;
     background: rgb(255, 255, 255);
     background: linear-gradient(94deg, rgba(255, 255, 255, 1) 0%, rgba(157, 207, 254, 1) 100%);
-
 }
 
 
@@ -22,8 +21,6 @@ body {
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 2%, rgba(187, 188, 190, 1) 33%, rgba(121, 123, 124, 1) 61%, rgba(145, 143, 143, 1) 87%);
     box-shadow: 1px 4px 15px 2px #33a1ef;
-
-
 }
 
 .logo a, .footer a {
@@ -32,14 +29,11 @@ body {
 
 .logo img {
     border: 1px solid black;
-
     margin: 8px 12px;
-
     box-shadow: 1px 1px 20px 1px #000000;
     background-color: white;
     position: relative;
     width: 125px;
-
 }
 
 .logo img:hover {
@@ -56,7 +50,6 @@ body {
     box-shadow: -1px -5px 15px 1px #33a1ef;
     font-size: 16px;
     padding-bottom: 24px;
-
 }
 
 .footer-wrapper h3 {
@@ -75,7 +68,6 @@ body {
 
 .f1 p a:hover {
     color: red;
-
 }
 
 .footer-wrapper h3:hover {
@@ -89,8 +81,6 @@ body {
     display: flex;
     justify-content: space-evenly;
     padding-top: 8px;
-
-
 }
 
 .f1-wrapper {
@@ -131,7 +121,6 @@ body {
 .second-option {
     text-align: center;
     font-size: 22px;
-
 }
 
 .second-option a {
@@ -144,14 +133,12 @@ body {
     flex-wrap: wrap;
     list-style: none;
     margin-right: 16px;
-
 }
 
 
 header {
     border-bottom: 2px solid #ece2e2;
     margin-bottom: 50px;
-
 }
 
 .nav-group a {
@@ -165,7 +152,6 @@ header {
     font-weight: bold;
     font-family: "Arial Black", sans-serif;
     text-shadow: 0 0 1px #f8efef;
-
 }
 
 .profile-icon-2 {
@@ -184,7 +170,6 @@ header {
     padding-bottom: 57px;
     padding-top: 65px;
     border-bottom: 5px solid red;
-
 }
 
 .nav-links {
@@ -196,7 +181,6 @@ header {
     width: 100%;
     position: absolute;
     z-index: -111;
-
 }
 
 /*profile photos*/
@@ -204,16 +188,12 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
 }
 
 .photo-wrapper img {
     width: 40vw;
-
-    border: 1px solid black;
     margin: 10px;
     background-color: #ccc6c6;
-
 }
 
 img:hover {
@@ -221,8 +201,6 @@ img:hover {
 }
 
 .photo-wrapper li {
-
-    border: 2px solid black;
     background-color: #257685;
 }
 
@@ -248,14 +226,10 @@ img:hover {
     text-decoration: none;
 }
 
-/*profile container*/
-
 .profile-container {
     display: flex;
     flex-direction: column;
     margin-left: 10%;
-    /*border-radius: 32px;*/
-    /*border: 1px solid black;*/
     padding: 12px;
     width: 80vw;
 }
@@ -264,8 +238,6 @@ img:hover {
     list-style: none;
 }
 
-
-/*button-edit-profile*/
 .button-edit-profile {
     border: 1px solid black;
     display: inline-block;
