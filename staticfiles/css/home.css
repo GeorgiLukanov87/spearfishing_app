@@ -99,7 +99,7 @@ body {
 }
 
 .f1 a {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .footer span {
@@ -107,8 +107,12 @@ body {
 }
 
 .users-photos i:hover {
-    scale: 1.5;
+    scale: 1.2;
     cursor: pointer;
+}
+
+.users-photos {
+    box-shadow: 0 0 10px 5px #969393;
 }
 
 .button-edit-profile:hover {
@@ -116,7 +120,6 @@ body {
     transition: linear 300ms;
     color: red;
     background-color: #ded8d8;
-
 }
 
 .second-option {
@@ -196,7 +199,7 @@ header {
 
 .photo-wrapper img {
     width: 45vw;
-    margin: 10px 20px;
+    margin: 0 20px;
     background-color: #ccc6c6;
     border-radius: 4px;
 
@@ -385,6 +388,10 @@ div.profile-details-wrapper > h4:nth-child(6) {
 
 }
 
+.nav-item a i {
+    font-size: 16px;
+}
+
 body > main > div.col-9 > form > label {
     display: none;
 }
@@ -397,4 +404,8 @@ body > main > div.col-9 > form {
     width: 40%;
     height: 40%;
     border: 2px solid black;
+}
+
+body > main > form > ul {
+    list-style: none;
 }

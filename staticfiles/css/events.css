@@ -66,25 +66,27 @@ h1 {
     margin-left: 20px;
 }
 
+.winner-gift img {
+    width: 50vw;
+}
+
 .gift-article1 img {
-    border-radius: 20px;
+    border-radius: 6px;
 }
 
 .gift-article2 p {
-    font-family: Cambria, serif;
     color: #0d1fe5;
-    font-size: 20px;
+    font-size: 18px;
+
 }
 
 .gift-article2 h3 {
-    font-family: Candara, serif;
-    color: #095909;
     font-size: 17px;
     letter-spacing: 1px;
 }
 
 .gift-article2 {
-    padding: 30px;
+    padding: 3%;
     margin: auto;
 }
 

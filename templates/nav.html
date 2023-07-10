@@ -45,7 +45,6 @@
                             </a>
                         </li>
 
-
                         <li class="nav-item">
                             <a href="{% url 'locations' %}">
                                 <i>Locations</i>
@@ -59,8 +58,6 @@
                                 </a>
                             </li>
                         {% endif %}
-
-
 
                         <li class="nav-item">
                             <a href="{% url 'all-stories' %}">
@@ -77,6 +74,12 @@
                         <li class="nav-item">
                             <a href="{% url 'profile details' pk=request.user.pk %}">
                                 <i>Profile={{ request.user }}</i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{% url 'change-password' %}">
+                                <i>Change password</i>
                             </a>
                         </li>
 

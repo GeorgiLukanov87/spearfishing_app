@@ -108,3 +108,8 @@ def to_github(request):
     return HttpResponseRedirect(
         "https://github.com/GeorgiLukanov87"
     )
+
+
+class ChangePasswordCBV(auth_views.PasswordChangeView):
+    template_name = 'accounts/change-password.html'
+    success_url = reverse_lazy('index')

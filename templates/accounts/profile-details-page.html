@@ -103,7 +103,8 @@
                 {% if photos %}
                     {% for photo in photos %}
                         <li class="users-photos">
-
+                        
+                            <img src="{{ photo.photo.url }}" alt="img">
                             <div class="comment-description">
                                 <h3><span class="location-comment">Location</span>: {{ photo.location }}</h3>
                                 <h3><span class="description-comment">Description</span>:
@@ -112,8 +113,6 @@
                                     </p>
                                 </h3>
                             </div>
-
-                            <img src="{{ photo.photo.url }}" alt="img">
                             <div class="icons-wrapper">
                                 <div>
                                     {% if not photo.like_set.all.count %}

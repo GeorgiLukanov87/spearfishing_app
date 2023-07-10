@@ -19,19 +19,18 @@
                         <h4><i class="fa-solid fa-envelope " style="color: #fcfcfc;"></i> {{ photo.user.email }}
                         </h4>
 
-                        <div class="comment-description">
-                            <h3><span class="location-comment">Location</span>: {{ photo.location }}</h3>
-                            <h3><span class="description-comment">Description</span>:
-                                <p>
-                                    {{ photo.description }}
-                                </p>
-                            </h3>
-                        </div>
 
                     </div>
 
                     <img src="{{ photo.photo.url }}" alt="img">
-
+                    <div class="comment-description">
+                        <h3><span class="location-comment">Location</span>: {{ photo.location }}</h3>
+                        <h3><span class="description-comment">Description</span>:
+                            <p>
+                                {{ photo.description }}
+                            </p>
+                        </h3>
+                    </div>
                     <div class="icons-wrapper">
                         <div>
                             <h4>likes: {{ photo.like_set.all.count }}</h4>

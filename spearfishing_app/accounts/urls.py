@@ -1,7 +1,7 @@
 from django.urls import path, include
 
 from spearfishing_app.accounts.views import SingInView, SignInView, SignOutView, UserDetailsView, UserEditView, \
-    UserDeleteView, to_github
+    UserDeleteView, to_github, ChangePasswordCBV
 
 # accounts/urls.py
 
@@ -19,6 +19,8 @@ urlpatterns = (
     )),
 
     path('to_github/', to_github, name='go to github'),
+
+    path('change-password/', ChangePasswordCBV.as_view(), name='change-password'),
 )
 
 # need to add this to work with signals->
