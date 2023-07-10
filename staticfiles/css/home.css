@@ -54,10 +54,11 @@ body {
 
 .footer-wrapper h3 {
     padding-bottom: 12px;
+    color: #2c2929;
 }
 
 .f1 p, a {
-    color: #343434;
+    color: #000000;
     font-size: 18px;
 }
 
@@ -188,12 +189,16 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+
 }
 
 .photo-wrapper img {
-    width: 40vw;
-    margin: 10px;
+    width: 45vw;
+    margin: 10px 20px;
     background-color: #ccc6c6;
+    border-radius: 4px;
+
 }
 
 img:hover {
@@ -202,6 +207,8 @@ img:hover {
 
 .photo-wrapper li {
     background-color: #257685;
+    border-radius: 4px;
+
 }
 
 .icons-wrapper {
@@ -300,18 +307,22 @@ div.profile-details-wrapper > h4:nth-child(6) {
     margin: auto;
 }
 
+.comment-container {
+    position: relative;
+}
 
 .comment-container li {
+    position: relative;
     background-color: #dad7d7;
-    width: 450px;
-    height: 250px;
+    width: 25vw;
+    height: 20vh;
     margin: 4px auto;
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 12px;
     padding: 18px;
     overflow: auto;
+    justify-content: space-around;
 }
 
 
@@ -347,7 +358,7 @@ div.profile-details-wrapper > h4:nth-child(6) {
 .photo-wrapper ul {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 18px;
 }
 
 .col-9 {

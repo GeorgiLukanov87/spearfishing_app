@@ -1,6 +1,5 @@
 .add-photo-wrapper {
     background-image: url("bg-images/divers-photos.jpg");
     background-size: 100% 100%;
-    border: 1px solid black;
     box-shadow: 0 0 20px 10px #444242;
 }

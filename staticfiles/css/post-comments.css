@@ -25,16 +25,14 @@
 .del-comment {
     color: #cecbcb;
     position: relative;
-    right: -181px;
     top: -30px;
     text-decoration: none;
     display: inline-block;
-    border: 1px solid #000000;
-    padding: 6px;
+    border: 1px solid #e80000;
+    padding: 1.1%;
     background-color: #000000;
     font-size: 12px;
-    border-radius: 8px 0 8px 8px;
-
+    border-radius: 10px;
 }
 
 .del-comment:hover {

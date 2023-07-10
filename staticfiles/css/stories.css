@@ -33,10 +33,9 @@
 
 .stories-wrapper2 img {
     width: 60%;
-
     margin-bottom: 10px;
     margin-top: 10px;
-    border: 1px solid #000000;
+    border-radius: 4px;
 }
 
 .story-details-p {
@@ -57,11 +56,11 @@
     width: 75%;
     display: flex;
     flex-direction: column;
-    border: 1px solid #626161;
+
     gap: 10px;
     padding: 12px;
     margin: 0 auto;
-    border-radius: 32px;
+    border-radius: 8px;
     box-shadow: 1px 1px 100px #696868;
 }
 
@@ -69,11 +68,12 @@
     margin: 10px 30%;
     background-color: #ddf6f2;
     padding: 12px;
-    border: 1px solid #0d1fe5;
-    box-shadow: 1px 1px 20px #2234ad;
+    box-shadow: 1px 1px 20px #656565;
     font-size: 22px;
     font-family: "Times New Roman", sans-serif;
     text-shadow: 1px 1px 2px #807f7f;
+    border-radius: 4px;
+
 }
 
 .stories-wrapper {
@@ -104,7 +104,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #6b6969;
-    border-bottom: 2px solid #000000;
+
 
 }
 
@@ -134,8 +134,7 @@
 .create-story-bg {
     background-image: url("bg-images/underwater-ship.jpg");
     background-size: 100% 100%;
-    border: 1px solid black;
-    box-shadow: 0 0 20px 10px #444242;
+    box-shadow: 0 0 20px 10px #807d7d;
 
 
 }

@@ -2,14 +2,13 @@ form {
     display: flex;
     align-items: center;
     flex-direction: column;
-
     gap: 8px;
     width: 385px;
     margin: 20px auto;
     padding: 26px;
     background: rgb(185, 213, 253);
     background: linear-gradient(90deg, rgba(185, 213, 253, 1) 0%, rgba(51, 140, 201, 1) 25%, rgb(178, 246, 162) 70%, rgba(72, 135, 224, 1) 100%);
-    border-radius: 12px;
+    border-radius: 4px;
     font-size: 20px;
 }
 
