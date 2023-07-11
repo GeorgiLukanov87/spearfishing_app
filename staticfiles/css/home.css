@@ -19,8 +19,9 @@ body {
     justify-content: space-between;
     align-items: center;
     background: rgb(255, 255, 255);
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 2%, rgba(187, 188, 190, 1) 33%, rgba(121, 123, 124, 1) 61%, rgba(145, 143, 143, 1) 87%);
-    box-shadow: 1px 4px 15px 2px #33a1ef;
+    background: radial-gradient(circle, rgb(236, 233, 233) 2%, rgba(187, 188, 190, 1) 33%, rgba(121, 123, 124, 1) 61%, rgba(145, 143, 143, 1) 87%);
+    box-shadow: 1px 4px 15px 2px #257685;
+
 }
 
 .logo a, .footer a {
@@ -47,7 +48,8 @@ body {
     margin-top: 50px;
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 2%, rgba(187, 188, 190, 1) 33%, rgba(121, 123, 124, 1) 61%, rgba(145, 143, 143, 1) 87%);
-    box-shadow: -1px -5px 15px 1px #33a1ef;
+    /*box-shadow: -1px -5px 15px 1px #33a1ef;*/
+    box-shadow: -1px -5px 15px 1px #257685;
     font-size: 16px;
     padding-bottom: 24px;
 }
@@ -167,7 +169,7 @@ header {
 
 .nav-group a:hover {
     color: red;
-    background-image: url("bg-images/4.gif");
+    background-image: url("bg-images/6.gif");
     background-size: 100% 112%;
     transition: linear 125ms;
     z-index: 100;
@@ -408,4 +410,8 @@ body > main > div.col-9 > form {
 
 body > main > form > ul {
     list-style: none;
+}
+
+body > main > form {
+    line-height: 1.3;
 }
