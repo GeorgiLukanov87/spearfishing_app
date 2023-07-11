@@ -166,7 +166,7 @@ header {
     color: red;
     background-image: url("bg-images/6.gif");
     background-size: 100% 112%;
-    transition: linear 125ms;
+    transition: linear 155ms;
     z-index: 100;
     position: relative;
     padding-bottom: 57px;

@@ -2,7 +2,6 @@
 {% block content %}
 
     <form action="{% url 'users-list' %}?page={{ page_obj.number }}">
-
         <label for="name">Search by Username:
             <input name="search" placeholder="Add username..." value="{{ search }}">
         </label>
@@ -56,12 +55,13 @@
                             <p> Likes count: {{ user.like_set.all.count }} </p>
                             <p> Email: {{ user.email }} </p>
                             <p> Gender: {{ user.gender }} </p>
-
                         </a>
 
-                        <div class="div-border">
-                            <a class="button-edit-profile" href="{% url 'profile delete' user.pk %}">Delete</a>
-                        </div>
+                        {% if not user.is_superuser %}
+                            <div class="div-border">
+                                <a class="button-edit-profile" href="{% url 'profile delete' user.pk %}">Delete</a>
+                            </div>
+                        {% endif %}
 
                     </li>
                 {% endfor %}
