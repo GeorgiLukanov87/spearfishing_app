@@ -60,3 +60,13 @@ body > main > div > div.login-register-box > form > ul.errorlist {
     background-color: #d0cccc;
     border-radius: 4px;
 }
+
+.button-login:hover {
+    background-color: #d9d5d5;
+    color: red;
+}
+
+body > main > form > button:nth-child(8) a:hover {
+    background-color: #d9d5d5;
+    color: red;
+}
