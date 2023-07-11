@@ -21,7 +21,6 @@ body {
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgb(236, 233, 233) 2%, rgba(187, 188, 190, 1) 33%, rgba(121, 123, 124, 1) 61%, rgba(145, 143, 143, 1) 87%);
     box-shadow: 1px 4px 15px 2px #257685;
-
 }
 
 .logo a, .footer a {
@@ -77,7 +76,6 @@ body {
     color: red;
     cursor: pointer;
     scale: 1.02;
-
 }
 
 .footer-wrapper {
@@ -132,7 +130,6 @@ body {
 
 .second-option a {
     text-decoration: none;
-
 }
 
 .nav-group {
@@ -141,7 +138,6 @@ body {
     list-style: none;
     margin-right: 16px;
 }
-
 
 header {
     border-bottom: 2px solid #ece2e2;
@@ -166,7 +162,6 @@ header {
     align-items: center;
 }
 
-
 .nav-group a:hover {
     color: red;
     background-image: url("bg-images/6.gif");
@@ -183,20 +178,16 @@ header {
     font-size: 18px;
 }
 
-
 #bubbles {
     width: 100%;
     position: absolute;
     z-index: -111;
 }
 
-/*profile photos*/
 .photo-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
-
 }
 
 .photo-wrapper img {
@@ -204,7 +195,6 @@ header {
     margin: 0 20px;
     background-color: #ccc6c6;
     border-radius: 4px;
-
 }
 
 img:hover {
@@ -224,7 +214,6 @@ img:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .icons-wrapper i {
@@ -297,7 +286,6 @@ img:hover {
 div.profile-details-wrapper > h4:nth-child(6) {
     border-bottom: 1px solid black;
     padding-bottom: 14px;
-
 }
 
 .button-login {
@@ -348,13 +336,11 @@ div.profile-details-wrapper > h4:nth-child(6) {
     margin-top: 85px;
     box-shadow: 1px 1px 20px gray;
     border: 1px solid gray;
-
 }
 
 .about-history article p {
     font-size: 20px;
     padding: 8px;
-
 }
 
 .history-h1 {
@@ -387,7 +373,6 @@ div.profile-details-wrapper > h4:nth-child(6) {
     padding: 8px;
     font-weight: bold;
     color: #4f4e4e;
-
 }
 
 .nav-item a i {
