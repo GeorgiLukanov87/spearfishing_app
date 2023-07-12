@@ -8,6 +8,7 @@ from django.urls import reverse
 from django.views import generic
 
 from spearfishing_app.common.forms import CommentForm, SearchForm
+from spearfishing_app.common.helpers.dirty_words_validator import validate_dirty_words
 from spearfishing_app.common.models import Like, Comment
 from spearfishing_app.photos.models import Photo
 
@@ -77,6 +78,7 @@ def add_comment(request, photo_id):
             comment = form.save(commit=False)
             comment.to_photo = photo
             comment.user = request.user
+            comment.text = validate_dirty_words(comment.text)
             comment.save()
 
         return redirect(request.META['HTTP_REFERER'] + f'#{photo_id}')
