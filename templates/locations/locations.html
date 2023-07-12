@@ -17,12 +17,18 @@
         <form class="location-searchbar" method="POST">
 
             {% csrf_token %}
-            {{ form.address|placeholder:'Enter city name...' }}
+            {{ form.address|placeholder:'City name or coordinates...' }}
 
             <button style="background-color: #8f8b8b;color: #000000;border-radius: 6px;padding: 6px;font-weight: bold"
                     type="submit">Search
             </button>
         </form>
+        <h5 class="h5-locations-wrapper">You can search using city name or search using coordinates:
+            <p>Latitude and Longitude.</p>
+            <p>For example:</p>
+            <p>Hong Kong, China -</p>
+            <p>22.321281514822648, 114.16861223046111</p>
+        </h5>
     </div>
 
 {% endblock %}

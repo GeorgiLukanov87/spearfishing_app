@@ -6,11 +6,16 @@ from spearfishing_app.accounts.forms import UserEditForm, UserCreateForm
 
 UserModel = get_user_model()
 
+admin.site.site_header = "Spearfishing Admin"
+
 
 @admin.register(UserModel)
 class UserAdmin(auth_admin.UserAdmin):
     form = UserEditForm
     add_form = UserCreateForm
+
+    ordering = ('id',)
+    list_display = ('id', 'username', 'first_name', 'last_name', 'gender')
 
     fieldsets = (
         (

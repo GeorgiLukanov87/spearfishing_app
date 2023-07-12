@@ -88,13 +88,11 @@ class Equipment(models.Model):
     gun_model = models.CharField(
         max_length=20,
         choices=GUN_CHOICES,
-
     )
 
     gun_material = models.CharField(
         max_length=20,
         choices=GUN_MATERIAL_CHOICES,
-
     )
 
     gun_length = models.CharField(
