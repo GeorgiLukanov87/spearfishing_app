@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="not-found-img">
+        <img src="{% static 'images/HTML-Yeti-404-Page.gif' %}" alt="404 not found gif">
+    </div>
+
+    <h3>Error 404 - page not found.</h3>
+
+    <a href="{% url 'index' %}">
+        <button>Return to Spearfishing4Life</button>
+    </a>
+
+{% endblock %}
