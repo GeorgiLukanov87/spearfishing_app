@@ -114,10 +114,9 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 20px;
+    padding: 0 10px;
     text-align: center;
     border-radius: 20px;
-    margin-bottom: 6.6%;
 
 }
 

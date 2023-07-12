@@ -47,3 +47,7 @@ class UserCreateForm(auth_forms.UserCreationForm):
             ),
 
         }
+
+        labels = {
+            'profile_image_url': 'Profile Image URL',
+        }

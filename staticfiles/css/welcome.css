@@ -1,8 +1,9 @@
 .welcome-msg {
-    font-size: 20px;
-    letter-spacing: 1.2px;
+    font-size: 18px;
+    letter-spacing: 1.3px;
     text-shadow: 1px 1px 1px #625d5d;
-    line-height: 1.72;
+    line-height: 1.32;
+    padding: 0 10%;
 }
 
 .welcome-title, .p-and-l {
@@ -10,7 +11,7 @@
 }
 
 .p-and-l {
-    font-size: 32px;
+    font-size: 26px;
 }
 
 
