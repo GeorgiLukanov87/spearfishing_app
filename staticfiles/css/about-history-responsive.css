@@ -1,0 +1,29 @@
+@media only screen and (max-width: 1250px) {
+    .history-h1 {
+        font-size: 20px;
+    }
+
+    body > main > div > article.bg-about p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .history-h1 {
+        font-size: 16px;
+    }
+
+    body > main > div > article.bg-about p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .history-h1 {
+        font-size: 15px;
+    }
+
+    body > main > div > article.bg-about p {
+        font-size: 12px;
+    }
+}
