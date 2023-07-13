@@ -1,0 +1,54 @@
+@media only screen and (max-width: 1300px) {
+    .event-wrapper a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .event-details-wrapper1 {
+        font-size: 16px;
+    }
+
+    .rewards-wrapper div, .rewards-wrapper h2 {
+        font-size: 16px;
+    }
+
+    .competitors {
+        margin: 15px auto;
+        width: 150px;
+        height: 45px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .event-wrapper a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .event-details-wrapper1 {
+        font-size: 14px;
+    }
+
+    .rewards-wrapper div, .rewards-wrapper h2 {
+        font-size: 14px;
+    }
+
+    .competitors {
+        margin: 15px auto;
+        width: 120px;
+        height: 35px;
+    }
+
+}
+
+
+@media only screen and (max-width: 550px) {
+    .event-details-wrapper1 {
+        font-size: 12px;
+    }
+
+    .rewards-wrapper div, .rewards-wrapper h2 {
+        font-size: 12px;
+    }
+}

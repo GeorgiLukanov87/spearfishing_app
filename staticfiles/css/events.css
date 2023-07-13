@@ -202,14 +202,14 @@ main {
 
 .event-wrapper a {
     border: 1px solid black;
-    padding: 14px;
+    padding: 12px;
     border-radius: 14px;
     color: white;
     text-decoration: none;
     background-color: #1e9a01;
     font-weight: bold;
     text-shadow: 1px 1px 1px black;
-    font-size: 20px;
+    font-size: 16px;
 
 }
 
