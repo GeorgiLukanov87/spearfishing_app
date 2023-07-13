@@ -16,7 +16,6 @@
 }
 
 @media only screen and (max-width: 650px) {
-
     body > main > div:nth-child(2) > form > button {
         position: relative;
         top: 47px;
@@ -24,7 +23,7 @@
     }
 
     #id_address {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .map-wrapper {
@@ -53,5 +52,11 @@
     .map-wrapper {
         width: 95%;
     }
+
+
+}
+
+#id_address button:hover {
+    color: red;
 }
 
