@@ -1,6 +1,7 @@
-/*Nav bar*/
-
 @media only screen and (max-width: 1450px) {
+    .icons-wrapper i {
+        font-size: 21px;
+    }
 
     .users-photos {
         font-size: 12px;
@@ -116,6 +117,15 @@
 
     .del-comment {
         top: -35px;
+    }
+
+    #id_text {
+        font-size: 12px;
+    }
+
+    .icons-wrapper i {
+        font-size: 18px;
+        padding: 1px;
     }
 
 }

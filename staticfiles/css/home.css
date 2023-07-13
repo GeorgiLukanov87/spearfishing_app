@@ -151,7 +151,7 @@ header {
     text-decoration: none;
     border: 1px solid black;
     padding: 16px 16px;
-    background-color: #b9d5fd;
+    background-color: #7ac8d5;
     color: black;
     box-shadow: 0 0 5px 1px #605e5e;
     font-size: 20px;
@@ -223,8 +223,7 @@ img:hover {
     color: #fffdfd;
     font-size: 26px;
     display: inline-block;
-    padding: 8px;
-
+    padding: 4px;
 }
 
 .icons-wrapper a {
