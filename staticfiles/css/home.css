@@ -293,10 +293,10 @@ div.profile-details-wrapper > h4:nth-child(6) {
     border: 1px solid black;
     display: inline-block;
     border-radius: 20px;
-    padding: 10px;
+    padding: 8px;
     text-decoration: none;
     background-color: #474e50;
-    font-size: 18px;
+    font-size: 15px;
     color: white;
     width: 100px;
     margin: auto;
@@ -390,8 +390,8 @@ body > main > div.col-9 > form {
 }
 
 .profile-image {
-    width: 40%;
-    height: 40%;
+    width: 50%;
+
     border: 2px solid black;
 }
 

@@ -1,0 +1,33 @@
+@media only screen and (max-width: 1450px) {
+    .button-login {
+        font-size: 14px;
+        width: 80px;
+        padding: 7px;
+    }
+
+    .login-register-box h2 {
+        font-size: 18px;
+    }
+
+    body > main > div > div.login-register-box > form input {
+        font-size: 18px;
+    }
+
+    body > main > div > div.login-register-box > form label {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .button-login {
+        font-size: 12px;
+        width: 60px;
+        padding: 5px;
+    }
+
+    body > main > div > div.login-register-box > form input {
+        font-size: 14px;
+    }
+
+}

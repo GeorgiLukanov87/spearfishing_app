@@ -6,6 +6,14 @@
     body > main > div > article.bg-about p {
         font-size: 16px;
     }
+
+    body > main > div > article:nth-child(2) > p:nth-child(2) {
+        font-size: 16px;
+    }
+
+    body > main > div > article:nth-child(2) > p:nth-child(3) {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -16,6 +24,14 @@
     body > main > div > article.bg-about p {
         font-size: 14px;
     }
+
+    body > main > div > article:nth-child(2) > p:nth-child(2) {
+        font-size: 14px;
+    }
+
+    body > main > div > article:nth-child(2) > p:nth-child(3) {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -23,7 +39,11 @@
         font-size: 15px;
     }
 
-    body > main > div > article.bg-about p {
-        font-size: 12px;
+    body > main > div > article:nth-child(2) > p:nth-child(2) {
+        font-size: 13px;
+    }
+
+    body > main > div > article:nth-child(2) > p:nth-child(3) {
+        font-size: 13px;
     }
 }
