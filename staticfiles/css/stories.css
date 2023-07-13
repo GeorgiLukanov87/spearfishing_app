@@ -23,7 +23,6 @@
     padding: 16px;
     margin: 10px;
     width: 25vw;
-
 }
 
 .stories-wrapper2 {
@@ -56,7 +55,6 @@
     width: 75%;
     display: flex;
     flex-direction: column;
-
     gap: 10px;
     padding: 12px;
     margin: 0 auto;
@@ -73,7 +71,6 @@
     font-family: "Times New Roman", sans-serif;
     text-shadow: 1px 1px 2px #807f7f;
     border-radius: 4px;
-
 }
 
 .stories-wrapper {
@@ -85,7 +82,6 @@
     padding: 12px;
     font-weight: bold;
     margin: 8px;
-
 }
 
 .stories-titles div {
@@ -104,8 +100,6 @@
     font-size: 20px;
     font-weight: bold;
     color: #6b6969;
-
-
 }
 
 .gif-story1:hover {
@@ -114,19 +108,11 @@
     color: red;
     font-weight: bold;
     transition: 300ms linear;
-
-
 }
 
 .gif-story1 {
     margin-bottom: 30px;
-
 }
-
-/*.gif-story2 {*/
-/*    position: absolute;*/
-
-/*}*/
 
 .gif-story2:hover {
     padding: 75px 50px;
@@ -135,8 +121,6 @@
     transition: 300ms linear;
     font-weight: bold;
     border-radius: 100%;
-
-
 }
 
 .create-story-bg {
