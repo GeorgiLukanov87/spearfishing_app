@@ -2,18 +2,15 @@
 {% block content %}
 
     <div class="weather-wrapper-global">
-
         <form method="post">
             {% csrf_token %}
 
             <label for="city">Location:
                 <input type="text" name="city" placeholder="Enter city name...">
             </label>
-
             <div>
                 <button class="button-edit-profile" type="submit">Check Weather</button>
             </div>
-
         </form>
 
         <article id="weather-wrapper">
@@ -32,7 +29,7 @@
                 </div>
 
             {% else %}
-                <h2 style="font-size: 30px">No city selected: Please Enter city name!</h2>
+                <h2>No city selected: Please Enter city name!</h2>
             {% endif %}
 
             </div>
