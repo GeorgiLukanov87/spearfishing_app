@@ -113,12 +113,19 @@
     background-image: url("bg-images/bg1.gif");
     color: red;
     font-weight: bold;
+    transition: 300ms linear;
 
 
 }
 
 .gif-story1 {
     margin-bottom: 30px;
+
+}
+
+.gif-story2 {
+    position: absolute;
+    
 }
 
 .gif-story2:hover {
@@ -128,6 +135,7 @@
     transition: 300ms linear;
     font-weight: bold;
     border-radius: 100%;
+
 
 }
 
