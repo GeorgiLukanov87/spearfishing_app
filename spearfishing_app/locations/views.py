@@ -16,7 +16,7 @@ def locations(request):
             return redirect('locations')
     else:
         form = SearchLocationForm()
-        m = folium.Map(location=[39.18475207792338, -0.21667029996640755], zoom_start=9)
+        m = folium.Map(location=[39.18475207792338, -0.21667029996640755], zoom_start=8)
 
     address = Search.objects.all().last()
     location = geocoder.osm(address)
