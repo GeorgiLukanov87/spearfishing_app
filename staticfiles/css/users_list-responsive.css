@@ -1,0 +1,23 @@
+@media only screen and (max-width: 1100px) {
+    .ul-list-wrapper {
+
+        width: 75vw;
+    }
+
+    .f1 p, a {
+        font-size: 14px;
+    }
+
+    body > main > form > label > input {
+        font-size: 12px;
+    }
+
+    .div-border button {
+        padding: unset;
+    }
+
+    .ul-list-wrapper h2 {
+        font-size: 16px;
+    }
+    
+}

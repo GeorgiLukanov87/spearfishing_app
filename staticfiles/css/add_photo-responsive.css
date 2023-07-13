@@ -1,0 +1,62 @@
+@media only screen and (max-width: 850px) {
+    #id_description {
+        width: 25vw;
+    }
+
+    .add-photo-form {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    #id_description {
+        width: 35vw;
+    }
+
+    .add-photo-form {
+        font-size: 14px;
+    }
+
+    #id_photo input {
+        font-size: 12px;
+    }
+
+
+    body > main > main > div > div > form > p:nth-child(4) input {
+        font-size: 12px;
+    }
+
+    body > main > main > div > div > form > p:nth-child(3) input {
+        font-size: 14px;
+    }
+
+    body > main > main > div > div > form > p:nth-child(2) input {
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .add-photo-wrapper {
+        background-image: url("bg-images/divers-photos.jpg");
+        background-size: 200% 100%;
+        box-shadow: 0 0 20px 10px #444242;
+    }
+
+    body > main > div > form > label > input[type=text] {
+        font-size: 12px;
+    }
+
+    #weather-wrapper > h2 {
+        font-size: 16px;
+    }
+
+    .wrong-datas div {
+        font-size: 12px;
+    }
+
+    .wrong-datas {
+        margin: unset;
+
+    }
+}
+

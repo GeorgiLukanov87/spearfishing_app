@@ -42,3 +42,9 @@
     border-top: 2px solid black;
 
 }
+
+.div-border > .button-edit-profile {
+    color: white;
+    padding: 6px;
+    margin: 4px;
+}

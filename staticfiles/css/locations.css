@@ -24,10 +24,15 @@
 }
 
 .wrong-datas {
-    margin: 150px;
-    line-height: 2.25;
+    line-height: 1.25;
+
+}
+
+.wrong-datas div {
+    line-height: 1.25;
+
 }
 
 .h5-locations-wrapper {
-    line-height: 1.5;
+    line-height: 1.25;
 }

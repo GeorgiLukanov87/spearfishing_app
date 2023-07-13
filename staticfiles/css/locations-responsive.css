@@ -1,0 +1,38 @@
+@media only screen and (max-width: 850px) {
+
+    body > main > div:nth-child(2) > form > button {
+        position: relative;
+        top: 47px;
+        right: 50%;
+    }
+
+    #id_address {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    body > main > div:nth-child(2) > form > button {
+        position: relative;
+        top: 47px;
+        right: 60%;
+    }
+
+    #id_address {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    body > main > div:nth-child(2) > form > button {
+        position: relative;
+        top: 45px;
+        right: 75%;
+    }
+
+    #id_address {
+        font-size: 12px;
+    }
+}

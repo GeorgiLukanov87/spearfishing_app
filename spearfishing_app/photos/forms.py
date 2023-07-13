@@ -26,7 +26,27 @@ class PhotoBaseForm(forms.ModelForm):
 
 
 class PhotoCreateForm(PhotoBaseForm):
-    pass
+    class Meta:
+        model = Photo
+        fields = ('photo', 'description', 'location',)
+
+        labels = {
+            'photo': '',
+            'description': '',
+            'location': '',
+        }
+        widgets = {
+            'description': forms.Textarea(
+                attrs={
+                    'placeholder': 'Add description...'
+                }
+            ),
+            'location': forms.TextInput(
+                attrs={
+                    'placeholder': 'Add location...'
+                }
+            ),
+        }
 
 
 class PhotoEditForm(forms.ModelForm):
