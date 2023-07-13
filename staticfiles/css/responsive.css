@@ -1,0 +1,121 @@
+/*Nav bar*/
+
+@media only screen and (max-width: 1450px) {
+
+    .users-photos {
+        font-size: 12px;
+    }
+
+    .profile-details-wrapper-home-page {
+        font-size: 12px;
+    }
+
+    main form {
+        width: 40vw;
+    }
+
+    main form input {
+        width: 30vw;
+    }
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 99;
+        outline: none;
+        background-color: #257685;
+        color: white;
+        cursor: pointer;
+        padding: 14px;
+        border-radius: 4px;
+        font-size: 12px;
+        border: 1px solid black;
+    }
+
+    .nav-group {
+        justify-content: center;
+
+    }
+
+    .nav-group a {
+        padding: 12px 12px;
+        font-size: 14px;
+        justify-content: center;
+
+    }
+
+    body > header > nav > div > div.logo > a > img {
+        width: 100px;
+    }
+
+    .nav-group a:hover {
+        color: red;
+        background-image: unset;
+        background-color: black;
+        transition: linear 155ms;
+        z-index: 100;
+        position: relative;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 2px solid red;
+    }
+
+    @media only screen and (max-width: 1200px) {
+
+        .nav-group a {
+            padding: 10px 10px;
+            font-size: 8px;
+            line-height: 2.05;
+
+        }
+
+        .nav-group {
+            justify-content: center;
+
+        }
+
+        .container {
+            height: 250px;
+            justify-content: center;
+        }
+
+        .searchbar-button {
+            display: none;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .footer-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding-left: 50px;
+
+    }
+
+    .f1-wrapper {
+        justify-content: center;
+    }
+
+    #id_user_name {
+        font-size: 12px;
+    }
+
+    .comment-container li {
+        height: 17vh;
+        font-size: 12px;
+    }
+
+    .comment-container li h4 {
+        font-size: 12px;
+    }
+
+    .del-comment {
+        top: -35px;
+    }
+
+}
