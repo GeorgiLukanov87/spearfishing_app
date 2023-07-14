@@ -4,11 +4,13 @@
     margin: auto;
     position: relative;
     top: -4px;
+    
 }
 
 .comment-description h3:nth-child(1) {
     border-bottom: 1px solid black;
     font-size: 14px;
+
 }
 
 .comment-description h3:nth-child(2) {
@@ -17,6 +19,7 @@
     border-bottom-right-radius: 4px;
     color: black;
     font-size: 14px;
+
 }
 
 
