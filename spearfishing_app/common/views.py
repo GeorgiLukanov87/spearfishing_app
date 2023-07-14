@@ -116,3 +116,7 @@ class AllUsersCBV(generic.ListView):
 
         context['search'] = self.request.GET.get('search', '')
         return context
+
+
+class BandCalculator(generic.TemplateView):
+    template_name = 'common/Band-calculator.html'

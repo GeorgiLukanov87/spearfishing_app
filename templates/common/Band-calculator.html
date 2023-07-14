@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <h1>Calculator</h1>
+    <div class="calc-wrapper1">
+        <img src="{% static 'images/Custom-Power-Bands-for-Spearguns-1.jpg' %}" alt="bands">
+        <h2>Measure this distance! From the Hole in the muzzle to the First Shark Fin!</h2>
+    </div>
+
+    <div class="calc-wrapper2">
+
+        <label for="calc1">Distance in cm:
+            <input type="number" id="calc1"></input>
+        </label>
+
+        <div>
+            <label for="e-factor">Select elongation factor:
+                <select id="e-factor">
+                    <option value="0">280% - Soft</option>
+                    <option value="1">290% - Normal</option>
+                    <option value="2">300% - Recommended</option>
+                    <option value="3">310% - Power</option>
+                    <option value="4">320% - More power</option>
+                    <option value="5">330% - Very powerful</option>
+                    <option value="5">350% Hard</option>
+                    <option value="5">380% Extreme</option>
+                </select>
+            </label>
+        </div>
+
+        <div>
+            Result:<input type="number">
+        </div>
+
+    </div>
+
+{% endblock %}
