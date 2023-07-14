@@ -9,30 +9,38 @@
     </div>
 
     <div class="calc-wrapper2">
+        <form action="" id="calculator-form">
 
-        <label for="calc1">Distance in cm:
-            <input type="number" id="calc1"></input>
-        </label>
-
-        <div>
-            <label for="e-factor">Select elongation factor:
-                <select id="e-factor">
-                    <option value="0">280% - Soft</option>
-                    <option value="1">290% - Normal</option>
-                    <option value="2">300% - Recommended</option>
-                    <option value="3">310% - Power</option>
-                    <option value="4">320% - More power</option>
-                    <option value="5">330% - Very powerful</option>
-                    <option value="5">350% Hard</option>
-                    <option value="5">380% Extreme</option>
-                </select>
+            <label for="calc1">Distance in cm:
+                <input type="number" id="calc1" placeholder="For example: 105cm">
             </label>
-        </div>
 
-        <div>
-            Result:<input type="number">
-        </div>
+            <div>
+                <label for="e-factor">Select elongation factor:
+                    <select id="e-factor">
+                        <option value="0">280% - Soft</option>
+                        <option value="1">290% - Normal</option>
+                        <option value="2">300% - Recommended</option>
+                        <option value="3">310% - Power</option>
+                        <option value="4">320% - More power</option>
+                        <option value="5">330% - Very powerful</option>
+                        <option value="5">350% Hard</option>
+                        <option value="5">380% Extreme</option>
+                    </select>
+                </label>
+            </div>
+
+            <div>
+                <label>Result:
+                    <input type="number" placeholder="No result">
+                </label>
+            </div>
+            <button type="button">Calculate</button>
+            <button type="reset">Clear</button>
+
+        </form>
 
     </div>
+
 
 {% endblock %}
