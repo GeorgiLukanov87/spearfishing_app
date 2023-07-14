@@ -1,0 +1,15 @@
+.calc-wrapper1 img {
+    margin: auto;
+    width: 75vw;
+}
+
+.calc-wrapper1 h5 {
+    margin: 10px 20%;
+}
+
+@media only screen and (max-width: 1250px) {
+    .calc-wrapper1 h4 {
+        font-size: 13px;
+        margin: 5px 15px;
+    }
+}

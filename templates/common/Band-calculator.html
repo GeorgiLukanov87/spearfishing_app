@@ -2,10 +2,28 @@
 {% load static %}
 {% block content %}
 
-    <h1>Calculator</h1>
+
     <div class="calc-wrapper1">
         <img src="{% static 'images/Custom-Power-Bands-for-Spearguns-1.jpg' %}" alt="bands">
-        <h2>Measure this distance! From the Hole in the muzzle to the First Shark Fin!</h2>
+        <h4>
+            The unstretched band is at 100%
+        </h4>
+        <h4>
+            The band is stretched to two times original length - then stretch is 200%
+        </h4>
+        <h4> 3 times the original length is 300%</h4>
+        <h4>Measure this distance! From the Hole in the muzzle to the First Shark Fin!</h4>
+        <h5>
+            You may encounter differing opinions about the exact ratio to use. Some people prefer a shorter band/higher
+            ratio. This results in more power and a slightly longer stroke but also shortens band life and may make the
+            bands difficult to reach on longer spearguns. On the other hand a smaller Spearo may opt for a longer band
+            of greater diameter to make the bands easier to reach. The 3 to 1 ratio we use approximates that of bands
+            specified by most OEM’s. We prefer adjusting power by changing the number and diameter of bands while
+            maintaining the 3 to 1 length.
+
+            If you would like more technical information on the power of different band diameters, take a look at the
+            Band Power page in the Reference section of our site.
+        </h5>
     </div>
 
     <div class="calc-wrapper2">
@@ -14,7 +32,6 @@
             <label for="calc1">Distance in cm:
                 <input type="number" id="calc1" placeholder="For example: 105cm">
             </label>
-
             <div>
                 <label for="e-factor">Select elongation factor:
                     <select id="e-factor">
@@ -24,23 +41,53 @@
                         <option value="3">310% - Power</option>
                         <option value="4">320% - More power</option>
                         <option value="5">330% - Very powerful</option>
-                        <option value="5">350% Hard</option>
-                        <option value="5">380% Extreme</option>
+                        <option value="5">350% - Hard</option>
+                        <option value="5">380% - Extreme</option>
                     </select>
                 </label>
             </div>
 
             <div>
                 <label>Result:
-                    <input type="number" placeholder="No result">
+                    <input id="final-result" type="number" placeholder="No result" readonly>
                 </label>
+                <button class="button-edit-profile" id="calc-btn" type="button">Calculate</button>
+                <div>
+
+                    <button class="button-edit-profile" type="reset">Clear</button>
+                </div>
             </div>
-            <button type="button">Calculate</button>
-            <button type="reset">Clear</button>
+
 
         </form>
 
     </div>
 
+    <script>
+        const calcFormElement = document.getElementById('calculator-form');
+        const num1Element = document.getElementById('calc1');
+        const num2Element = document.getElementById('e-factor');
+        const calcBtn = document.getElementById('calc-btn');
+        const finalResultElement = document.getElementById('final-result');
+        calcBtn.addEventListener('click', calcFun);
+
+        function calcFun(e) {
+            let result = 0;
+            let number1 = parseFloat(num1Element.value);
+            let number2 = parseFloat(num2Element.options[num2Element.selectedIndex].text.split('%')[0]);
+
+            if (!number1) {
+                alert('Invalid input! Please add the distance in cm.');
+                calcFormElement.reset()
+                return;
+            }
+
+            result = ((number1 * 2) / (number2 / 100)).toFixed(2)
+            console.log(number1)
+            console.log(number2)
+            console.log(result)
+            finalResultElement.value = result
+        }
+    </script>
 
 {% endblock %}
