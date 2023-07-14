@@ -63,4 +63,9 @@ form select {
         border-radius: 4px;
         background-color: #eae5e5;
     }
+
+    form input {
+        font-size: 12px;
+        padding: 6px;
+    }
 }

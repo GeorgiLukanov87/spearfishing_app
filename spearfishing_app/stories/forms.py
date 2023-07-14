@@ -11,6 +11,7 @@ class StoryBaseForm(forms.ModelForm):
         labels = {
             'title': '',
             'image_url': '',
+            'description': '',
         }
 
         widgets = {
@@ -28,8 +29,8 @@ class StoryBaseForm(forms.ModelForm):
             'description': forms.Textarea(
                 attrs={
                     'placeholder': 'Tell your story...',
-                    'rows': 30,
-                    'cols': 40,
+                    'rows': 25,
+                    'cols': 35,
                 }
             ),
 

@@ -127,6 +127,5 @@
     background-image: url("bg-images/underwater-ship.jpg");
     background-size: 100% 100%;
     box-shadow: 0 0 20px 10px #807d7d;
-
-
+    margin: 5px 3%;
 }
