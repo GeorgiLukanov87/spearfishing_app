@@ -122,7 +122,6 @@ body {
 
 .button-edit-profile:hover {
     background-color: #1e1d1d;
-
 }
 
 .second-option {
@@ -140,7 +139,6 @@ body {
     flex-wrap: wrap;
     list-style: none;
     margin: 0 10px;
-
 }
 
 header {
@@ -176,11 +174,6 @@ header {
     padding-bottom: 57px;
     padding-top: 65px;
     border-bottom: 5px solid red;
-    
-}
-
-.nav-links {
-    font-size: 18px;
 }
 
 #bubbles {

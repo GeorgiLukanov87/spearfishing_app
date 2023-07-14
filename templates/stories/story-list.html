@@ -7,7 +7,7 @@
         <a class="button-edit-profile gif-story2" href="{% url 'create-story' %}"
            style="font-size: 16px;font-weight: bold"> Add new story
         </a>
-    
+
         {% if object_list %}
 
 
@@ -41,7 +41,7 @@
 
                             <article>
                                 <p class="stories-description">
-                                    {{ story.description|truncatewords:70 }}
+                                    {{ story.description|truncatewords:40 }}
                                 </p>
                                 <div>
                                     <a class="button-edit-profile gif-story1"
