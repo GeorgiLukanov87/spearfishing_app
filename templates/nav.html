@@ -11,7 +11,7 @@
             </div>
 
             <button onclick="topFunction()" id="myBtn" title="Go to top">
-                <i class="fa-solid fa-up-long fa-2xl" style="color: white;"></i>
+                <i class="fa-solid fa-up-long fa-xl" style="color: white;"></i>
             </button>
 
             <div class="nav-links">
@@ -64,7 +64,7 @@
                                 <i>Stories</i>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="{% url 'calculator' %}">
                                 <i>Calculator</i>
@@ -116,24 +116,28 @@
         </div>
     </nav>
 
+
     <script>
         let mybutton = document.getElementById("myBtn");
-        window.onscroll = function () {
-            scrollFunction()
-        };
+        window.addEventListener("scroll", scrollFunction);
 
         function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            if (window.scrollY > 20) {
                 mybutton.style.display = "block";
             } else {
                 mybutton.style.display = "none";
             }
         }
 
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+        function scrollToTop() {
+            if (window.scrollY > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, window.scrollY - window.scrollY / 8);
+            }
         }
+
+        mybutton.addEventListener("click", scrollToTop);
     </script>
+
 
 </header>
