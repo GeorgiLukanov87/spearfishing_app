@@ -70,7 +70,7 @@
         const finalResultElement = document.getElementById('final-result');
         calcBtn.addEventListener('click', calcFun);
 
-        function calcFun(e) {
+        function calcFun() {
             let result = 0;
             let number1 = parseFloat(num1Element.value);
             let number2 = parseFloat(num2Element.options[num2Element.selectedIndex].text.split('%')[0]);

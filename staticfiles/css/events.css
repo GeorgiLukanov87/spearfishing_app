@@ -31,7 +31,6 @@
 }
 
 .h1-winners-pool {
-
     box-shadow: 1px 1px 7px #0a0a0a;
     padding: 12px;
     background-color: #ced0d2;
@@ -44,7 +43,6 @@
 
 .event-container {
     display: flex;
-    border: 3px solid #595757;
     padding: 3%;
     gap: 24px;
     border-radius: 30px;
