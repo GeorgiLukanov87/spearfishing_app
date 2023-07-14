@@ -37,11 +37,6 @@ class StoryEditCBV(generic.UpdateView):
     pk_url_kwarg = 'pk'
     context_object_name = 'story'
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['user_profile'] = UserModel
-    #     return context
-
     def get_success_url(self):
         return reverse_lazy('details-story', kwargs={
             'pk': self.object.pk,
