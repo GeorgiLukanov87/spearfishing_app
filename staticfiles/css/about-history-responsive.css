@@ -9,6 +9,7 @@
 
     body > main > div > article:nth-child(2) > p:nth-child(2) {
         font-size: 16px;
+
     }
 
     body > main > div > article:nth-child(2) > p:nth-child(3) {
@@ -23,6 +24,7 @@
 
     body > main > div > article.bg-about p {
         font-size: 14px;
+
     }
 
     body > main > div > article:nth-child(2) > p:nth-child(2) {
@@ -45,5 +47,27 @@
 
     body > main > div > article:nth-child(2) > p:nth-child(3) {
         font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .history-h1 {
+        font-size: 15px;
+    }
+
+    .bg-about1 {
+        border: 1px solid #000000;
+        margin: 10px;
+        height: 220px;
+        overflow: auto;
+        box-shadow: 1px 1px 8px #000000;
+    }
+
+    .about-history2 {
+        border: 1px solid #000000;
+        margin: 10px;
+        height: 220px;
+        overflow: auto;
+        box-shadow: 1px 1px 8px #000000;
     }
 }

@@ -9,11 +9,10 @@
 
 .event-container h3 img {
     width: 40vw;
-
 }
 
 .event-buttons {
-    box-shadow: 1px 1px 7px #0a0a0a;
+    box-shadow: 1px 1px 4px #4b4a4a;
 }
 
 .competitors {
