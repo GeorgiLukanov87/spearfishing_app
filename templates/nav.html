@@ -22,7 +22,7 @@
                         {% if request.user.is_authenticated and request.user.is_superuser %}
                             <li class="nav-item">
                                 <a href="{% url 'users-list' %}">
-                                    <i>Users List</i>
+                                    <i>Users</i>
                                 </a>
                             </li>
                         {% endif %}
@@ -41,7 +41,7 @@
 
                         <li class="nav-item">
                             <a href="{% url 'weather' %}">
-                                <i>Check Weather</i>
+                                <i>Weather</i>
                             </a>
                         </li>
 
@@ -68,6 +68,12 @@
                         <li class="nav-item">
                             <a href="{% url 'about' %}">
                                 <i>About</i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#">
+                                <i>Calculator</i>
                             </a>
                         </li>
 
