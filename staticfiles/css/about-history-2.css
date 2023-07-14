@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 0 5%;
-
+    color: #525252;
 }
 
 .about-history article img {
@@ -14,7 +14,7 @@
 }
 
 .about-history article p {
-    font-size: 20px;
+    font-size: 18px;
     padding: 8px;
 }
 
@@ -23,12 +23,17 @@
 }
 
 .about-history2 {
-    font-size: 18px;
+    font-size: 16px;
     text-align: start;
-    margin: 6px 6%;
+    margin: 6px 10%;
 }
 
 .about-history2 p {
-    line-height: 1.3;
-    padding: 12px 10%;
+    padding: 4px 10%;
 }
+
+.history-span1 {
+    font-weight: bold;
+    font-size: 19px;
+}
+
