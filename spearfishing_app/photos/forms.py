@@ -38,7 +38,9 @@ class PhotoCreateForm(PhotoBaseForm):
         widgets = {
             'description': forms.Textarea(
                 attrs={
-                    'placeholder': 'Add description...'
+                    'placeholder': 'Add description...',
+                    'rows': 15,
+                    'cols': 35,
                 }
             ),
             'location': forms.TextInput(
