@@ -1,7 +1,7 @@
 from django.urls import path
 
 from spearfishing_app.common.views import index, like_functionality, add_comment, share, AllUsersCBV, delete_comment, \
-    BandCalculator
+    BandCalculator, ApneaTrainer
 
 urlpatterns = (
 
@@ -14,5 +14,6 @@ urlpatterns = (
 
     path('users-list/', AllUsersCBV.as_view(), name='users-list'),
     path('calculator/', BandCalculator.as_view(), name='calculator'),
+    path('apnea-trainer/', ApneaTrainer.as_view(), name='apnea-trainer'),
 
 )

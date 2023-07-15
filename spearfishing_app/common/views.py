@@ -120,3 +120,7 @@ class AllUsersCBV(generic.ListView):
 
 class BandCalculator(generic.TemplateView):
     template_name = 'common/Band-calculator.html'
+
+
+class ApneaTrainer(generic.TemplateView):
+    template_name = 'common/apnea-trainer.html'

@@ -9,36 +9,11 @@ from spearfishing_app.accounts.forms import UserCreateForm
 UserModel = get_user_model()
 
 
-# lukanov2 : gogo$12345$newpass
-
-
 class SignInView(auth_views.LoginView):
     template_name = 'accounts/login-page.html'
     success_url = reverse_lazy('index')
 
 
-# Old version,sometimes giving error: "user has no clas _meta"
-# class SingInView(generic.CreateView):
-#     template_name = 'accounts/register-page.html'
-#     form_class = UserCreateForm
-#     success_url = reverse_lazy('index')
-#
-#     # when new user is created,auto-login
-#     # def post(self, request, *args, **kwargs):
-#     #     response = super().post(request, *args, **kwargs)
-#     #     login(request, self.object)
-#     #     return response
-#
-#     def post(self, request, *args, **kwargs):
-#         form = self.get_form()
-#         if form.is_valid():
-#             user = form.save()
-#             login(request, user)
-#             return self.form_valid(form)
-#         else:
-#             return self.form_invalid(form)
-
-# CHAT GPT HELP !
 class SingInView(generic.CreateView):
     template_name = 'accounts/register-page.html'
     form_class = UserCreateForm
@@ -72,16 +47,13 @@ class UserDetailsView(generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
         context['is_owner'] = self.request.user == self.object
-        # context['equipment'] = self.object.equipment
 
         # very important about queries...fast operation !single query from db filtered
         photos = self.object.photo_set.prefetch_related('like_set')
 
         context['photos_count'] = photos.count()
         context['likes_count'] = sum(x.like_set.count() for x in photos)
-
         context['photos'] = self.get_paginated_photos()
 
         return context

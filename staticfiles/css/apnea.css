@@ -1,0 +1,45 @@
+.apnea-main-wrapper {
+    width: 40vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 6px;
+
+}
+
+table, th, td {
+    border: 1px solid;
+    padding: 5px 20px;
+    background-color: #ffffff;
+}
+
+td {
+    color: #212020;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.apnea-text-wrapper {
+    width: 60vw;
+    margin: auto;
+    text-align: start;
+    font-size: 18px;
+    line-height: 1.1;
+}
+
+.p-text-1 {
+    padding-left: 4%;
+}
+
+.orange-p {
+    color: #ef6d12;
+    font-size: 18px;
+    text-indent: 44px;
+    font-weight: bold;
+}
