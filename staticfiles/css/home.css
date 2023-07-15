@@ -33,7 +33,7 @@ body {
 .logo img {
     border: 1px solid black;
     margin: 8px 14px;
-    box-shadow: 1px 1px 20px 1px #000000;
+    box-shadow: 1px 1px 10px 1px #3a3a3a;
     background-color: white;
     position: relative;
     width: 125px;
@@ -41,9 +41,9 @@ body {
 }
 
 .logo img:hover {
-    scale: 1.011;
+    scale: 1.01;
     transition: linear 110ms;
-    box-shadow: 0 0 5px 2px #257685;
+    box-shadow: 1px 1px 10px 1px #257685;
 }
 
 .footer {
