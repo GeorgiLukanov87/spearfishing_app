@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
     <h2 style="text-decoration: underline;font-size: 30px">Apnea Trainer</h2>
@@ -17,8 +18,17 @@
             what
             you are capable of right now to understand what you can expect from a month of training. Please download
             Apnea
-            Trainer mobile app for Android or iOS if you haven’t done it yet.
+            Trainer mobile app for <a style="font-weight: bold;color: blue;font-size: 20px" target="_blank"
+                                      href="https://play.google.com/store/apps/details?id=com.brucemax.freediveapneatimer">Android</a>
+            or <a style="font-weight: bold;color: blue;font-size: 20px" target="_blank"
+                  href="https://apps.apple.com/au/app/freediving-apnea-trainer/id1216253186">iOS</a>
+            if you haven’t done
+            it yet.
+
         </p>
+        <div class="apnea-img-container">
+            <img src="{% static 'images/header-iphone.png' %}" alt="phone-img">
+        </div>
         <br>
 
         <div class="p-text-1">
@@ -298,6 +308,7 @@
             This type of training should not last long. The combination of anaerobic walks and a regular workout is a
             good solution.</p>
         <br>
+
         <p style="text-indent: 44px;">Aerobic training, in turn, teaches your body to efficiently absorb oxygen.</p>
         <br>
         <p style="text-indent: 44px;">Healthy eating.</p>
