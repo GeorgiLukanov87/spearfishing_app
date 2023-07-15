@@ -53,11 +53,9 @@
                     Competitors:
                     <h3 class="competitors-wrapper">
 
-
                         {% for competitor in event.competitors.all %}
                             <div class="competitors">
                                 <ul style="list-style: none">
-
                                     <li class="competitors-li">
                                         <a style="text-decoration: none"
                                            href="{% url 'profile details' pk=competitor.pk %}">

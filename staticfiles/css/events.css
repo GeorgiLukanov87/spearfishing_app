@@ -189,16 +189,15 @@ main {
 
 
 .h3-details {
-    color: #043fee;
+    color: #06067a;
 }
 
 .winners-span {
-    color: #3b3939;
+    color: #252424;
 }
 
 .event-wrapper {
     height: 24px;
-
 }
 
 .event-wrapper a {
@@ -211,8 +210,6 @@ main {
     font-weight: bold;
     text-shadow: 1px 1px 1px black;
     font-size: 16px;
-
-
 }
 
 .event-wrapper a:hover {
