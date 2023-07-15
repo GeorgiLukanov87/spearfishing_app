@@ -32,11 +32,12 @@ body {
 
 .logo img {
     border: 1px solid black;
-    margin: 8px 12px;
+    margin: 8px 14px;
     box-shadow: 1px 1px 20px 1px #000000;
     background-color: white;
     position: relative;
     width: 125px;
+    margin-top: 12px;
 }
 
 .logo img:hover {
