@@ -95,7 +95,10 @@
         flex-direction: column-reverse;
         justify-content: center;
         padding-left: 50px;
+    }
 
+    .f1 {
+        font-size: 14px;
     }
 
     .f1-wrapper {
