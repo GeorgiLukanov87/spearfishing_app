@@ -1,6 +1,6 @@
 .users-list-ul {
     border: 1px solid black;
-    border-radius: 50px;
+    border-radius: 12px;
     display: flex;
     padding: 30px;
     flex-wrap: wrap;

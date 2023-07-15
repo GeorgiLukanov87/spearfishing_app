@@ -2,8 +2,8 @@
 {% block content %}
 
     <form action="{% url 'users-list' %}?page={{ page_obj.number }}">
-        <label for="name">Search by Username:
-            <input name="search" placeholder="Add username..." value="{{ search }}">
+        <label for="name">
+            <input name="search" placeholder="Search username..." value="{{ search }}">
         </label>
 
         <div>
@@ -15,7 +15,7 @@
         <div class="ul-list-wrapper">
             <h2>Users List:</h2>
             <br>
-            <div style="font-weight: bold;font-size: 24px">
+            <div style="font-weight: bold;font-size: 18px">
                 {% if page_obj.has_previous %}
                     <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}">&lt;</a>
                 {% else %}
@@ -69,7 +69,7 @@
         </div>
     </div>
 
-    <div style="font-weight: bold;font-size: 24px">
+    <div style="font-weight: bold;font-size: 18px">
         {% if page_obj.has_previous %}
             <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}">&lt;</a>
         {% else %}

@@ -33,7 +33,7 @@
                     </div>
                     <div class="icons-wrapper">
                         <div>
-                            <h4>likes: {{ photo.like_set.all.count }}</h4>
+                            <h4>Likes: {{ photo.like_set.all.count }}</h4>
                             {% if not photo.like_set.all.count %}
 
                                 <a href="{% url 'like' photo.id %}">
