@@ -196,9 +196,14 @@ main {
     color: #3b3939;
 }
 
+.event-wrapper {
+    height: 24px;
+
+}
+
 .event-wrapper a {
     border: 1px solid black;
-    padding: 12px;
+    padding: 9px;
     border-radius: 14px;
     color: white;
     text-decoration: none;
@@ -206,6 +211,7 @@ main {
     font-weight: bold;
     text-shadow: 1px 1px 1px black;
     font-size: 16px;
+
 
 }
 
