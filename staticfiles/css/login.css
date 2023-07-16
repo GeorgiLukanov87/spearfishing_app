@@ -55,8 +55,13 @@ body > main > div > div.login-register-box > form > ul.errorlist {
     width: 42px;
     height: 24px;
     font-weight: bold;
-    background-color: #d0cccc;
+    background-color: #dad7d7;
     border-radius: 4px;
+}
+
+#toggleButtonForPasswordLoginPage button:hover {
+    background-color: #afabab;
+
 }
 
 .button-login:hover {

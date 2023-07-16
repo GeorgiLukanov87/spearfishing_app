@@ -14,4 +14,20 @@
     font-size: 26px;
 }
 
+@media only screen and (max-width: 1200px) {
+    .welcome-msg {
+        font-size: 14px;
+    }
+}
 
+@media only screen and (max-width: 1000px) {
+    .welcome-msg {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .welcome-msg {
+        font-size: 12px;
+    }
+}

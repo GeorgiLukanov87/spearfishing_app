@@ -1,10 +1,11 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
 from spearfishing_app.common.helpers.dirty_words_validator import validate_dirty_words
-from spearfishing_app.stories.forms import StoryBaseForm, StoryEditForm, StoryCreateForm
+from spearfishing_app.stories.forms import StoryEditForm, StoryCreateForm
 from spearfishing_app.stories.models import Story
 
 UserModel = get_user_model()
@@ -12,7 +13,7 @@ UserModel = get_user_model()
 
 # stories/views.py
 
-class StoryCreateCBV(generic.CreateView):
+class StoryCreateCBV(LoginRequiredMixin, generic.CreateView):
     template_name = 'stories/create-story.html'
     form_class = StoryCreateForm
     success_url = reverse_lazy('all-stories')
@@ -30,7 +31,7 @@ class StoryListCBV(generic.ListView):
     model = Story
 
 
-class StoryEditCBV(generic.UpdateView):
+class StoryEditCBV(LoginRequiredMixin, generic.UpdateView):
     template_name = 'stories/edit-story.html'
     model = Story
     form_class = StoryEditForm
@@ -49,13 +50,13 @@ class StoryEditCBV(generic.UpdateView):
         return super().form_valid(form)
 
 
-class StoryDeleteCBV(generic.DeleteView):
+class StoryDeleteCBV(LoginRequiredMixin, generic.DeleteView):
     template_name = 'stories/delete-story.html'
     model = Story
     success_url = reverse_lazy('all-stories')
 
 
-class StoryDetailsCBV(generic.DetailView):
+class StoryDetailsCBV(LoginRequiredMixin, generic.DetailView):
     model = Story
     template_name = 'stories/details-story.html'
 

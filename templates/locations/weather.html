@@ -15,13 +15,13 @@
 
         <article id="weather-wrapper">
             {% if weather_data %}
-                <div style="background-color: #eee7e7;display: flex;padding:10px;flex-direction: column;gap:8px;font-size: 22px;border:1px solid black;border-radius: 10px;width: 35vw;margin: auto">
+                <div style="background-color: #eee7e7;display: flex;padding:10px;flex-direction: column;gap:8px;font-size: 22px;border:1px solid black;border-radius: 10px;width: 300px;margin: auto">
 
-                <h1>{{ weather_data.city|upper }}</h1>
-                <h2>Temp: <span style="color: #f85e00"> {{ weather_data.temperature }}°C </span></h2>
-                <h2>Wind: <span style="color: #2839e8"> {{ weather_data.wind }} km/h </span></h2>
-                <h2>{{ weather_data.description }}</h2>
-                <h2>Clouds: {{ weather_data.clouds }}%</h2>
+                <h3>{{ weather_data.city|capfirst }}</h3>
+                <h4>Temp: <span style="color: #f85e00"> {{ weather_data.temperature }}°C </span></h4>
+                <h4>Wind: <span style="color: #2839e8"> {{ weather_data.wind }} km/h </span></h4>
+                <h4>{{ weather_data.description }}</h4>
+                <h4>Clouds: {{ weather_data.clouds }}%</h4>
 
                 <div>
                     <img style="width: 105px" src="https://openweathermap.org/img/w/{{ weather_data.icon }}.png"

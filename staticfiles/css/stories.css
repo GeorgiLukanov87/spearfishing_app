@@ -43,11 +43,11 @@
 }
 
 .story-details-p-1 a {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
-    color: red;
+
     text-decoration: none;
-    border-bottom: 4px solid #ff0000;
+    border-bottom: 3px solid #ff0000;
     padding-bottom: 6px;
 }
 
@@ -68,8 +68,6 @@
     padding: 12px;
     box-shadow: 1px 1px 20px #656565;
     font-size: 22px;
-    font-family: "Times New Roman", sans-serif;
-    text-shadow: 1px 1px 2px #807f7f;
     border-radius: 4px;
 }
 
@@ -115,12 +113,14 @@
 }
 
 .gif-story2:hover {
-    padding: 75px 50px;
+    padding: 80px 45px;
     background-image: url("bg-images/bg3.gif");
     background-size: cover;
     transition: 300ms linear;
     font-weight: bold;
     border-radius: 100%;
+    color: red;
+
 }
 
 .create-story-bg {

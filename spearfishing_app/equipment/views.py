@@ -1,8 +1,10 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from spearfishing_app.equipment.forms import EquipmentAddForm
 
 
+@login_required
 def add_equipment(request):
     if request.method == 'GET':
         form = EquipmentAddForm()

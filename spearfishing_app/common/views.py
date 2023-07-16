@@ -86,7 +86,7 @@ def add_comment(request, photo_id):
         return redirect('index')
 
 
-@login_required()
+@login_required
 def delete_comment(request, photo_id, comment_pk):
     photo = get_object_or_404(Photo, pk=photo_id)
     comment = Comment.objects.filter(to_photo=photo, pk=comment_pk)

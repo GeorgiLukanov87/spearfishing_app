@@ -44,3 +44,9 @@
     border-radius: 4px;
 
 }
+
+#equipment-show-btw:hover {
+    cursor: pointer;
+    background-color: #d7d4d4;
+
+}

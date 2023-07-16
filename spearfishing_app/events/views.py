@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
@@ -7,7 +9,6 @@ from spearfishing_app.events.models import Event
 
 
 def events_list(request):
-    # print(request.user.is_staff)
     events = Event.objects.all()
     context = {
         'events': events,
@@ -17,12 +18,13 @@ def events_list(request):
     return render(request, 'events/events-list.html', context)
 
 
-class CreateEventCBV(generic.CreateView):
+class CreateEventCBV(LoginRequiredMixin, generic.CreateView):
     template_name = 'events/create-event.html'
     form_class = EventCreateForm
     success_url = reverse_lazy('events-list')
 
 
+@login_required
 def edit_event(request, pk):
     event = Event.objects.filter(pk=pk).get()
     if request.method == 'GET':
@@ -37,6 +39,7 @@ def edit_event(request, pk):
     return render(request, 'events/edit-event.html', context, )
 
 
+@login_required
 def delete_event(request, pk):
     event = Event.objects.filter(pk=pk).get()
     if request.method == 'GET':

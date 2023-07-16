@@ -66,6 +66,7 @@ def get_post_photo_form(request, form, success_url, template_path, pk=None):
     return render(request, template_path, context)
 
 
+@login_required
 def edit_photo(request, pk):
     photo = Photo.objects.filter(pk=pk).get()
     return get_post_photo_form(
@@ -77,6 +78,7 @@ def edit_photo(request, pk):
     )
 
 
+@login_required
 def delete_photo(request, pk):
     photo = Photo.objects.filter(pk=pk).get()
 
