@@ -13,15 +13,15 @@
 
         <h2 class="h2-maps">Search new Locations here:</h2>
 
-
         <form class="location-searchbar" method="POST">
 
             {% csrf_token %}
             {{ form.address|placeholder:'City name or coordinates...' }}
 
-            <button style="background-color: #8f8b8b;color: #000000;border-radius: 14px;padding: 6px;font-weight: bold"
-                    type="button">Search
+            <button style="border: 1px solid #474e50;background-color: #474e50;color: #fcfcfc;border-radius: 14px;padding: 6px;font-weight: bold"
+                    type="submit">Search
             </button>
+
         </form>
         <h4 class="h5-locations-wrapper">You can search using city name or search using coordinates:
             <p>Latitude and Longitude.</p>

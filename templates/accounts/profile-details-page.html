@@ -2,9 +2,15 @@
 {% load static %}
 {% block content %}
     <div class="profile-container">
-        <h3>User Equipment:</h3>
+        <h3>Diving Equipment:</h3>
+        
+        <div>
+            <button id="equipment-show-btw" type="button">Show</button>
+        </div>
+
         {% if request.user.equipment %}
-            <div class="equipment-wrapper">
+
+            <div id="equipment-id" class="equipment-wrapper">
                 <div class="equipment">
                     <div class="equipment-containers">
 
@@ -15,7 +21,6 @@
                                 <img src="{% static 'images/no-image-available.jpg' %}" alt="gun img">
                             {% endif %}
                         </div>
-
                         <h4>Gun Brand: {{ request.user.equipment.gun_model }}</h4>
                         <h4>Gun Material: {{ request.user.equipment.gun_material }}</h4>
                         <h4>Gun Length: {{ request.user.equipment.gun_length }}</h4>
@@ -177,5 +182,21 @@
         </div>
         {# END PAGINATOR #}
     </div>
+
+    <script>
+        const showBtn = document.getElementById('equipment-show-btw');
+        const equipmentElement = document.getElementById('equipment-id');
+        showBtn.addEventListener('click', showHideFunc)
+
+        function showHideFunc(e) {
+            if (e.target.textContent === 'Show') {
+                equipmentElement.style.display = 'block';
+                e.target.textContent = 'Hide'
+            } else {
+                equipmentElement.style.display = 'none';
+                e.target.textContent = 'Show'
+            }
+        }
+    </script>
 
 {% endblock %}

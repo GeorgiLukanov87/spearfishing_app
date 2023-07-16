@@ -15,7 +15,7 @@
 
         <article id="weather-wrapper">
             {% if weather_data %}
-                <div style="background-color: #eee7e7;display: flex;flex-direction: column;gap:8px;font-size: 22px;border:1px solid black;border-radius: 10%;width: 500px;margin: auto">
+                <div style="background-color: #eee7e7;display: flex;padding:10px;flex-direction: column;gap:8px;font-size: 22px;border:1px solid black;border-radius: 10px;width: 35vw;margin: auto">
 
                 <h1>{{ weather_data.city|upper }}</h1>
                 <h2>Temp: <span style="color: #e15b07"> {{ weather_data.temperature }}°C </span></h2>

@@ -35,6 +35,7 @@ class PhotoCreateForm(PhotoBaseForm):
             'description': '',
             'location': '',
         }
+
         widgets = {
             'description': forms.Textarea(
                 attrs={

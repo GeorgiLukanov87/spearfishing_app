@@ -23,11 +23,24 @@
 }
 
 .equipment img {
-    width: 55%;
-    height: 55%;
+    width: 45%;
+    height: 45%;
     border: 1px solid black;
     border-radius: 12px;
     margin: auto;
-    box-shadow: 1px 1px 15px black;
+    box-shadow: 1px 1px 5px black;
+
+}
+
+.equipment-wrapper {
+    display: none;
+}
+
+#equipment-show-btw {
+    width: 50px;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
 
 }
