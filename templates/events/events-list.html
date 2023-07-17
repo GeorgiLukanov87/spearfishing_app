@@ -33,18 +33,19 @@
                         <h2 class="h1-winners-pool">Winner's pool rewards:</h2>
                     </div>
 
-                    <h2><i class="fa-solid fa-trophy  fa-xl"
+                    <h2><i class="fa-solid fa-trophy"
                            style="color: #ff7300;"></i> <span class="winners-span"> Winner First Place:</span>
                         1000$</h2>
-                    <h2><i class="fa-solid fa-trophy  fa-lg" style="color: #ff7300;"> </i><span
-                            class="winners-span">2nd Place:</span>
+                    <h2><i class="fa-solid fa-trophy" style="color: #ff7300;"> </i><span
+                            class="winners-span"> 2nd Place:</span>
                         500$</h2>
-                    <h2><i class="fa-solid fa-trophy " style="color: #ff7300;"> </i>
+                    <h2><i class="fa-solid fa-trophy" style="color: #ff7300;"> </i>
                         <span class="winners-span">3th Place:</span>
                         Gift from
                         our partners -
                         <a class="gift-a" href="https://www.tradeinn.com/diveinn/es" target="_blank"> "DiveInn.com" </a>
-                        <a class="gift-a" href="{% url 'gift-page' %}" target="_blank"> -> LOOK THE GIFT HERE <- </a>
+                        <a class="gift-a" href="{% url 'gift-page' %}" target="_blank"> <span
+                                style="color: black;font-size: 22px"> > </span>LOOK THE GIFT HERE </a>
                     </h2>
                 </div>
 
@@ -70,15 +71,19 @@
                     </h3>
                 </div>
                 {% if perms %}
-                    <div class="event-wrapper">
-                        <a class="event-buttons" href="{% url 'edit-event' pk=event.pk %}">Edit Event <i
-                                class="fa-solid fa-pen-to-square  fa-xl" style="color: #005eff;"></i></a>
+                    <div class="event-wrapper-global">
+
+                        <div class="event-wrapper">
+                            <a class="event-buttons" href="{% url 'edit-event' pk=event.pk %}">Edit Event <i
+                                    class="fa-solid fa-pen-to-square  fa-xl" style="color: #005eff;"></i></a>
+                        </div>
+
+                        <div class="event-wrapper">
+                            <a class="event-buttons" href="{% url 'delete-event' pk=event.pk %}">Delete Event
+                                <i class="fa-solid fa-trash-can  fa-xl" style="color: #ff0000;"></i></a>
+                        </div>
                     </div>
 
-                    <div class="event-wrapper">
-                        <a class="event-buttons" href="{% url 'delete-event' pk=event.pk %}">Delete Event
-                            <i class="fa-solid fa-trash-can  fa-xl" style="color: #ff0000;"></i></a>
-                    </div>
                     </div>
                 {% endif %}
         {% endfor %}

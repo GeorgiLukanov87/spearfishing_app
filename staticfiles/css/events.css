@@ -23,10 +23,11 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    border: #3d3c3c solid 2px;
-    padding: 30px;
+    border: #3d3c3c solid 1px;
+    padding: 12px;
     border-radius: 4px;
-    box-shadow: 1px 1px 20px #0a0a0a;
+    box-shadow: 1px 1px 7px #736f6f;
+
 }
 
 .h1-winners-pool {
@@ -46,8 +47,8 @@
     gap: 24px;
     border-radius: 4px;
     background-color: #b9d5fd;
-    box-shadow: 1px 1px 15px #0a0a0a;
-    margin: 0 7%;
+    box-shadow: 1px 1px 5px #0a0a0a;
+    margin: 0 15%;
 }
 
 h1 {
@@ -237,4 +238,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.event-wrapper-global {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
 }

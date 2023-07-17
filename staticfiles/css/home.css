@@ -38,6 +38,7 @@ body {
     position: relative;
     width: 125px;
     margin-top: 12px;
+    padding: 10px;
 }
 
 .logo img:hover {
