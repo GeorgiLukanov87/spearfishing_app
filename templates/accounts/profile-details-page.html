@@ -3,7 +3,7 @@
 {% block content %}
     <div class="profile-container">
         <h3>Diving Equipment:</h3>
-        
+
         <div>
             <button id="equipment-show-btw" type="button">Show</button>
         </div>
@@ -82,7 +82,7 @@
                 <h2>Full Name: {{ object.get_full_name }}</h2>
                 <h2>Username: {{ object.username }}</h2>
             {% else %}
-                <h1> Username: {{ object.username }}, pk= {{ request.user.pk }}</h1>
+                <h2> Username: {{ object.username }}</h2>
             {% endif %}
 
             <h4>Email: {{ object.email }}</h4>
