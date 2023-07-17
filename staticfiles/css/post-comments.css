@@ -1,10 +1,10 @@
 .comment-description {
     background-color: #52afbe;
-    width: 35%;
+    width: 300px;
     margin: auto;
     position: relative;
     top: -4px;
-    
+
 }
 
 .comment-description h3:nth-child(1) {

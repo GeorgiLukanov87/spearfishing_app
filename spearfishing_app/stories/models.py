@@ -45,3 +45,5 @@ class Story(models.Model):
         UserModel,
         on_delete=models.CASCADE,
     )
+
+    

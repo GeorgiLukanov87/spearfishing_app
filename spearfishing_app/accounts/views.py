@@ -41,7 +41,7 @@ class UserDetailsView(generic.DetailView):
 
     def get_paginated_photos(self):
         page = self.get_photos_page()
-        photos = self.object.photo_set.all()
+        photos = self.object.photo_set.order_by('id')
         paginator = Paginator(photos, self.photos_paginate_by)
         return paginator.get_page(page)
 

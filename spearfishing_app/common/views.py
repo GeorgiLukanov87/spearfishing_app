@@ -108,7 +108,7 @@ class AllUsersCBV(generic.ListView):
         queryset = super().get_queryset()
 
         search = self.request.GET.get('search', '')
-        queryset = queryset.filter(username__icontains=search)
+        queryset = queryset.filter(username__icontains=search).order_by('id')
         return queryset
 
     def get_context_data(self, *args, **kwargs):
