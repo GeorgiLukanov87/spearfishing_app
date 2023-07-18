@@ -4,12 +4,8 @@
 
     <form action="{% url 'login' %}" method="post">
         <input type="hidden" name="next" value="{{ next }}">
-
-        <label for="name">Name</label>
-        {{ form.username|placeholder:'Add name...' }}
-
-        <label for="password">Password</label>
-        {{ form.password|placeholder:'Add password...' }}
+        
+        {{ form.as_p }}
         <div id="toggleButtonForPasswordLoginPage">
 
             <button type="button" id="toggle-show" onclick="togglePass()">

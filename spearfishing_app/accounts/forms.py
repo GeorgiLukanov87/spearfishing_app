@@ -17,9 +17,6 @@ class UserCreateForm(auth_forms.UserCreationForm):
         self.fields['password1'].widget.attrs['placeholder'] = 'Enter Password...'
         self.fields['password2'].widget.attrs['placeholder'] = 'Repeat Password...'
 
-        # self.fields['password1'].widget.attrs['id'] = 'pass1-toggle'
-        # self.fields['password2'].widget.attrs['id'] = 'pass2-toggle'
-
     class Meta:
         model = UserModel
         fields = ('username', 'email', 'profile_image_url',)

@@ -42,6 +42,11 @@ body > main > div > div.login-register-box > form > ul.errorlist {
     color: red;
 }
 
+body > main > form > ul:nth-child(3), body > main > form > ul:nth-child(6), body > main > form > ul {
+    display: block;
+    color: red;
+}
+
 #toggle-hide {
     display: none;
 }

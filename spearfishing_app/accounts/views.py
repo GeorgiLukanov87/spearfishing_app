@@ -1,3 +1,4 @@
+from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect
 from django.contrib.auth import views as auth_views, get_user_model, login
@@ -12,6 +13,7 @@ UserModel = get_user_model()
 class SignInView(auth_views.LoginView):
     template_name = 'accounts/login-page.html'
     success_url = reverse_lazy('index')
+    form_class = AuthenticationForm
 
 
 class SingInView(generic.CreateView):
@@ -85,3 +87,4 @@ def to_github(request):
 class ChangePasswordCBV(auth_views.PasswordChangeView):
     template_name = 'accounts/change-password.html'
     success_url = reverse_lazy('index')
+    form_class = PasswordChangeForm
