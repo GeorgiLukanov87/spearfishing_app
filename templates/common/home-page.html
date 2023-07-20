@@ -121,6 +121,8 @@
                         </li>
 
                     {% endfor %}
+                {% else %}
+                    <img style="width: 20vw" src="{% static 'images/no_posts.png' %}" alt="no-posts">
                 {% endif %}
             </ul>
         </div>
