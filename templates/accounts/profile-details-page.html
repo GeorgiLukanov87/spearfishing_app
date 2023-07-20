@@ -9,7 +9,6 @@
         </div>
 
         {% if request.user.equipment %}
-
             <div id="equipment-id" class="equipment-wrapper">
                 <div class="equipment">
                     <div class="equipment-containers">
@@ -51,11 +50,18 @@
                         <h4>Fins brand: {{ request.user.equipment.fins_model }}</h4>
                         <h4>Fins Material: {{ request.user.equipment.fins_material }}</h4>
                     </div>
+
                 </div>
+
+                <a class="button-edit-profile" href="{% url 'edit-equipment' request.user.equipment.pk %}">Edit
+                    Equipment</a>
             </div>
 
         {% else %}
             <h1>No equipment added yet!</h1>
+            <h2>
+                <a href="{% url 'add-equipment' %}">Add Equipment</a>
+            </h2>
         {% endif %}
 
         <div class="profile-details-wrapper">

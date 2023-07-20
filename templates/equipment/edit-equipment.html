@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <form action="{% url 'edit-equipment' pk=request.user.equipment.pk %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="button-edit-profile" type="submit">Save</button>
+    </form>
+
+{% endblock %}
