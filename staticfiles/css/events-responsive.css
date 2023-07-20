@@ -40,6 +40,12 @@
         height: 35px;
     }
 
+    .event-wrapper-global {
+        justify-content: center;
+        flex-direction: column;
+        gap: 14px;
+    }
+
 }
 
 

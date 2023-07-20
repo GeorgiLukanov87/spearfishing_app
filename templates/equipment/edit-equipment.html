@@ -5,10 +5,10 @@
         {% csrf_token %}
         {{ form.as_p }}
 
-        <button class="button-edit-profile" type="submit">Save</button>
+        <button style="font-weight: bold" class="button-edit-profile" type="submit">Save</button>
 
         <button class="button-edit-profile" type="button"><a
-                style="text-decoration: none;font-size: 14px;color: #dedcdc"
+                style="text-decoration: none;font-size: 13px;color: #dedada;font-weight: bold"
                 href="{% url 'profile details' request.user.pk %}">Back</a>
         </button>
     </form>
