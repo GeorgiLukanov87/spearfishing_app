@@ -2,7 +2,7 @@
 {% block content %}
 
     <form action="{% url 'add-equipment' %}" method="post">
-    <h1>Add equipment:</h1>
+        <h2>Add equipment:</h2>
 
         {{ form }}
         {% csrf_token %}

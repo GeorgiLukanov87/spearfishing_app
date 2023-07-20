@@ -45,3 +45,7 @@
     cursor: pointer;
     background-color: #d7d4d4;
 }
+
+#id_additional_info {
+    width: 95%;
+}

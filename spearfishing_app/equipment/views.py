@@ -27,7 +27,12 @@ def add_equipment(request):
 class EquipmentEditView(generic.UpdateView):
     template_name = 'equipment/edit-equipment.html'
     model = Equipment
-    fields = '__all__'
+    fields = (
+        'gun_model', 'gun_material', 'gun_length', 'gun_image',
+        'bands', 'bands_brand', 'bands_image',
+        'fins_model', 'fins_material', 'fins_image',
+        'additional_info'
+    )
 
     def get_success_url(self):
         return reverse_lazy('profile details', kwargs={
