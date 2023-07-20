@@ -53,9 +53,11 @@
 
                 </div>
 
-                <a style="font-weight: bold" class="button-edit-profile"
-                   href="{% url 'edit-equipment' request.user.equipment.pk %}">Edit
-                    Equipment</a>
+                {% if is_owner %}
+                    <a style="font-weight: bold" class="button-edit-profile"
+                       href="{% url 'edit-equipment' request.user.equipment.pk %}">Edit
+                        Equipment</a>
+                {% endif %}
             </div>
 
         {% else %}
