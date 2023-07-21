@@ -102,7 +102,7 @@ def redirect_to_index(request):
 class AllUsersCBV(generic.ListView):
     template_name = 'common/users-list.html'
     model = UserModel
-    paginate_by = 3
+    paginate_by = 4
 
     def get_queryset(self):
         queryset = super().get_queryset()

@@ -13,22 +13,23 @@
 
     <div class="lists">
         <div class="ul-list-wrapper">
-            <h2>Users List:</h2>
+            <h2>All users:</h2>
             <br>
-            <div style="font-weight: bold;font-size: 18px">
-                {% if page_obj.has_previous %}
-                    <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}">&lt;</a>
-                {% else %}
-                    <a>&lt;</a>
-                {% endif %}
-
-                {{ page_obj.number }} / {{ paginator.num_pages }}
-
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}&search={{ search }}">&gt;</a>
-                {% else %}
-                    <a>&gt;</a>
-                {% endif %}
+            <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a style="color: blue;font-size: 16px" href="?page=1">&laquo; First</a>
+                        <a style="color: red;font-size: 16px;"
+                           href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    {% endif %}
+                    <span style="font-weight: bold;font-size: 16px"
+                          class="current">{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+                    {% if page_obj.has_next %}
+                        <a style="color: red;font-size: 16px;"
+                           href="?page={{ page_obj.next_page_number }}"> Next</a>
+                        <a style="color: blue;font-size: 16px" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                    {% endif %}
+                </span>
             </div>
             <br>
 
@@ -69,20 +70,39 @@
         </div>
     </div>
 
-    <div style="font-weight: bold;font-size: 18px">
-        {% if page_obj.has_previous %}
-            <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}">&lt;</a>
-        {% else %}
-            <a>&lt;</a>
-        {% endif %}
+    {#    <div style="font-weight: bold;font-size: 18px">#}
+    {#        {% if page_obj.has_previous %}#}
+    {#            <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}">&lt;</a>#}
+    {#        {% else %}#}
+    {#            <a>&lt;</a>#}
+    {#            #}
+    {##}
+    {#        {% endif %}#}
+    {##}
+    {#        {{ page_obj.number }} / {{ paginator.num_pages }}#}
+    {##}
+    {#        {% if page_obj.has_next %}#}
+    {#            <a href="?page={{ page_obj.next_page_number }}&search={{ search }}">&gt;</a>#}
+    {#        {% else %}#}
+    {#            <a>&gt;</a>#}
+    {#        {% endif %}#}
+    {#    </div>#}
 
-        {{ page_obj.number }} / {{ paginator.num_pages }}
-
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}&search={{ search }}">&gt;</a>
-        {% else %}
-            <a>&gt;</a>
-        {% endif %}
+    <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a style="color: blue;font-size: 16px" href="?page=1">&laquo; First</a>
+                        <a style="color: red;font-size: 16px;"
+                           href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    {% endif %}
+                    <span style="font-weight: bold;font-size: 16px"
+                          class="current">{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+                    {% if page_obj.has_next %}
+                        <a style="color: red;font-size: 16px;"
+                           href="?page={{ page_obj.next_page_number }}"> Next</a>
+                        <a style="color: blue;font-size: 16px" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                    {% endif %}
+                </span>
     </div>
 
 {% endblock %}
