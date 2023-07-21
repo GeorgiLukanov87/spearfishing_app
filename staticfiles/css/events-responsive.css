@@ -57,4 +57,31 @@
     .rewards-wrapper div, .rewards-wrapper h2 {
         font-size: 12px;
     }
+
+    .winner-gift {
+        margin-left: unset;
+        flex-direction: column-reverse;
+    }
+
+    .gift-article2 p, .gift-article2 h3 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1550px) {
+    .winner-gift {
+        margin-left: unset;
+        flex-direction: column-reverse;
+    }
+
+    .gift-article2 p, .gift-article2 h3 {
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 1050px) {
+    .gift-article2 p, .gift-article2 h3 {
+        font-size: 13px;
+    }
 }
