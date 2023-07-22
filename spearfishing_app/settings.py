@@ -127,8 +127,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Send mail config.
-# Important-add in accounts-app's urls
-# "from .signals import *"
+# Important-add in accounts-app's urls: "from .signals import *"
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587

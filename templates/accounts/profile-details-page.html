@@ -2,17 +2,18 @@
 {% load static %}
 {% block content %}
     <div class="profile-container">
+
         <h3>Diving Equipment:</h3>
 
-        <div>
-            <button id="equipment-show-btw" type="button">Show</button>
-        </div>
-
         {% if object.equipment %}
+
+            <div>
+                <button id="equipment-show-btw" type="button">Show</button>
+            </div>
+
             <div id="equipment-id" class="equipment-wrapper">
                 <div class="equipment">
                     <div class="equipment-containers">
-
                         <div>
                             {% if object.equipment.gun_image %}
                                 <img src="{{ object.equipment.gun_image }}" alt="gun img">
@@ -36,7 +37,6 @@
 
                         <h4>Gun Bands: {{ object.equipment.bands }}</h4>
                         <h4>Gun Bands brand: {{ object.equipment.bands_brand }}</h4>
-
                     </div>
 
                     <div class="equipment-containers">
@@ -50,7 +50,6 @@
                         <h4>Fins brand: {{ object.equipment.fins_model }}</h4>
                         <h4>Fins Material: {{ object.equipment.fins_material }}</h4>
                     </div>
-
                 </div>
 
                 {% if is_owner %}
