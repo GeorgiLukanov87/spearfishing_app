@@ -52,7 +52,7 @@
 
                             <i class="fa-solid fa-square-share-nodes "></i>
                         </div>
-                        {% if is_owner %}
+                        {% if is_owner or request.user.is_staff %}
                             <div>
 
                                 <a href="{% url 'edit-photo' photo.pk %}">

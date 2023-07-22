@@ -97,7 +97,7 @@
             {% endif %}
 
             <p>
-                {% if is_owner %}
+                {% if is_owner or request.user.is_staff %}
                     <a class="button-edit-profile" href="{% url 'profile edit' pk=object.pk %}"> Edit profile <i
                             class="fa-regular fa-user fa-bounce" style="color: #00f010;"></i></a>
                     <a class="button-edit-profile" href="{% url 'add-photo' %}"> Add new photo <i
@@ -149,7 +149,7 @@
                                            style="color: #09f809;"></i>
                                     </a>
 
-                                    {% if is_owner %}
+                                    {% if is_owner or request.user.is_staff %}
                                         <a href="{% url 'delete-photo' photo.pk %}"><i
                                                 class="fa-solid fa-trash-can-arrow-up fa-xl"
                                                 style="color: #770272;"></i></a>
@@ -166,7 +166,7 @@
             </ul>
         </div>
         <br>
-    
+
         {# PAGINATOR #}
         <div class="pagination">
                 <span class="step-links">

@@ -4,7 +4,7 @@
     <div class="edit-delete delete-photo">
 
         <form method="post" action="{% url 'edit-photo' pk=pk %}" enctype="multipart/form-data">
-            <h2>Edit photo</h2>
+            <h3>Edit photo</h3>
 
             {{ form.as_p }}
             {% csrf_token %}

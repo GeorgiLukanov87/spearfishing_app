@@ -1,8 +1,8 @@
 #myBtn {
     display: none;
     position: fixed;
-    bottom: 27px;
-    right: 15px;
+    bottom: 23px;
+    right: 30px;
     z-index: 99;
     outline: none;
     background-color: #257685;
