@@ -1,3 +1,24 @@
+@media only screen and (max-width: 1550px) {
+    .nav-group a {
+        padding: 12px 12px;
+        font-size: 14px;
+        justify-content: end;
+
+    }
+
+    .nav-group {
+        margin: 10px 0 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    main {
+        background-color: red;
+    }
+
+
+}
+
 @media only screen and (max-width: 1450px) {
     .icons-wrapper i {
         font-size: 21px;
@@ -84,6 +105,10 @@
 
         .searchbar-button {
             display: none;
+        }
+
+        .nav-group {
+            margin: 0;
         }
 
     }
