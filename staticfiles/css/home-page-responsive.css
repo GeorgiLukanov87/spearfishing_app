@@ -11,12 +11,14 @@
     }
 }
 
-@media only screen and (max-width: 1300px) {
-    main {
-        background-color: red;
+@media only screen and (max-width: 1350px) {
+    body > header > nav > div > div.nav-links > ul > li:nth-child(12) > a {
+        display: none;
     }
 
-
+    .container {
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 1450px) {
@@ -89,8 +91,12 @@
         .nav-group a {
             padding: 10px 10px;
             font-size: 8px;
-            line-height: 2.05;
+            line-height: 2.20;
 
+        }
+
+        body > header > nav > div > div.nav-links > ul > li:nth-child(12) > a {
+            display: inline;
         }
 
         .nav-group {
