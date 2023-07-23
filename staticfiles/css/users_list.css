@@ -8,15 +8,14 @@
     text-align: start;
     letter-spacing: 1px;
     font-size: 18px;
-    background-color: #bdbdbd
-
+    /*background-color: #bdbdbd;*/
+    background-color: #7ac8d5;
 }
 
 .users-list-ul li a {
     text-decoration: none;
     padding: 10px;
     color: #2a2929;
-
 }
 
 .users-list-ul li {

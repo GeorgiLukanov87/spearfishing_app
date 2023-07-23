@@ -84,7 +84,7 @@
 
                         <li class="nav-item">
                             <a href="{% url 'profile details' pk=request.user.pk %}">
-                                <i>Profile</i>
+                                <i>Profile: {{ request.user.username }}</i>
                             </a>
                         </li>
 
