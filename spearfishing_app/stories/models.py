@@ -5,6 +5,7 @@ from django.db import models
 UserModel = get_user_model()
 
 
+# stories/models.py
 class Story(models.Model):
     STORY_TITLE_MAX_LEN = 50
     STORY_TITLE_MIN_LEN = 3
@@ -45,5 +46,3 @@ class Story(models.Model):
         UserModel,
         on_delete=models.CASCADE,
     )
-
-    

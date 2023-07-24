@@ -3,6 +3,7 @@ from django.urls import path
 from spearfishing_app.common.views import index, like_functionality, add_comment, share, AllUsersCBV, delete_comment, \
     BandCalculator, ApneaTrainer
 
+# common/urls.py
 urlpatterns = (
 
     path('', index, name='index'),

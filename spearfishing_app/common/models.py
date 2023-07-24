@@ -6,6 +6,7 @@ from spearfishing_app.photos.models import Photo
 UserModel = get_user_model()
 
 
+# common/models.py
 class Comment(models.Model):
     COMMENT_TEXT_MAX_LEN = 1500
     text = models.CharField(

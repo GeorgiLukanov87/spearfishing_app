@@ -8,6 +8,7 @@ from spearfishing_app.events.forms import EventCreateForm, EventEditForm, EventD
 from spearfishing_app.events.models import Event
 
 
+# events/views.py
 def events_list(request):
     events = Event.objects.all()
     context = {

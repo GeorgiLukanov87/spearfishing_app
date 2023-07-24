@@ -6,6 +6,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 
+# accounts/models.py
 def validate_only_letters(value):
     for ch in value:
         if not ch.isalpha():

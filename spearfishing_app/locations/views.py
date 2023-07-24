@@ -10,6 +10,7 @@ import requests
 all_spots = []
 
 
+# locations/views.py
 def locations(request):
     if request.method == 'POST':
         form = SearchLocationForm(request.POST)

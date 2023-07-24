@@ -5,6 +5,7 @@ from spearfishing_app.photos.disable_form_mixin import DisabledFormMixin
 from spearfishing_app.photos.models import Photo
 
 
+# photos/forms.py
 class PhotoBaseForm(forms.ModelForm):
     class Meta:
         model = Photo

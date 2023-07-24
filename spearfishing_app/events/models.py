@@ -4,6 +4,7 @@ from django.db import models
 UserModel = get_user_model()
 
 
+# events/models.py
 class Event(models.Model):
     NAME_MAX_LEN = 20
     LOCATION_MAX_LEN = 20

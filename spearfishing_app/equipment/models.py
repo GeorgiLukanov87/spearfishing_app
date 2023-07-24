@@ -4,6 +4,7 @@ from django.db import models
 UserModel = get_user_model()
 
 
+# equipment/models.py
 class Equipment(models.Model):
     GUN_CHOICES = (
         ('Cressi', 'Cressi'),

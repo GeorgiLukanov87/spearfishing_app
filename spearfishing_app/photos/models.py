@@ -13,6 +13,7 @@ def validate_file_size_5mb(image_object):
 UserModel = get_user_model()
 
 
+# photos/models.py
 class Photo(models.Model):
     PHOTO_DESCRIPTION_MAX_LEN = 300
     PHOTO_DESCRIPTION_MIN_LEN = 10

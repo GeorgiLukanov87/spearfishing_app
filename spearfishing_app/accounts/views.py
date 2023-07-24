@@ -10,6 +10,7 @@ from spearfishing_app.accounts.forms import UserCreateForm
 UserModel = get_user_model()
 
 
+# accounts/views.py
 class SignInView(auth_views.LoginView):
     template_name = 'accounts/login-page.html'
     success_url = reverse_lazy('index')

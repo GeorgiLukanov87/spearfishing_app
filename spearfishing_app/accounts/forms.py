@@ -4,6 +4,7 @@ from django.contrib.auth import forms as auth_forms, get_user_model
 UserModel = get_user_model()
 
 
+# accounts/forms.py
 class UserEditForm(auth_forms.UserChangeForm):
     class Meta:
         model = UserModel

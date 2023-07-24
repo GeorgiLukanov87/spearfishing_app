@@ -3,6 +3,7 @@ from django import forms
 from spearfishing_app.events.models import Event
 
 
+# events/forms.py
 class EventBaseForm(forms.ModelForm):
     class Meta:
         model = Event

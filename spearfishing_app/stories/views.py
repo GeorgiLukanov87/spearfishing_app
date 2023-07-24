@@ -12,7 +12,6 @@ UserModel = get_user_model()
 
 
 # stories/views.py
-
 class StoryCreateCBV(LoginRequiredMixin, generic.CreateView):
     template_name = 'stories/create-story.html'
     form_class = StoryCreateForm

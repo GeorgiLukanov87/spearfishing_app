@@ -7,6 +7,7 @@ from spearfishing_app.equipment.forms import EquipmentAddForm
 from spearfishing_app.equipment.models import Equipment
 
 
+# equipment/views.py
 @login_required
 def add_equipment(request):
     if request.method == 'GET':

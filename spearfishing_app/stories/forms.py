@@ -3,6 +3,7 @@ from django import forms
 from spearfishing_app.stories.models import Story
 
 
+# stories/forms.py
 class StoryBaseForm(forms.ModelForm):
     class Meta:
         model = Story

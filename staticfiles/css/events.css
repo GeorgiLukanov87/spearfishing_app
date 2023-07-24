@@ -35,7 +35,7 @@
     padding: 6px;
     background-color: #ced0d2;
     border-radius: 4px;
-    width: 50%;
+    width: 25%;
     margin: 16px auto;
     font-size: 24px;
 
@@ -215,7 +215,7 @@ main {
 }
 
 .event-wrapper a:hover {
-    background-color: white;
+    background-color: #27cb02;
     color: red;
     text-shadow: 1px 1px 1px black;
     transition: 200ms linear;

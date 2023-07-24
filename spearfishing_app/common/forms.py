@@ -3,6 +3,7 @@ from django import forms
 from spearfishing_app.common.models import Comment
 
 
+# common/forms.py
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
