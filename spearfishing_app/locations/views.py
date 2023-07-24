@@ -7,6 +7,8 @@ from spearfishing_app.locations.models import Search
 import folium
 import requests
 
+all_spots = []
+
 
 def locations(request):
     if request.method == 'POST':
@@ -23,6 +25,11 @@ def locations(request):
     lat = location.lat
     lng = location.lng
     country = location.country
+
+    # No1 - fast , No2 - slow
+    all_spots.append([lat, lng, country], )
+    all_countries_names = Search.objects.all()
+
     if lat is None or lng is None:
         address.delete()
         return render(request, 'locations/wrong-data.html')
@@ -30,11 +37,24 @@ def locations(request):
     # Create Map Object
     if lat and lng:
         m = folium.Map(location=[lat, lng], zoom_start=8)
+
+        # Visualisation from all_spots_list / fast operation but not persisting in db
+        for lat, lng, country in all_spots:
+            folium.Marker([lat, lng], tooltip='See more details!', popup=country).add_to(m)
+
+        # Visualisation from Search.objects.all() #slow operation
+        # for item in all_countries_names:
+        #     curr_location = geocoder.osm(item)
+        #     curr_lat = curr_location.lat
+        #     curr_lng = curr_location.lng
+        #     curr_country = curr_location.country
+        #     folium.Marker([curr_lat, curr_lng], tooltip='See more details!', popup=curr_country).add_to(m)
     else:
         m = folium.Map(location=[39.18475207792338, -0.21667029996640755], zoom_start=9)
 
     folium.Marker([lat, lng], tooltip='See more details!', popup=country).add_to(m)
-    # Get HTML Representation of Map Object
+
+    # # Get HTML Representation of Map Object
     tooltip = "See more details!"
     # STATIC Markers:
     folium.Marker(
@@ -210,10 +230,12 @@ def locations(request):
     ).add_to(m)
 
     m = m._repr_html_()
+
     context = {
         'm': m,
         'form': form,
     }
+
     return render(request, 'locations/locations.html', context)
 
 

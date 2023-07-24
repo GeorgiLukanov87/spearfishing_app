@@ -7,7 +7,7 @@
     }
 
     .nav-group {
-        margin: 10px 0 0 50px;
+        margin: 5px 0;
     }
 }
 
@@ -91,8 +91,7 @@
         .nav-group a {
             padding: 10px 10px;
             font-size: 8px;
-            line-height: 2.20;
-
+            line-height: 2.215;
         }
 
         body > header > nav > div > div.nav-links > ul > li:nth-child(12) > a {
@@ -101,11 +100,10 @@
 
         .nav-group {
             justify-content: center;
-
         }
 
         .container {
-            height: 250px;
+
             justify-content: center;
         }
 
@@ -116,7 +114,6 @@
         .nav-group {
             margin: 0;
         }
-
     }
 }
 
