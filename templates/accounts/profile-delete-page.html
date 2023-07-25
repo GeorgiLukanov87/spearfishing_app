@@ -2,7 +2,6 @@
 {% block content %}
 
     <div class="delete-profile">
-
         <div class="sure-buttons">
             <form action="{% url 'profile delete' pk=object.pk %}" method="post">
                 <h2>
@@ -16,9 +15,7 @@
                 <a class="button-edit-profile" style="color: #dedada;width: 105px;font-size: 14px"
                    href="{% url 'profile details' pk=object.pk %}">Back to Profile</a>
             </form>
-
         </div>
-
     </div>
 
 {% endblock %}
