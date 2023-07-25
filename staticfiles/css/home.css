@@ -314,6 +314,8 @@ div.profile-details-wrapper > h4:nth-child(6) {
     padding: 18px;
     overflow: auto;
     justify-content: space-around;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
 

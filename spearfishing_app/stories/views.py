@@ -74,8 +74,8 @@ class AboutCBV(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['video3'] = Video.objects.all()[0]
         context['video1'] = Video.objects.all()[2]
+        context['video3'] = Video.objects.all()[0]
         return context
 
 

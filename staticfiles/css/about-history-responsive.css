@@ -61,6 +61,8 @@
         height: 220px;
         overflow: auto;
         box-shadow: 1px 1px 8px #000000;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
     }
 
     .about-history2 {
@@ -69,5 +71,7 @@
         height: 220px;
         overflow: auto;
         box-shadow: 1px 1px 8px #000000;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
     }
 }
