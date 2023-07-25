@@ -59,12 +59,12 @@ body {
 }
 
 .footer-wrapper h3 {
-    padding-bottom: 12px;
-    color: #2c2929;
+    padding-bottom: 16px;
+    font-weight: bold;
 }
 
 .f1 p, a {
-    color: #000000;
+    color: #100f0f;
     font-size: 16px;
 }
 
@@ -78,9 +78,7 @@ body {
 }
 
 .footer-wrapper h3:hover {
-    color: red;
     cursor: pointer;
-    scale: 1.02;
 }
 
 .footer-wrapper {
