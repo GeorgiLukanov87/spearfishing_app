@@ -84,14 +84,6 @@ def edit_photo(request, pk):
 @login_required
 def delete_photo(request, pk):
     photo = Photo.objects.filter(pk=pk).get()
-    if photo.photo:
-        # Get the local filesystem path to the photo
-        photo_path = photo.photo.path
-
-        # Check if the file exists before attempting to delete
-        if os.path.exists(photo_path):
-            # Delete the file from the save_folder
-            os.remove(photo_path)
 
     return get_post_photo_form(
         request,
