@@ -5,7 +5,7 @@
         <div class="edit-delete">
 
             <form action="{% url 'profile edit' pk=object.pk %}" method="post">
-                        <h2>Edit Profile</h2>
+                <h2>Edit Profile</h2>
                 <br>
                 {% csrf_token %}
 
@@ -32,10 +32,11 @@
                     <br>
                 {% endfor %}
                 <div>
-
-
                     <button class="button-edit-profile" type="submit">Edit profile</button>
                 </div>
+
+                <a class="button-edit-profile" style="color: #dedada;font-size: 13px"
+                   href="{% url 'profile details' pk=object.pk %}">Back to Profile</a>
             </form>
 
         </div>

@@ -9,11 +9,14 @@
                     Are you sure you want to delete profile?
                 </h2>
                 {% csrf_token %}
-                <button class="button-edit-profile" style="color: red;font-size: 22px;width: 100px">Yes</button>
+                <button class="button-edit-profile" style="color: #dedada;font-size: 14px;width: 80px">Yes
+                    <i style="color: #dedada"
+                       class="fa-solid fa-trash-can"></i></button>
 
-
+                <a class="button-edit-profile" style="color: #dedada;width: 105px;font-size: 14px"
+                   href="{% url 'profile details' pk=object.pk %}">Back to Profile</a>
             </form>
-            <a class="button-edit-profile" style="color: #ffffff;width: 150px" href="{% url 'index' %}">Go Back</a>
+
         </div>
 
     </div>

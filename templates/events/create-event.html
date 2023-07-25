@@ -5,6 +5,8 @@
         {{ form }}
         {% csrf_token %}
         <button class="button-edit-profile" type="submit">Create New Event</button>
+        <a class="button-edit-profile" style="color: #dedada;font-size: 13px" href="{% url 'events-list' %}">Back to
+            Events</a>
     </form>
 
 {% endblock %}

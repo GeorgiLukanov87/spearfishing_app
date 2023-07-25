@@ -7,7 +7,10 @@
             <h2>Delete photo</h2>
             {{ form.as_p }}
             <button class="button-edit-profile" type="submit">Delete Photo</button>
-
+            <div>
+                <a style="font-size: 13px" class="button-edit-profile" href="{% url 'photo-details' pk=pk %}">Back to
+                    Photo</a>
+            </div>
             {% csrf_token %}
         </form>
 

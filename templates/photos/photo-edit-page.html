@@ -10,6 +10,9 @@
             {% csrf_token %}
 
             <button class="button-edit-profile" type="submit">Edit Photo</button>
+            <a class="button-edit-profile" style="color: #dedada;font-size: 13px"
+               href="{% url 'photo-details' pk=pk %}">Back to
+                Photos</a>
         </form>
     </div>
 

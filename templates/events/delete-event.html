@@ -2,9 +2,11 @@
 {% block content %}
     <form action="{% url 'delete-event' pk=event.pk %}" method="post">
 
-    {{ form }}
-    {% csrf_token %}
-    <button class="button-edit-profile" type="submit">Delete</button>
+        {{ form }}
+        {% csrf_token %}
+        <button class="button-edit-profile" type="submit">Delete</button>
+        <a class="button-edit-profile" style="color: #dedada;font-size: 13px" href="{% url 'events-list' %}">Back to
+            Events</a>
     </form>
 
 {% endblock %}
