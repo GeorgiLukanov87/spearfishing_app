@@ -41,12 +41,12 @@
                         <a target="_blank" href="{% url 'profile details' user.pk %}">
                             <h3>Status:
                                 {% if user.is_superuser %}
-                                    {{ user.username }} : superuser
+                                    {{ user.username }} : SuperUser
                                 {% else %}
                                     {% if user.is_staff %}
-                                        {{ user.username }} : staff
+                                        {{ user.username }} : Staff
                                     {% else %}
-                                        {{ user.username }} : regular user
+                                        {{ user.username }} : Regular User
                                     {% endif %}
                                 {% endif %}
                             </h3>
@@ -69,8 +69,9 @@
                             <p> Username: {{ user.username }} </p>
                             <p> Full Name: {{ user.get_full_name }} </p>
                             <p> PK={{ user.pk }} </p>
-                            <p> Photos count: {{ user.photo_set.all.count }} </p>
-                            <p> Likes count: {{ user.like_set.all.count }} </p>
+                            <p> Photos: {{ user.photo_set.all.count }} </p>
+                            <p> Likes: {{ user.like_set.all.count }} </p>
+                            <p> Comments: {{ user.comment_set.all.count }} </p>
                             <p> Email: {{ user.email }} </p>
                             <p> Gender: {{ user.gender }} </p>
                         </a>
