@@ -76,7 +76,7 @@
                             <p> Gender: {{ user.gender }} </p>
                         </a>
 
-                        {% if not user.is_superuser %}
+                        {% if not user.is_staff and request.user.is_superuser %}
                             <div class="div-border">
                                 <a class="button-edit-profile" href="{% url 'profile delete' user.pk %}">Delete</a>
                             </div>

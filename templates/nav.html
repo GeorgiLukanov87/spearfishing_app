@@ -18,12 +18,19 @@
                 <ul class="nav-group">
 
                     {% if request.user.is_authenticated %}
-                        {% if request.user.is_authenticated and request.user.is_superuser %}
+                        {% if request.user.is_authenticated and request.user.is_staff %}
                             <li class="nav-item">
-                                <a href="{% url 'users-list' %}">
-                                    <i>Users</i>
+                                <a href="{% url 'admin-panel' %}">
+                                    <i>/admin</i>
                                 </a>
                             </li>
+
+                            <li class="nav-item">
+                                <a href="{% url 'users-list' %}">
+                                    <i>/users</i>
+                                </a>
+                            </li>
+
                         {% endif %}
 
                         <li class="nav-item">

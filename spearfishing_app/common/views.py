@@ -2,6 +2,7 @@ import pyperclip
 
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 
 from django.urls import reverse
@@ -134,3 +135,10 @@ class ApneaTrainer(generic.TemplateView):
         context = super().get_context_data(**kwargs)
         context['video4'] = Video.objects.all()[3]
         return context
+
+
+@login_required
+def admin_panel(request):
+    return HttpResponseRedirect(
+        "http://127.0.0.1:8000/admin/"
+    )

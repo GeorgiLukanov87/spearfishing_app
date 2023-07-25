@@ -159,6 +159,14 @@ header {
     text-shadow: 0 0 1px #f8efef;
 }
 
+body > header > nav > div > div.nav-links > ul > li:nth-child(1) > a {
+    background-color: #3aa7b9;;
+}
+
+body > header > nav > div > div.nav-links > ul > li:nth-child(2) > a {
+    background-color: #3aa7b9;;
+}
+
 .profile-icon-2 {
     display: flex;
     align-items: center;
