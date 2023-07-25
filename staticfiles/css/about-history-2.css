@@ -40,3 +40,8 @@
 .video-wrapper {
     height: 50vh;
 }
+
+.video-wrapper iframe {
+    border-radius: 10px;
+
+}
