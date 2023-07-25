@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
@@ -25,7 +26,7 @@ def add_equipment(request):
     return render(request, 'equipment/add-equipment.html', context)
 
 
-class EquipmentEditView(generic.UpdateView):
+class EquipmentEditView(LoginRequiredMixin, generic.UpdateView):
     template_name = 'equipment/edit-equipment.html'
     model = Equipment
     fields = (
