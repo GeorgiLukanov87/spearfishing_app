@@ -37,6 +37,9 @@ class Comment(models.Model):
     class Meta:
         ordering = ['-date_time_of_publication']
 
+    def __str__(self):
+        return f"{self.date_time_of_publication}"
+
 
 class Like(models.Model):
     to_photo = models.ForeignKey(

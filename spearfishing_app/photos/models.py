@@ -49,3 +49,6 @@ class Photo(models.Model):
         UserModel,
         on_delete=models.CASCADE,
     )
+
+    def __str__(self):
+        return f"Photo id:{self.id}"

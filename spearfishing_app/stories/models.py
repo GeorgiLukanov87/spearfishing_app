@@ -46,3 +46,9 @@ class Story(models.Model):
         UserModel,
         on_delete=models.CASCADE,
     )
+
+    class Meta:
+        verbose_name_plural = 'Stories'
+
+    def __str__(self):
+        return f"{self.date}"

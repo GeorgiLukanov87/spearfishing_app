@@ -147,3 +147,9 @@ class Equipment(models.Model):
         on_delete=models.CASCADE,
         primary_key=True,
     )
+
+    class Meta:
+        verbose_name_plural = 'Equipment'
+
+    def __str__(self):
+        return f"{self.gun_model} owned by {self.owner.username}"
