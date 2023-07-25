@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load embed_video_tags %}
 {% load static %}
 {% block content %}
 
@@ -28,6 +29,7 @@
             <img style="margin: 6px auto" src="{% static 'images/history-of-spearfishing.jpg' %}"
                  alt="history of spearf img">
         </article>
+
 
         <article class="bg-about1">
             <br>
@@ -86,6 +88,11 @@
         </article>
 
     </div>
+
+    <div style="margin-top: 10px">
+        {% video video3.url "85%x600px" %}
+    </div>
+
     <h2 style="text-decoration: underline">Guidelines For Safe Freediving!</h2>
     <div class="about-history2">
 
@@ -254,6 +261,9 @@
         <p><span class="history-span1">10. </span>Watch out for the recoil! A big or small gun will remove teeth, break
             masks and noses, and generally ruin your day if not properly braced when firing! </p>
 
+    </div>
 
+    <div style="margin-top: 10px">
+        {% video video1.url "85%x600px" %}
     </div>
 {% endblock %}

@@ -5,6 +5,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 
 from spearfishing_app.common.helpers.dirty_words_validator import validate_dirty_words
+from spearfishing_app.common.models import Video
 from spearfishing_app.stories.forms import StoryEditForm, StoryCreateForm
 from spearfishing_app.stories.models import Story
 
@@ -65,8 +66,17 @@ class StoryDetailsCBV(LoginRequiredMixin, generic.DetailView):
         return context
 
 
-def about(request):
-    return render(request, 'common/about.html')
+# def about(request):
+#     return render(request, 'common/about.html')
+
+class AboutCBV(generic.TemplateView):
+    template_name = 'common/about.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['video3'] = Video.objects.all()[0]
+        context['video1'] = Video.objects.all()[2]
+        return context
 
 
 """

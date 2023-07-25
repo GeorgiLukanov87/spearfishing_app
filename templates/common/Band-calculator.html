@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load embed_video_tags %}
 {% load static %}
 {% block content %}
     <h2>Rubber band calculator</h2>
@@ -55,6 +56,11 @@
             </div>
 
         </form>
+
+        <div class="video-wrapper">
+            {% video video2.url "85%x600px" %}
+        </div>
+
     </div>
 
     <script>

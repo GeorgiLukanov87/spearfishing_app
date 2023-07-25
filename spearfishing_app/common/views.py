@@ -9,7 +9,7 @@ from django.views import generic
 
 from spearfishing_app.common.forms import CommentForm, SearchForm
 from spearfishing_app.common.helpers.dirty_words_validator import validate_dirty_words
-from spearfishing_app.common.models import Like, Comment
+from spearfishing_app.common.models import Like, Comment, Video
 from spearfishing_app.photos.models import Photo
 
 UserModel = get_user_model()
@@ -121,6 +121,16 @@ class AllUsersCBV(generic.ListView):
 class BandCalculator(generic.TemplateView):
     template_name = 'common/Band-calculator.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['video2'] = Video.objects.all()[1]
+        return context
+
 
 class ApneaTrainer(generic.TemplateView):
     template_name = 'common/apnea-trainer.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['video4'] = Video.objects.all()[3]
+        return context

@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
+{% load embed_video_tags %}
 {% load static %}
 {% block content %}
 
     <h2 style="text-decoration: underline;font-size: 30px">Apnea Trainer</h2>
+    <div class="video-wrapper">
+        {% video video4.url "500x400" %}
+    </div>
 
     <div class="apnea-text-wrapper">
         <h4 style="text-align: center">

@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'spearfishing_app.photos',
     'spearfishing_app.equipment',
 
+    'embed_video',
+
 ]
 
 MIDDLEWARE = [
