@@ -57,11 +57,11 @@ body > main > form > ul:nth-child(3), body > main > form > ul:nth-child(6), body
 }
 
 #toggleButtonForPasswordLoginPage button {
-    width: 42px;
+    width: 28px;
     height: 24px;
-    font-weight: bold;
+
     background-color: #dad7d7;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 #toggleButtonForPasswordLoginPage button:hover {

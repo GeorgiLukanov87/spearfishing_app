@@ -36,9 +36,9 @@ body {
     box-shadow: 1px 1px 10px 1px #3a3a3a;
     background-color: white;
     position: relative;
-    width: 125px;
+    width: 100px;
     margin-top: 12px;
-    padding: 10px;
+    padding: 4px;
 }
 
 .logo img:hover {
@@ -173,8 +173,8 @@ header {
     transition: linear 155ms;
     z-index: 100;
     position: relative;
-    padding-bottom: 57px;
-    padding-top: 65px;
+    padding-bottom: 44px;
+    padding-top: 49px;
     border-bottom: 5px solid red;
 }
 
