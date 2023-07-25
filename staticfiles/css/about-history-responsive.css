@@ -50,6 +50,13 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .video-wrapper iframe {
+        width: 90vw;
+        height: 50vh;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     .history-h1 {
         font-size: 15px;
