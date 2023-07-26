@@ -64,7 +64,7 @@
         {% endif %}
 
         <div class="profile-details-wrapper">
-            <h2>Profile Details:</h2>
+            <h3>Profile Details:</h3>
 
             {% if object.profile_image_url %}
                 <div>
@@ -84,16 +84,16 @@
             <h4>Stories: {{ object.story_set.all.count }}</h4>
 
             {% if object.get_full_name %}
-                <h2>Full Name: {{ object.get_full_name }}</h2>
-                <h2>Username: {{ object.username }}</h2>
+                <h3><span style="color:#4d4b4b">Full Name: </span>{{ object.get_full_name }}</h3>
+                <h3><span style="color:#4d4b4b">Username: </span>{{ object.username }}</h3>
             {% else %}
-                <h2> Username: {{ object.username }}</h2>
+                <h3><span style="color: #4d4b4b">Username:  </span>{{ object.username }}</h3>
             {% endif %}
 
-            <h4>Email: {{ object.email }}</h4>
+            <h4><span style="color: #4d4b4b">Email: </span>{{ object.email }}</h4>
 
             {% if object.gender %}
-                <h4>Gender: {{ object.gender }}</h4>
+                <h4><span style="color: #4d4b4b">Gender: </span> {{ object.gender }}</h4>
             {% endif %}
 
             <p>
