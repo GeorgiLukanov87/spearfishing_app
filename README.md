@@ -102,35 +102,35 @@ We organize a few Tournaments for free every year! If you want join ? YOU are we
 </ol>
 
 ## Screenshots
- <h3>Home page:</h3>
- 
+ <h4>Home page:</h4>
+
 ![home-screen](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/ab131076-7eab-4831-90bb-1abd20843114)
 
- <h3>Login page:</h3>
+ <h4>Login page:</h4>
 
 ![login-screen](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/1c7f8430-614e-427d-a3a2-b273152dee87)
 
- <h3>Locations page:</h3>
+ <h4>Locations page:</h4>
 
 ![locations-screen](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/7006b315-d61b-49d5-afcb-26b4b53fa13d)
 
- <h3>About page:</h3>
+ <h4>About page:</h4>
 
 ![about-screen](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/bc3ecc1c-a2a2-4fc3-a188-040fe1cc5f7b)
 
- <h3>Add-photo page:</h3>
+ <h4>Add-photo page:</h4>
 
 ![add-photo-screen](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/a540f611-5b9c-46bb-9a52-ca384014ec81)
 
- <h3>Weather page:</h3>
+ <h4>Weather page:</h4>
 
 ![weather-screen](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/5d029b42-f8e5-40b0-8602-135f9faca0f1)
 
- <h3>Calculator page:</h3>
+ <h4>Calculator page:</h4>
 
 ![calculator-screen](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/5b177b1f-372b-4bd8-a09e-032c9be67013)
 
- <h3>Apnea-trainer page:</h3>
+ <h4>Apnea-trainer page:</h4>
 
 ![apnea-trainer-screen](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/885ba9b2-c8c8-45c6-b45e-74224f86776e)
 
