@@ -63,7 +63,7 @@ We organize a few Tournaments for free every year! If you want join ? YOU are we
  </ul>
  </li>
  
- <li>Create a superuser:
+ <li>Create a superuser(required):
   <ul>
   <li>python manage.py createsuperuser</li>
   <li>IMPORTANT: After create an superuser. Accessing admin panel -> "http://localhost:8000/admin/"
