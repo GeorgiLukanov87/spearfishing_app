@@ -9,8 +9,9 @@ Here you can find a very good resources, stories and much more. And also share y
 We organize a few Tournaments for free every year! If you want join ? YOU are welcome! ENJOY!
 </h3>
 
-## Features
+![home-page-working](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/70a8c185-db98-4a3e-a8b2-5a1277ec8da5)
 
+## Features
 <ul>
  <li>User authentication and registration</li>
  <li>Upload photos</li>
@@ -20,13 +21,25 @@ We organize a few Tournaments for free every year! If you want join ? YOU are we
  <li>Check weather</li>
  <li>Search/add new destinations(spots for fishing)</li>
  <li>Band calculator</li>
+ <li>Apnea-Trainer</li>
  <li>Usefull resources and videos</li>
  <li>User-friendly interface with a full-responsive design</li>
- <li>Censure-System for comments and stories</li>
+ <li>Censored-System for comments and stories</li>
+</ul>
+
+## Technologies Used
+<ul>
+ <li>Django(4.2.2)</li>
+ <li>HTML, CSS</li>
+ <li>JavaScript</li>
+ <li>PostgreSQL</li>
+ <li>Folium docs: https://python-visualization.github.io/folium/ </li>
+ <li>Geocoder docs: https://geocoder.readthedocs.io/ </li>
+ <li>Open-Weather(API) doc: https://openweathermap.org/current </li>
+ <li>Django-embed-videos doc: https://django-embed-video.readthedocs.io/en/latest/ </li>
 </ul>
 
 ## Installation
-
 <ol>
  <li>Clone the repository - HTTPS or SSH:
  <ul>
@@ -63,16 +76,32 @@ We organize a few Tournaments for free every year! If you want join ? YOU are we
   <li>python manage.py runserver</li>
  </ul>
  </li>
- 
-
- 
 </ol>
 
-## Technologies Used
+## License
+<ul>
+ <li>MIT License</li>
+</ul>
+
+
 
 ## Usage
 
-## License
+<ol>
+ <li>To access the web application, go to: http://127.0.0.1:8000/</li>
+ <li>To access the admin interface, go to: http://127.0.0.1:8000/admin/</li>
+ <li>To access the add-photo, go to: http://127.0.0.1:8000/photos/add/</li>
+ <li>To access the events, go to: http://127.0.0.1:8000/events/</li>
+ <li>To access the weather, go to: http://127.0.0.1:8000/locations/weather/</li>
+ <li>To access the locations, go to: http://127.0.0.1:8000/locations/</li>
+ <li>To access the stories, go to: http://127.0.0.1:8000/stories/</li>
+ <li>To access the add story,go to: http://127.0.0.1:8000/stories/create/</li>
+ <li>To access the band-calculator, go to: http://127.0.0.1:8000/calculator/</li>
+ <li>To access the apnea-trainer, go to: http://127.0.0.1:8000/apnea-trainer/</li>
+ <li>To access the about-page, go to: http://127.0.0.1:8000/stories/about/</li>
+</ol>
+
+## Screenshots
 
  <h3>Home page:</h3>
  
