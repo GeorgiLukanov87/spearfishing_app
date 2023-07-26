@@ -1,5 +1,38 @@
-# spearfishing_app
- Spearfishing4Life App
+<h1> Spearfishing4Life </h1>
+
+<h3>
+Welcome to Spearfishing 4 Life application!
+This page is a worldwide community.
+We respect each other. So we expect you do the same!
+He all are brother in our Passion and Love - Spearfishing and Diving!
+Here you can find a very good resources, stories and much more. And also share your own.
+We organize a few Tournaments for free every year! If you want join ? YOU are welcome! ENJOY!
+</h3>
+
+## Features
+
+<ul>
+ <li>User authentication and registration</li>
+ <li>Upload photos</li>
+ <li>Comment and share</li>
+ <li>Create events</li>
+ <li>Share stories</li>
+ <li>Check weather</li>
+ <li>Search/add new destinations(spots for fishing)</li>
+ <li>Band calculator</li>
+ <li>Usefull resources and videos</li>
+ <li>User-friendly interface with a full-responsive design</li>
+ <li>Censure-System for comments and stories</li>
+</ul>
+
+## Technologies Used
+
+## Installation
+
+## Usage
+
+## License
+
  
 ![home-screen](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/ab131076-7eab-4831-90bb-1abd20843114)
 ![login-screen](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/1c7f8430-614e-427d-a3a2-b273152dee87)
