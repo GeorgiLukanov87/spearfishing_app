@@ -67,7 +67,7 @@ We organize a few Tournaments for free every year! If you want join ? YOU are we
   <ul>
   <li>python manage.py createsuperuser</li>
   <li>IMPORTANT: After create an superuser. Accessing admin panel -> "http://localhost:8000/admin/"
-   To work properly - create at least 1 SEARCHS/address-model in LOCATIONS-app.</li>
+   To work properly - create at least 1 SEARCHS/address-model in LOCATIONS-app.For example: "Varna" </li>
  </ul>
  </li>
  
