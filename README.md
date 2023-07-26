@@ -1,7 +1,7 @@
 <h1> Spearfishing4Life </h1>
 
 <h3>
-Welcome to Spearfishing 4 Life application!
+Welcome to "Spearfishing 4 Life" application!
 This page is a worldwide community.
 We respect each other. So we expect you do the same!
 He all are brother in our Passion and Love - Spearfishing and Diving!
