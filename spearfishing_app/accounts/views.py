@@ -17,6 +17,16 @@ class SignInView(auth_views.LoginView):
     form_class = AuthenticationForm
 
 
+class SignOutView(auth_views.LogoutView):
+    next_page = reverse_lazy('index')
+
+
+class ChangePasswordCBV(auth_views.PasswordChangeView):
+    template_name = 'accounts/change-password.html'
+    success_url = reverse_lazy('index')
+    form_class = PasswordChangeForm
+
+
 class SingInView(generic.CreateView):
     template_name = 'accounts/register-page.html'
     form_class = UserCreateForm
@@ -28,10 +38,6 @@ class SingInView(generic.CreateView):
         user = form.save()
         login(self.request, user)
         return response
-
-
-class SignOutView(auth_views.LogoutView):
-    next_page = reverse_lazy('index')
 
 
 class UserDetailsView(generic.DetailView):
@@ -83,9 +89,3 @@ def to_github(request):
     return HttpResponseRedirect(
         "https://github.com/GeorgiLukanov87"
     )
-
-
-class ChangePasswordCBV(auth_views.PasswordChangeView):
-    template_name = 'accounts/change-password.html'
-    success_url = reverse_lazy('index')
-    form_class = PasswordChangeForm

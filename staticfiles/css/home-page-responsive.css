@@ -3,7 +3,6 @@
         padding: 12px 12px;
         font-size: 14px;
         justify-content: end;
-
     }
 
     .nav-group {
@@ -60,14 +59,12 @@
 
     .nav-group {
         justify-content: center;
-
     }
 
     .nav-group a {
         padding: 12px 12px;
         font-size: 14px;
         justify-content: center;
-
     }
 
     body > header > nav > div > div.logo > a > img {
@@ -103,7 +100,6 @@
         }
 
         .container {
-
             justify-content: center;
         }
 
