@@ -102,7 +102,6 @@ We organize a few Tournaments for free every year! If you want join ? YOU are we
 </ol>
 
 ## Screenshots
-
  <h3>Home page:</h3>
  
 ![home-screen](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/ab131076-7eab-4831-90bb-1abd20843114)
