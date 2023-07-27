@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
 
+from spearfishing_app.accounts.OwnerOrStaffMixin.required_mixin_owner_or_staff import OwnerOrStaffRequiredMixin
 from spearfishing_app.equipment.forms import EquipmentAddForm
 from spearfishing_app.equipment.models import Equipment
 
@@ -26,7 +27,7 @@ def add_equipment(request):
     return render(request, 'equipment/add-equipment.html', context)
 
 
-class EquipmentEditView(LoginRequiredMixin, generic.UpdateView):
+class EquipmentEditView(LoginRequiredMixin, OwnerOrStaffRequiredMixin, generic.UpdateView):
     template_name = 'equipment/edit-equipment.html'
     model = Equipment
     fields = (
