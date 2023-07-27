@@ -4,8 +4,8 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
 
-from spearfishing_app.accounts.OwnerOrStaffMixin.account_required_mixin_owner_or_staff import OwnerOrStaffRequiredMixin
-from spearfishing_app.equipment.Equipment_Perm_Mixin.equipment_permissions_owner_mixin import \
+from spearfishing_app.accounts.accounts_mixins.required_mixin import OwnerOrStaffRequiredMixin
+from spearfishing_app.equipment.equipment_mixins.equipment_required_mixin import \
     EquipmentOwnerOrStaffRequiredMixin
 from spearfishing_app.equipment.forms import EquipmentAddForm
 from spearfishing_app.equipment.models import Equipment

@@ -5,7 +5,7 @@ from django.views import generic
 
 from spearfishing_app.common.helpers.dirty_words_validator import validate_dirty_words
 from spearfishing_app.common.models import Video
-from spearfishing_app.stories.StoryOwnerMixin.story_required_mixin import StoryOwnerOrStaffRequiredMixin
+from spearfishing_app.stories.story_mixins.story_required_mixin import StoryOwnerOrStaffRequiredMixin
 from spearfishing_app.stories.forms import StoryEditForm, StoryCreateForm
 from spearfishing_app.stories.models import Story
 

@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+
     <form action="{% url 'edit-equipment' pk=request.user.equipment.pk %}" method="post">
 
         {% csrf_token %}
         {{ form.as_p }}
 
-        {% if request.user == object.owner %}
+        {% if request.user == object.owner or request.user.is_staff %}
             <button style="font-weight: bold" class="button-edit-profile" type="submit">Save</button>
         {% else %}
             <h5 style="color: red">You don't have permission to do this action!</h5>
@@ -15,7 +16,6 @@
                 style="text-decoration: none;font-size: 13px;color: #dedada;font-weight: bold"
                 href="{% url 'profile details' request.user.pk %}">Back</a>
         </button>
-    
     </form>
 
 {% endblock %}
