@@ -4,7 +4,13 @@
     <form action="{% url 'create-event' %}" method="post">
         {{ form }}
         {% csrf_token %}
-        <button class="button-edit-profile" type="submit">Create New Event</button>
+
+        {% if request.user.is_staff %}
+            <button class="button-edit-profile" type="submit">Create New Event</button>
+        {% else %}
+            <h5 style="color: red">You don't have permission to do this action!</h5>
+        {% endif %}
+    
         <a class="button-edit-profile" style="color: #dedada;font-size: 13px" href="{% url 'events-list' %}">Back to
             Events</a>
     </form>

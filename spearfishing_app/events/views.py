@@ -1,4 +1,4 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
@@ -25,7 +25,12 @@ class CreateEventCBV(LoginRequiredMixin, generic.CreateView):
     success_url = reverse_lazy('events-list')
 
 
+def is_staff_user(user):
+    return user.is_staff
+
+
 @login_required
+@user_passes_test(is_staff_user, login_url=reverse_lazy('index'))
 def edit_event(request, pk):
     event = Event.objects.filter(pk=pk).get()
     if request.method == 'GET':
@@ -41,6 +46,7 @@ def edit_event(request, pk):
 
 
 @login_required
+@user_passes_test(is_staff_user, login_url=reverse_lazy('index'))
 def delete_event(request, pk):
     event = Event.objects.filter(pk=pk).get()
     if request.method == 'GET':
