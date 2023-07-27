@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div style="margin: auto;display: flex;flex-direction: column;border-radius: 4px;gap: 4px;border: 2px solid black;padding: 20px;background-color: #b9b9b9">
+        <h2><i class="fa-solid fa-circle-exclamation fa-beat fa-xl" style="color: #ff0000;"></i></h2>
+        <h2>Error: 403!</h2>
+        <h2>Access denied!</h2>
+        <h2>No permission to do this action!</h2>
+        <br>
+        <div>
+            <a style="display: inline" class="button-edit-profile" href="{% url 'index' %}">Back to home page</a>
+        </div>
+    </div>
+{% endblock %}
