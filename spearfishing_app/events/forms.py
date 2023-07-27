@@ -1,6 +1,7 @@
 from django import forms
 
 from spearfishing_app.events.models import Event
+from spearfishing_app.photos.disable_form_mixin import DisabledFormMixin
 
 
 # events/forms.py
@@ -47,18 +48,14 @@ class EventEditForm(EventBaseForm):
     pass
 
 
-class EventDeleteForm(EventBaseForm):
+class EventDeleteForm(DisabledFormMixin, EventBaseForm):
+    disabled_fields = '__all__'
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.__disable_fields()
+        self._disable_fields()
 
     def save(self, commit=True):
         if commit:
             self.instance.delete()
         return self.instance
-
-    def __disable_fields(self):
-        for field in self.fields.values():
-            field.widget.attrs['disabled'] = True
-            field.widget.attrs['readonly'] = True
-            field.required = False

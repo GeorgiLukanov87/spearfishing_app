@@ -51,4 +51,4 @@ class Story(models.Model):
         verbose_name_plural = 'Stories'
 
     def __str__(self):
-        return f"{self.date}"
+        return f"Story created on: {self.date}"

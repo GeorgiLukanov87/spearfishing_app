@@ -13,3 +13,4 @@ class DisabledFormMixin:
                 field = self.fields[field_name]
                 field.widget.attrs['disabled'] = 'disabled'
                 field.widget.attrs['readonly'] = 'readonly'
+                field.required = False

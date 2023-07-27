@@ -1,12 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
     <div class="delete-profile">
         <div class="sure-buttons">
             <form action="{% url 'profile delete' pk=object.pk %}" method="post">
-                <h2>
+                <h3>
                     Are you sure you want to delete profile?
-                </h2>
+                </h3>
+                <p>
+                    {% if object.profile_image_url %}
+                        <img style="width: 10.5rem" src="{{ object.profile_image_url }}" alt="profile-img">
+                    {% else %}
+                        <img style="width: 10.5rem" src="{% static 'images/no-image-available.jpg' %}"
+                             alt="profile-img">
+                    {% endif %}
+                <p>
+
+                <h4>Username: {{ object.username }}</h4>
+                <h6>{{ object.email }}</h6>
+
                 {% csrf_token %}
 
                 {% if request.user == object or request.user.is_staff %}

@@ -1,5 +1,4 @@
 from django import forms
-
 from spearfishing_app.stories.models import Story
 
 

@@ -55,6 +55,11 @@ class StoryDeleteCBV(LoginRequiredMixin, StoryOwnerOrStaffRequiredMixin, generic
     model = Story
     success_url = reverse_lazy('all-stories')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['story_instance'] = self.get_object()
+        return context
+
 
 class StoryDetailsCBV(LoginRequiredMixin, generic.DetailView):
     model = Story
