@@ -73,7 +73,7 @@ class UserDetailsView(LoginRequiredMixin, generic.DetailView):
 class UserEditView(LoginRequiredMixin, OwnerOrStaffRequiredMixin, generic.UpdateView):
     template_name = 'accounts/profile-edit-page.html'
     model = UserModel
-    fields = ('first_name', 'last_name', 'email', 'gender',)
+    fields = ('first_name', 'last_name', 'email', 'profile_image_url', 'gender',)
 
     def get_success_url(self):
         return reverse_lazy('profile details', kwargs={
