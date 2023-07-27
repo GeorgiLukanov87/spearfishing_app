@@ -2,14 +2,17 @@
 {% block content %}
 
     <form action="{% url 'edit-story' pk=object.pk %}" method="post">
-        <h1>Edit story</h1>
+        <h2>Edit story</h2>
 
         {{ form.as_p }}
         {% csrf_token %}
-
-        <div>
-            <button type="submit" class="button-edit-profile">Edit Story</button>
-        </div>
+        {% if request.user.id == object.creator_id or request.user.is_staff %}
+            <div>
+                <button type="submit" class="button-edit-profile">Edit Story</button>
+            </div>
+        {% else %}
+            <h5 style="color: red">You don't have permission to do this action!</h5>
+        {% endif %}
 
         <a class="button-edit-profile" style="color: #dedada;font-size: 13px" href="{% url 'all-stories' %}">Back to
             Stories</a>

@@ -5,12 +5,17 @@
         {% csrf_token %}
         {{ form.as_p }}
 
-        <button style="font-weight: bold" class="button-edit-profile" type="submit">Save</button>
+        {% if request.user == object.owner %}
+            <button style="font-weight: bold" class="button-edit-profile" type="submit">Save</button>
+        {% else %}
+            <h5 style="color: red">You don't have permission to do this action!</h5>
+        {% endif %}
 
         <button class="button-edit-profile" type="button"><a
                 style="text-decoration: none;font-size: 13px;color: #dedada;font-weight: bold"
                 href="{% url 'profile details' request.user.pk %}">Back</a>
         </button>
+    
     </form>
 
 {% endblock %}

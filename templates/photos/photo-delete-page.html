@@ -2,17 +2,24 @@
 {% block content %}
 
     <div class="edit-delete delete-photo">
-
         <form method="post" action="{% url 'delete-photo' pk=pk %}" enctype="multipart/form-data">
             <h2>Delete photo</h2>
+
             {{ form.as_p }}
-            <button class="button-edit-profile" type="submit">Delete Photo</button>
+            {% csrf_token %}
+
+            {% if request.user == photo.user or request.user.is_staff %}
+                <button class="button-edit-profile" type="submit">Delete Photo</button>
+            {% else %}
+                <h5 style="color: red">You don't have permission to do this action!</h5>
+            {% endif %}
+
             <div>
                 <a style="font-size: 13px" class="button-edit-profile" href="{% url 'photo-details' pk=pk %}">Back to
                     Photo</a>
             </div>
-            {% csrf_token %}
         </form>
 
     </div>
+
 {% endblock %}

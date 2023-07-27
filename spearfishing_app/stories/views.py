@@ -1,11 +1,11 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
 from spearfishing_app.common.helpers.dirty_words_validator import validate_dirty_words
 from spearfishing_app.common.models import Video
+from spearfishing_app.stories.StoryOwnerMixin.story_required_mixin import StoryOwnerOrStaffRequiredMixin
 from spearfishing_app.stories.forms import StoryEditForm, StoryCreateForm
 from spearfishing_app.stories.models import Story
 
@@ -31,7 +31,7 @@ class StoryListCBV(generic.ListView):
     model = Story
 
 
-class StoryEditCBV(LoginRequiredMixin, generic.UpdateView):
+class StoryEditCBV(LoginRequiredMixin, StoryOwnerOrStaffRequiredMixin, generic.UpdateView):
     template_name = 'stories/edit-story.html'
     model = Story
     form_class = StoryEditForm
@@ -50,7 +50,7 @@ class StoryEditCBV(LoginRequiredMixin, generic.UpdateView):
         return super().form_valid(form)
 
 
-class StoryDeleteCBV(LoginRequiredMixin, generic.DeleteView):
+class StoryDeleteCBV(LoginRequiredMixin, StoryOwnerOrStaffRequiredMixin, generic.DeleteView):
     template_name = 'stories/delete-story.html'
     model = Story
     success_url = reverse_lazy('all-stories')
@@ -66,9 +66,6 @@ class StoryDetailsCBV(LoginRequiredMixin, generic.DetailView):
         return context
 
 
-# def about(request):
-#     return render(request, 'common/about.html')
-
 class AboutCBV(generic.TemplateView):
     template_name = 'common/about.html'
 
@@ -81,7 +78,7 @@ class AboutCBV(generic.TemplateView):
 
 """
 http://127.0.0.1:8000/stories/create/
-http://127.0.0.1:8000/stories/edit/1/
-http://127.0.0.1:8000/stories/delete/1/
-http://127.0.0.1:8000/stories/details/1/
+http://127.0.0.1:8000/stories/edit/2/
+http://127.0.0.1:8000/stories/delete/2/
+http://127.0.0.1:8000/stories/details/2/
 """

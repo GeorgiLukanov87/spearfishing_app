@@ -1,5 +1,3 @@
-import os
-
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
@@ -44,7 +42,6 @@ def show_photo_details(request, pk):
         'comments': comments,
         'comment_form': comment_form,
         'is_owner': request.user == photo.user,
-
     }
 
     return render(
@@ -63,6 +60,7 @@ def get_post_photo_form(request, form, success_url, template_path, pk=None):
     context = {
         'form': form,
         'pk': pk,
+        'photo': Photo.objects.filter(pk=pk).get(),
     }
 
     return render(request, template_path, context)

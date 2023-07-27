@@ -9,7 +9,13 @@
             {{ form.as_p }}
             {% csrf_token %}
 
-            <button class="button-edit-profile" type="submit">Edit Photo</button>
+        
+            {% if request.user == photo.user or request.user.is_staff %}
+                <button class="button-edit-profile" type="submit">Edit Photo</button>
+            {% else %}
+                <h5 style="color: red">You don't have permission to do this action!</h5>
+            {% endif %}
+
             <a class="button-edit-profile" style="color: #dedada;font-size: 13px"
                href="{% url 'photo-details' pk=pk %}">Back to
                 Photos</a>

@@ -6,7 +6,7 @@ from django.contrib.auth import views as auth_views, get_user_model, login
 from django.urls import reverse_lazy
 from django.views import generic
 
-from spearfishing_app.accounts.OwnerOrStaffMixin.required_mixin_owner_or_staff import OwnerOrStaffRequiredMixin
+from spearfishing_app.accounts.OwnerOrStaffMixin.account_required_mixin_owner_or_staff import OwnerOrStaffRequiredMixin
 from spearfishing_app.accounts.forms import UserCreateForm
 
 UserModel = get_user_model()
