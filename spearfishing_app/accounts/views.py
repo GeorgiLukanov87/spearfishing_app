@@ -1,10 +1,12 @@
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect
 from django.contrib.auth import views as auth_views, get_user_model, login
 from django.urls import reverse_lazy
 from django.views import generic
 
+from spearfishing_app.accounts.OwnerOrStaffMixin.required_mixin_owner_or_staff import OwnerOrStaffRequiredMixin
 from spearfishing_app.accounts.forms import UserCreateForm
 
 UserModel = get_user_model()
@@ -21,7 +23,7 @@ class SignOutView(auth_views.LogoutView):
     next_page = reverse_lazy('index')
 
 
-class ChangePasswordCBV(auth_views.PasswordChangeView):
+class ChangePasswordCBV(LoginRequiredMixin, auth_views.PasswordChangeView):
     template_name = 'accounts/change-password.html'
     success_url = reverse_lazy('index')
     form_class = PasswordChangeForm
@@ -40,7 +42,7 @@ class SingInView(generic.CreateView):
         return response
 
 
-class UserDetailsView(generic.DetailView):
+class UserDetailsView(LoginRequiredMixin, generic.DetailView):
     model = UserModel
     template_name = 'accounts/profile-details-page.html'
     photos_paginate_by = 2
@@ -68,7 +70,7 @@ class UserDetailsView(generic.DetailView):
         return context
 
 
-class UserEditView(generic.UpdateView):
+class UserEditView(LoginRequiredMixin, OwnerOrStaffRequiredMixin, generic.UpdateView):
     template_name = 'accounts/profile-edit-page.html'
     model = UserModel
     fields = ('first_name', 'last_name', 'email', 'gender',)
@@ -79,7 +81,7 @@ class UserEditView(generic.UpdateView):
         })
 
 
-class UserDeleteView(generic.DeleteView):
+class UserDeleteView(LoginRequiredMixin, OwnerOrStaffRequiredMixin, generic.DeleteView):
     template_name = 'accounts/profile-delete-page.html'
     model = UserModel
     success_url = reverse_lazy('index')
