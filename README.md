@@ -4,7 +4,7 @@
 Welcome to "Spearfishing 4 Life" application!
 This page is a worldwide community.
 We respect each other. So we expect you do the same!
-Here all we are brother here in our Passion and Love - Spearfishing and Diving!
+All we are brother here in our Passion and Love - Spearfishing and Diving!
 Here you can find a very good resources, stories and much more. And also share your own.
 We organize a few Tournaments for free every year! If you want join ? YOU are welcome! ENJOY!
 </h3>
