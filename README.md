@@ -21,7 +21,7 @@ We organize a few Tournaments for free every year! If you want join ? YOU are we
  <li>Check weather(Weather API)</li>
  <li>Search/add new destinations(folium & geocoder APIs)</li>
  <li>Band calculator</li>
- <li>Apnea-Trainer</li>
+ <li>Apnea-Trainer(Advertisement)</li>
  <li>Useful resources and videos</li>
  <li>User-friendly interface with a full-responsive design</li>
  <li>Censored-System for comments and stories</li>
