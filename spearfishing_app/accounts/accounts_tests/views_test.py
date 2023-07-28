@@ -55,20 +55,19 @@ class AccountsViewTests(TestCase):
     def test_user_details_view(self):
         url = reverse('profile details', kwargs={'pk': self.user.pk})
         response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'accounts/profile-details-page.html')
+        self.assertEqual(response.status_code, 302)
 
     def test_user_edit_view(self):
         url = reverse('profile edit', kwargs={'pk': self.user.pk})
         response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'accounts/profile-edit-page.html')
+        self.assertEqual(response.status_code, 403)
+        self.assertTemplateUsed(response, 'accounts/permission_denied.html')
 
     def test_user_delete_view(self):
         url = reverse('profile delete', kwargs={'pk': self.user.pk})
         response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'accounts/profile-delete-page.html')
+        self.assertEqual(response.status_code, 403)
+        self.assertTemplateUsed(response, 'accounts/permission_denied.html')
 
     def test_to_github_view(self):
         url = reverse('go to github')
