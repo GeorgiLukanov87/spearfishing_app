@@ -37,6 +37,7 @@ We organize a few Tournaments for free every year! If you want join ? YOU are we
  <li>Geocoder docs: https://geocoder.readthedocs.io/ </li>
  <li>Open-Weather(API) doc: https://openweathermap.org/current </li>
  <li>Django-embed-videos doc: https://django-embed-video.readthedocs.io/en/latest/ </li>
+ <li>Unit and Integration Testing </li>
 </ul>
 
 ## Installation
