@@ -90,8 +90,8 @@ We organize a few Tournaments for free every year! If you want join ? YOU are we
 ## <code style="color : red">Usage</code>
 
 <ol>
- <li>To access the Web application, go to: http://127.0.0.1:8000/</li>
- <li>To access the Admin interface, go to: http://127.0.0.1:8000/admin/</li>
+ <li>To access the Web-application, go to: http://127.0.0.1:8000/</li>
+ <li>To access the Admin-interface, go to: http://127.0.0.1:8000/admin/</li>
  <li>To access the Add-photo, go to: http://127.0.0.1:8000/photos/add/</li>
  <li>To access the Events, go to: http://127.0.0.1:8000/events/</li>
  <li>To access the Weather, go to: http://127.0.0.1:8000/locations/weather/</li>
