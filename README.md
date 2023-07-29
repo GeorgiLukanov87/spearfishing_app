@@ -90,17 +90,17 @@ We organize a few Tournaments for free every year! If you want join ? YOU are we
 ## <code style="color : red">Usage</code>
 
 <ol>
- <li>To access the web application, go to: http://127.0.0.1:8000/</li>
- <li>To access the admin interface, go to: http://127.0.0.1:8000/admin/</li>
- <li>To access the add-photo, go to: http://127.0.0.1:8000/photos/add/</li>
- <li>To access the events, go to: http://127.0.0.1:8000/events/</li>
- <li>To access the weather, go to: http://127.0.0.1:8000/locations/weather/</li>
- <li>To access the locations, go to: http://127.0.0.1:8000/locations/</li>
- <li>To access the stories, go to: http://127.0.0.1:8000/stories/</li>
- <li>To access the add story,go to: http://127.0.0.1:8000/stories/create/</li>
- <li>To access the band-calculator, go to: http://127.0.0.1:8000/calculator/</li>
- <li>To access the apnea-trainer, go to: http://127.0.0.1:8000/apnea-trainer/</li>
- <li>To access the about-page, go to: http://127.0.0.1:8000/stories/about/</li>
+ <li>To access the Web application, go to: http://127.0.0.1:8000/</li>
+ <li>To access the Admin interface, go to: http://127.0.0.1:8000/admin/</li>
+ <li>To access the Add-photo, go to: http://127.0.0.1:8000/photos/add/</li>
+ <li>To access the Events, go to: http://127.0.0.1:8000/events/</li>
+ <li>To access the Weather, go to: http://127.0.0.1:8000/locations/weather/</li>
+ <li>To access the Locations, go to: http://127.0.0.1:8000/locations/</li>
+ <li>To access the Stories, go to: http://127.0.0.1:8000/stories/</li>
+ <li>To access the Add-story,go to: http://127.0.0.1:8000/stories/create/</li>
+ <li>To access the Band-calculator, go to: http://127.0.0.1:8000/calculator/</li>
+ <li>To access the Apnea-trainer, go to: http://127.0.0.1:8000/apnea-trainer/</li>
+ <li>To access the About-page, go to: http://127.0.0.1:8000/stories/about/</li>
 </ol>
 
 ## <code style="color : red">Screenshots</code>
