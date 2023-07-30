@@ -4,9 +4,9 @@
 Welcome to "Spearfishing 4 Life" application!
 This page is a worldwide community.
 We respect each other. So we expect you do the same!
-Here we are all brothers in our Passion and Love - Spearfishing and Diving!
+Here we are all brothers in our passion and love - Spearfishing and Diving!
 Here you can find a good resources, stories and much more. And also share your own.
-We organize a few Tournaments for free every year! If you want join ? YOU are welcome! ENJOY!
+We organize a few Tournaments for free every year! If you want join ? You are welcome! Enjoy!
 </h3>
 
 ![home-page-working](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/70a8c185-db98-4a3e-a8b2-5a1277ec8da5)
