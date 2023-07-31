@@ -1,4 +1,6 @@
-<h1> Spearfishing4Life </h1>
+<h1>Spearfishing4Life</h1>
+
+![logo1](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/df9a3dc1-1994-4e6b-a44c-92a657ed6177)
 
 <h3>
 Welcome to "Spearfishing 4 Life" application!
