@@ -12,6 +12,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
+    'embed_video',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -22,13 +24,13 @@ INSTALLED_APPS = [
     'spearfishing_app.common',
     'spearfishing_app.accounts',
     'spearfishing_app.events',
-    'spearfishing_app.market',
     'spearfishing_app.locations',
     'spearfishing_app.stories',
     'spearfishing_app.photos',
     'spearfishing_app.equipment',
 
-    'embed_video',
+    # TODO
+    'spearfishing_app.market',
 
 ]
 

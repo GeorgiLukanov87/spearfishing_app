@@ -8,8 +8,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.views import generic
 
-from spearfishing_app.common.forms import CommentForm, SearchForm
 from spearfishing_app.common.helpers.dirty_words_validator import validate_dirty_words
+from spearfishing_app.common.forms import CommentForm, SearchForm
 from spearfishing_app.common.models import Like, Comment, Video
 from spearfishing_app.photos.models import Photo
 
@@ -93,11 +93,6 @@ def delete_comment(request, photo_id, comment_pk):
     comment = Comment.objects.filter(to_photo=photo, pk=comment_pk)
     comment.delete()
     return redirect(request.META['HTTP_REFERER'] + f'#{photo_id}')
-
-
-@login_required
-def redirect_to_index(request):
-    return redirect('index')
 
 
 class AllUsersCBV(generic.ListView):

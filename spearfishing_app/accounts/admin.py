@@ -15,7 +15,7 @@ class UserAdmin(auth_admin.UserAdmin):
     add_form = UserCreateForm
 
     ordering = ('id',)
-    list_display = ('id', 'username', 'first_name', 'last_name', 'gender')
+    list_display = ('id', 'username', 'first_name', 'last_name', 'gender', 'email',)
 
     fieldsets = (
         (
