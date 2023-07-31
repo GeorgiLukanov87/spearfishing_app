@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-)#jernn7)!!6b(0olw!!0i_9g2+5uu_)*#nd048=wi3n02dt6*'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -139,62 +139,35 @@ EMAIL_HOST_USER = 'petstragram.info.sender@gmail.com'
 EMAIL_HOST_PASSWORD = 'rsmtntzfelfmighe'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-LOGS_DIR = BASE_DIR / 'Logs'
+LOG_DIR = os.path.join(BASE_DIR, 'logs')
+os.makedirs(LOG_DIR, exist_ok=True)
 
-try:
-    os.mkdir(LOGS_DIR)
-except:
-    pass
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
 
-if DEBUG:
-    LOGGING = {
-        "version": 1,
-        "disable_existing_loggers": False,
-        "handlers": {
-            "console": {
-                "class": "logging.StreamHandler",
-            },
-        },
-        "root": {
-            "handlers": ["console"],
-            "level": "WARNING",
-        },
-    }
-else:
-    LOGGING = {
-        "version": 1,
-        "disable_existing_loggers": False,
-
-        "formatters": {
-            "verbose": {
-                "format": "{asctime} [{levelname}] {module} {process:d} {thread:d} {message}",
-                "style": "{",
-            },
-            "simple": {
-                "format": "{levelname} {message}",
-                "style": "{",
-            },
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
         },
 
-        "handlers": {
-            "console": {
-                "level": "INFO",
-                "class": "logging.StreamHandler",
-                "formatter": "simple",
-            },
-            "file": {
-                "level": "DEBUG",
-                "formatter": "verbose",
-                "class": "logging.FileHandler",
-                "filename": LOGS_DIR / 'Log.txt',
-            },
-
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(LOG_DIR, 'django.log'),
+            'formatter': 'verbose',
         },
-        "loggers": {
-            "django": {
-                "handlers": ["file"],
-                "level": "WARNING",
-                "propagate": True,
-            },
+    },
+    'formatters': {
+        'verbose': {
+            'format': '{asctime} [{levelname}] {module} {process:d} {thread:d} {message}',
+            'style': '{',
         },
-    }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'WARNING',  # Adjust the logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+        },
+    },
+}

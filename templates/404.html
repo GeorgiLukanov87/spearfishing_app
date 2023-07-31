@@ -2,15 +2,37 @@
 {% load static %}
 {% block content %}
 
-    <div class="not-found-img">
-        <img src="{% static 'images/HTML-Yeti-404-Page.gif' %}" alt="404 not found gif">
+    <style>
+        .error-404-wrapper {
+            border: 2px solid black;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            padding: 14px;
+            margin: auto;
+            padding-bottom: 30px;
+        }
+
+        .error-404-wrapper a button:hover {
+            cursor: pointer;
+        }
+
+    </style>
+
+
+    <div class="error-404-wrapper">
+
+        <h1 style="color: red">Error 404!</h1>
+        <h2>Page not found!</h2>
+
+        <a href="{% url 'index' %}">
+            <button style="border: 1px solid black;padding: 6px 8px;border-radius: 6px" class="button-edit-profile">
+                Return
+                to Spearfishing4Life
+            </button>
+        </a>
+
     </div>
-
-    <h2 style="color: red">Error 404 - page not found.</h2>
-
-    <a href="{% url 'index' %}">
-        <button style="border: 1px solid black;padding: 4px 6px;border-radius: 6px">Return to Spearfishing4Life</button>
-    </a>
 
 
 {% endblock %}
