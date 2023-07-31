@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-)#jernn7)!!6b(0olw!!0i_9g2+5uu_)*#nd048=wi3n02dt6*'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -121,13 +121,11 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# always use the extended User and get it using get_user_model()
 AUTH_USER_MODEL = 'accounts.AppUser'
 
 LOGIN_REDIRECT_URL = reverse_lazy('index')
 LOGOUT_REDIRECT_URL = reverse_lazy('index')
 
-# to save and reach uploaded media-files.
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
@@ -169,7 +167,7 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['console', 'file'],
-            'level': 'WARNING',  # Adjust the logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+            'level': 'WARNING',  # Adjust-level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
         },
     },
 }

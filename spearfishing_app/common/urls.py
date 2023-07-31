@@ -1,11 +1,11 @@
 from django.urls import path
+from django.views.generic import TemplateView
 
 from spearfishing_app.common.views import index, like_functionality, add_comment, share, AllUsersCBV, delete_comment, \
     BandCalculator, ApneaTrainer, admin_panel
 
 # common/urls.py
 urlpatterns = (
-
     path('', index, name='index'),
 
     path('like/<int:photo_id>/', like_functionality, name='like'),
@@ -18,5 +18,4 @@ urlpatterns = (
     path('apnea-trainer/', ApneaTrainer.as_view(), name='apnea-trainer'),
 
     path('admin/', admin_panel, name='admin-panel')
-
 )
