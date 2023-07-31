@@ -42,6 +42,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'spearfishing_app.common.CustomMiddleware.CustomErrorMiddleware',
 ]
 
 ROOT_URLCONF = 'spearfishing_app.urls'
