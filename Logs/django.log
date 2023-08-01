@@ -1,47 +1,16 @@
-2023-07-31 20:12:37,141 [WARNING] log 4052 7772 Not Found: /g454
-2023-07-31 20:12:37,141 [WARNING] basehttp 4052 7772 "GET /g454 HTTP/1.1" 404 4657
-2023-07-31 20:13:16,060 [WARNING] log 9220 12296 Not Found: /
-2023-07-31 20:13:16,060 [WARNING] basehttp 9220 12296 "GET / HTTP/1.1" 404 2953
-2023-08-01 02:53:05,725 [WARNING] log 4876 13144 Not Found: /favicon.ico
-2023-08-01 02:53:05,726 [WARNING] basehttp 4876 13144 "GET /favicon.ico HTTP/1.1" 404 4678
-2023-08-01 11:47:27,314 [WARNING] log 9428 8560 Not Found: /favicon.ico
-2023-08-01 11:47:27,315 [WARNING] basehttp 9428 8560 "GET /favicon.ico HTTP/1.1" 404 4678
-2023-08-01 12:01:59,832 [WARNING] log 9972 9368 Not Found: /favicon.ico
-2023-08-01 12:01:59,833 [WARNING] basehttp 9972 9368 "GET /favicon.ico HTTP/1.1" 404 4678
-2023-08-01 12:32:36,161 [WARNING] log 9972 2688 Not Found: /favicon.ico
-2023-08-01 12:32:36,162 [WARNING] basehttp 9972 2688 "GET /favicon.ico HTTP/1.1" 404 4678
-2023-08-01 17:31:29,782 [ERROR] log 14104 12172 Internal Server Error: /locations/
-Traceback (most recent call last):
-  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\Jorge\Desktop\GitHub SoftUni\spearfishing_app\spearfishing_app\locations\views.py", line 214, in locations
-    m = m._repr_html_()
-AttributeError: 'Marker' object has no attribute '_repr_html_'
-2023-08-01 17:31:29,813 [ERROR] log 14104 12172 Internal Server Error: /locations/
-Traceback (most recent call last):
-  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-  File "C:\Users\Jorge\Desktop\GitHub SoftUni\spearfishing_app\spearfishing_app\common\CustomMiddleware.py", line 13, in __call__
-    return self.handle_error(request, response)
-  File "C:\Users\Jorge\Desktop\GitHub SoftUni\spearfishing_app\spearfishing_app\common\CustomMiddleware.py", line 19, in handle_error
-    return HttpResponseServerError(template.render(context))
-  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\template\backends\django.py", line 57, in render
-    context = make_context(
-  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\template\context.py", line 278, in make_context
-    raise TypeError(
-TypeError: context must be a dict rather than RequestContext.
-2023-08-01 17:31:29,815 [ERROR] basehttp 14104 12172 "GET /locations/ HTTP/1.1" 500 73840
-2023-08-01 17:31:29,949 [WARNING] log 14104 12172 Not Found: /favicon.ico
-2023-08-01 17:31:29,949 [WARNING] basehttp 14104 12172 "GET /favicon.ico HTTP/1.1" 404 4678
-2023-08-01 17:32:06,503 [ERROR] log 12704 3572 Internal Server Error: /locations/
-Traceback (most recent call last):
-  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\Jorge\Desktop\GitHub SoftUni\spearfishing_app\spearfishing_app\locations\views.py", line 214, in locations
-    m = m._repr_html_()
-AttributeError: 'Marker' object has no attribute '_repr_html_'
-2023-08-01 17:32:06,505 [ERROR] basehttp 12704 3572 "GET /locations/ HTTP/1.1" 500 68219
+2023-08-01 21:24:29,858 [WARNING] log 10184 8860 Not Found: /locations/weather/fewrf32
+2023-08-01 21:24:29,859 [WARNING] basehttp 10184 8860 "GET /locations/weather/fewrf32 HTTP/1.1" 404 4966
+2023-08-01 21:26:04,014 [WARNING] log 11364 12264 Not Found: /fdsfsd
+2023-08-01 21:26:04,015 [WARNING] basehttp 11364 12264 "GET /fdsfsd HTTP/1.1" 404 4663
+2023-08-01 21:26:05,612 [WARNING] log 11364 12264 Not Found: /fdsfsd
+2023-08-01 21:26:05,613 [WARNING] basehttp 11364 12264 "GET /fdsfsd HTTP/1.1" 404 4663
+2023-08-01 21:26:28,653 [WARNING] log 11364 12264 Forbidden: /stories/delete/3/
+2023-08-01 21:26:28,654 [WARNING] basehttp 11364 12264 "GET /stories/delete/3/ HTTP/1.1" 403 6220
+2023-08-01 21:26:28,805 [WARNING] log 11364 12264 Forbidden: /stories/delete/3/
+2023-08-01 21:26:28,806 [WARNING] basehttp 11364 12264 "GET /stories/delete/3/ HTTP/1.1" 403 6220
+2023-08-01 21:26:30,476 [WARNING] log 11364 12264 Not Found: /stories/delete/3/f32f32
+2023-08-01 21:26:30,477 [WARNING] basehttp 11364 12264 "GET /stories/delete/3/f32f32 HTTP/1.1" 404 5731
+2023-08-01 21:28:46,298 [WARNING] log 10164 8980 Forbidden: /stories/edit/3/
+2023-08-01 21:28:46,300 [WARNING] basehttp 10164 8980 "GET /stories/edit/3/ HTTP/1.1" 403 6220
+2023-08-01 21:28:46,485 [WARNING] log 10164 8980 Forbidden: /stories/edit/3/
+2023-08-01 21:28:46,486 [WARNING] basehttp 10164 8980 "GET /stories/edit/3/ HTTP/1.1" 403 6220
