@@ -53,7 +53,6 @@
                     <i class="fa-solid fa-users "></i>
                     Competitors:
                     <h3 class="competitors-wrapper">
-
                         {% for competitor in event.competitors.all %}
                             <div class="competitors">
                                 <ul style="list-style: none">
@@ -70,6 +69,7 @@
 
                     </h3>
                 </div>
+
                 {% if perms %}
                     <div class="event-wrapper-global">
 
@@ -86,6 +86,9 @@
 
                     </div>
                 {% endif %}
+
         {% endfor %}
+
     {% endif %}
+
 {% endblock %}
