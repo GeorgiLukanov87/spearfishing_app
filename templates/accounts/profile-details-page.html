@@ -25,7 +25,7 @@
                         <h4>Gun Material: {{ object.equipment.gun_material }}</h4>
                         <h4>Gun Length: {{ object.equipment.gun_length }}</h4>
                     </div>
-                
+
                     <div class="equipment-containers">
                         <div>
                             {% if object.equipment.bands_image %}
@@ -173,7 +173,7 @@
                         <a style="color: red;font-size: 16px; font-weight: bold"
                            href="?page={{ photos.previous_page_number }}">PREVIOUS</a>
                     {% endif %}
-                    <span style="font-size: 16px"
+                    <span style="font-size: 18px"
                           class="current">Page {{ photos.number }} of {{ photos.paginator.num_pages }}.</span>
                     {% if photos.has_next %}
                         <a style="color: red;font-size: 16px; font-weight: bold"

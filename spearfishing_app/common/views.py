@@ -2,6 +2,7 @@ import pyperclip
 
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 
@@ -27,6 +28,17 @@ def index(request):
         search_form = SearchForm(request.POST)
         if search_form.is_valid():
             all_photos = all_photos.filter(photo__icontains=search_form.cleaned_data['user_name'])
+
+    per_page = 4
+    paginator = Paginator(all_photos, per_page)
+    page = request.GET.get('page')
+
+    try:
+        all_photos = paginator.page(page)
+    except PageNotAnInteger:
+        all_photos = paginator.page(1)
+    except EmptyPage:
+        all_photos = paginator.page(paginator.num_pages)
 
     context = {
         'all_photos': all_photos,
