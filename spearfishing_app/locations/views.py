@@ -41,7 +41,7 @@ def locations(request):
 
         # Visualisation from all_spots_list / fast operation but not persisting in db
         for lat, lng, country in all_spots:
-            folium.Marker([lat, lng], tooltip='See more details!', popup=country).add_to(m)
+            folium.Marker([float(lat), float(lng)], tooltip='See more details!', popup=country).add_to(m)
 
         # Visualisation from Search.objects.all() #slow operation
         # for item in all_countries_names:
