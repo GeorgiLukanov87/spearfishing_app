@@ -14,3 +14,61 @@
 2023-08-01 21:28:46,300 [WARNING] basehttp 10164 8980 "GET /stories/edit/3/ HTTP/1.1" 403 6220
 2023-08-01 21:28:46,485 [WARNING] log 10164 8980 Forbidden: /stories/edit/3/
 2023-08-01 21:28:46,486 [WARNING] basehttp 10164 8980 "GET /stories/edit/3/ HTTP/1.1" 403 6220
+2023-08-03 11:28:13,489 [ERROR] log 2172 11456 Internal Server Error: /share/68/
+Traceback (most recent call last):
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Jorge\Desktop\GitHub SoftUni\spearfishing_app\spearfishing_app\common\views.py", line 84, in share
+    copy(request.META['HTTP_HOST'] + resolve_url('photo-details', photo_id))
+NameError: name 'resolve_url' is not defined
+2023-08-03 11:28:13,512 [ERROR] log 2172 11456 Internal Server Error: /share/68/
+Traceback (most recent call last):
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Jorge\Desktop\GitHub SoftUni\spearfishing_app\spearfishing_app\common\CustomMiddleware.py", line 13, in __call__
+    return self.handle_error(request, response)
+  File "C:\Users\Jorge\Desktop\GitHub SoftUni\spearfishing_app\spearfishing_app\common\CustomMiddleware.py", line 19, in handle_error
+    return HttpResponseServerError(template.render(context))
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\template\backends\django.py", line 57, in render
+    context = make_context(
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\template\context.py", line 278, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than RequestContext.
+2023-08-03 11:28:13,513 [ERROR] basehttp 2172 11456 "GET /share/68/ HTTP/1.1" 500 73823
+2023-08-03 11:28:13,631 [WARNING] log 2172 11456 Not Found: /favicon.ico
+2023-08-03 11:28:13,631 [WARNING] basehttp 2172 11456 "GET /favicon.ico HTTP/1.1" 404 4678
+2023-08-03 12:38:29,100 [ERROR] log 10168 10116 Internal Server Error: /share/68/
+Traceback (most recent call last):
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Jorge\Desktop\GitHub SoftUni\spearfishing_app\spearfishing_app\common\views.py", line 81, in share
+    return redirect(get_photo_url)
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'spearfishing_app.common.views.get_photo_url' not found. 'spearfishing_app.common.views.get_photo_url' is not a valid view function or pattern name.
+2023-08-03 12:38:29,159 [ERROR] log 10168 10116 Internal Server Error: /share/68/
+Traceback (most recent call last):
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Jorge\Desktop\GitHub SoftUni\spearfishing_app\spearfishing_app\common\CustomMiddleware.py", line 13, in __call__
+    return self.handle_error(request, response)
+  File "C:\Users\Jorge\Desktop\GitHub SoftUni\spearfishing_app\spearfishing_app\common\CustomMiddleware.py", line 19, in handle_error
+    return HttpResponseServerError(template.render(context))
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\template\backends\django.py", line 57, in render
+    context = make_context(
+  File "C:\home\wwd\spearfishing_app\lib\site-packages\django\template\context.py", line 278, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than RequestContext.
+2023-08-03 12:38:29,166 [ERROR] basehttp 10168 10116 "GET /share/68/ HTTP/1.1" 500 73823
+2023-08-03 12:38:29,313 [WARNING] log 10168 10116 Not Found: /favicon.ico
+2023-08-03 12:38:29,313 [WARNING] basehttp 10168 10116 "GET /favicon.ico HTTP/1.1" 404 4678

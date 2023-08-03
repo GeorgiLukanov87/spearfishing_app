@@ -77,8 +77,9 @@ def share(request, photo_id):
     photo_details_url = reverse('photo-details', kwargs={
         'pk': photo_id
     })
-    pyperclip.copy(photo_details_url)
-    return redirect(get_photo_url(request, photo_id))
+
+    pyperclip.copy(request.META['HTTP_HOST'] + photo_details_url)
+    return redirect(request.META['HTTP_REFERER'] + f'#{photo_id}')
 
 
 @login_required
