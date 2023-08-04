@@ -55,7 +55,7 @@ We organize a few Tournaments for free every year! If you want join ? You are we
  <br>
  <li>Install project dependencies:
  <ul>
-  <li>pip install -r requiments.txt</li>
+  <li>pip install -r requirements.txt</li>
  </ul>
  </li>
   <br>
