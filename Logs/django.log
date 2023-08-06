@@ -72,3 +72,7 @@ TypeError: context must be a dict rather than RequestContext.
 2023-08-03 12:38:29,166 [ERROR] basehttp 10168 10116 "GET /share/68/ HTTP/1.1" 500 73823
 2023-08-03 12:38:29,313 [WARNING] log 10168 10116 Not Found: /favicon.ico
 2023-08-03 12:38:29,313 [WARNING] basehttp 10168 10116 "GET /favicon.ico HTTP/1.1" 404 4678
+2023-08-06 16:20:30,173 [WARNING] log 1168 15076 Not Found: /fwefwe
+2023-08-06 16:20:30,174 [WARNING] basehttp 1168 15076 "GET /fwefwe HTTP/1.1" 404 4663
+2023-08-06 16:20:30,490 [WARNING] log 1168 15076 Not Found: /favicon.ico
+2023-08-06 16:20:30,491 [WARNING] basehttp 1168 15076 "GET /favicon.ico HTTP/1.1" 404 4678
