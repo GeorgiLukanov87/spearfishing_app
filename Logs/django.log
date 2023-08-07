@@ -76,3 +76,7 @@ TypeError: context must be a dict rather than RequestContext.
 2023-08-06 16:20:30,174 [WARNING] basehttp 1168 15076 "GET /fwefwe HTTP/1.1" 404 4663
 2023-08-06 16:20:30,490 [WARNING] log 1168 15076 Not Found: /favicon.ico
 2023-08-06 16:20:30,491 [WARNING] basehttp 1168 15076 "GET /favicon.ico HTTP/1.1" 404 4678
+2023-08-07 23:46:29,814 [WARNING] log 9648 12308 Not Found: /locations/weather/g43g43
+2023-08-07 23:46:29,814 [WARNING] basehttp 9648 12308 "GET /locations/weather/g43g43 HTTP/1.1" 404 4963
+2023-08-07 23:46:29,902 [WARNING] log 9648 12308 Not Found: /favicon.ico
+2023-08-07 23:46:29,903 [WARNING] basehttp 9648 12308 "GET /favicon.ico HTTP/1.1" 404 4678
