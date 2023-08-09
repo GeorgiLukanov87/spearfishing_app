@@ -43,6 +43,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
+    'spearfishing_app.common.CustomMiddleware.NoAdminAccessForRegularUserMiddleware',
     'spearfishing_app.common.CustomMiddleware.CustomErrorMiddleware',
 ]
 
