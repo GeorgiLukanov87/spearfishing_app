@@ -30,7 +30,7 @@ def is_staff_user(user):
 
 
 @login_required
-@user_passes_test(is_staff_user, login_url=reverse_lazy('index'))
+@user_passes_test(is_staff_user, login_url=reverse_lazy('events-list'))
 def edit_event(request, pk):
     event = Event.objects.filter(pk=pk).get()
     if request.method == 'GET':
@@ -42,11 +42,12 @@ def edit_event(request, pk):
             return redirect('events-list')
 
     context = {'form': form, 'event': event, }
+
     return render(request, 'events/edit-event.html', context, )
 
 
 @login_required
-@user_passes_test(is_staff_user, login_url=reverse_lazy('index'))
+@user_passes_test(is_staff_user, login_url=reverse_lazy('events-list'))
 def delete_event(request, pk):
     event = Event.objects.filter(pk=pk).get()
     if request.method == 'GET':
