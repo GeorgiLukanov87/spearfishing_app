@@ -1,4 +1,4 @@
-from django.http import HttpResponseServerError, Http404
+from django.http import HttpResponseServerError
 from django.shortcuts import redirect
 from django.template.loader import get_template
 from django.template import RequestContext

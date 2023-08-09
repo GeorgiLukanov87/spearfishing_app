@@ -68,11 +68,7 @@ Traceback (most recent call last):
     context = make_context(
   File "C:\home\wwd\spearfishing_app\lib\site-packages\django\template\context.py", line 278, in make_context
     raise TypeError(
-TypeError: context must be a dict rather than RequestContext.
 
-2023-08-09 08:59:22,783 [WARNING] log 14284 4756 Not Found: /favicon.ico
-2023-08-09 08:59:22,784 [WARNING] basehttp 14284 4756 "GET /favicon.ico HTTP/1.1" 404 4678
-2023-08-09 09:04:43,627 [WARNING] log 14116 7144 Not Found: /admin/
-2023-08-09 09:04:43,642 [WARNING] basehttp 14116 7144 "GET /admin/ HTTP/1.1" 404 1799
-2023-08-09 09:04:43,943 [WARNING] log 14116 7144 Not Found: /admin/
-2023-08-09 09:04:43,944 [WARNING] basehttp 14116 7144 "GET /admin/ HTTP/1.1" 404 1799
+
+2023-08-09 09:19:11,998 [WARNING] log 15268 15216 Not Found: /dasda
+2023-08-09 09:19:11,998 [WARNING] basehttp 15268 15216 "GET /dasda HTTP/1.1" 404 4660
