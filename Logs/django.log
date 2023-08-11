@@ -82,3 +82,5 @@ Traceback (most recent call last):
 2023-08-11 18:26:57,777 [WARNING] basehttp 5780 11016 "GET /favicon.ico HTTP/1.1" 404 4678
 2023-08-11 18:29:06,264 [WARNING] log 5780 10800 Forbidden: /accounts/profile/21/delete/
 2023-08-11 18:29:06,265 [WARNING] basehttp 5780 10800 "GET /accounts/profile/21/delete/ HTTP/1.1" 403 6220
+2023-08-11 21:09:52,206 [WARNING] log 7244 4112 Not Found: /favicon.ico
+2023-08-11 21:09:52,207 [WARNING] basehttp 7244 4112 "GET /favicon.ico HTTP/1.1" 404 4678
