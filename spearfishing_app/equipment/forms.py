@@ -9,22 +9,29 @@ class EquipmentBaseForm(forms.ModelForm):
         model = Equipment
         exclude = ('owner',)
 
+        labels = {
+            'gun_image': '',
+            'bands_image': '',
+            'fins_image': '',
+            'additional_info': '',
+        }
+
         widgets = {
             'gun_image': forms.URLInput(
                 attrs={
-                    'placeholder': 'Link to gun image...'
+                    'placeholder': 'Link to your Gun image...'
                 }
             ),
 
             'bands_image': forms.URLInput(
                 attrs={
-                    'placeholder': 'Link to bands image...'
+                    'placeholder': 'Link to your Bands image...'
                 }
             ),
 
             'fins_image': forms.URLInput(
                 attrs={
-                    'placeholder': 'Link to fins image...'
+                    'placeholder': 'Link to your Fins image...'
                 }
             ),
 
