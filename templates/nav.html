@@ -4,9 +4,7 @@
         <div class="container">
             <div class="logo">
                 <a href="{% url 'index' %}">
-                    <img
-                            src="{% static 'images/underwater-hunter-skull-Logo.jpg' %}"
-                            alt="nav-logo">
+                    <img src="{% static 'images/underwater-hunter-skull-Logo.jpg' %}" alt="nav-logo">
                 </a>
             </div>
 
@@ -91,8 +89,7 @@
 
                         <li class="nav-item">
                             <a href="{% url 'profile details' pk=request.user.pk %}">
-                                {#                                <i>Profile</i>#}
-                                <i>Profile: {{ request.user.username }} </i>
+                                <i>Profile</i>
                             </a>
                         </li>
 

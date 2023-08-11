@@ -5,11 +5,12 @@
         <div class="edit-delete">
             <form action="{% url 'profile edit' pk=object.pk %}" method="post">
                 <h2>Edit Profile</h2>
-                <br>
                 {% csrf_token %}
+                <br>
 
                 {% for field in form %}
                     <p class="error"> {{ field.errors }} </p>
+
                     <div class="label-input">
                         <label>{{ field.label }}</label>
                         {% if not field.label == "Gender:" %}
@@ -28,6 +29,7 @@
                             </div>
                         {% endif %}
                     </div>
+
                     <br>
                 {% endfor %}
                 <div>
