@@ -25,7 +25,11 @@ def add_equipment(request):
 
     context = {'form': form, }
 
-    return render(request, 'equipment/add-equipment.html', context)
+    return render(
+        request,
+        'equipment/add-equipment.html',
+        context
+    )
 
 
 class EquipmentEditView(LoginRequiredMixin, EquipmentOwnerOrStaffRequiredMixin, generic.UpdateView):

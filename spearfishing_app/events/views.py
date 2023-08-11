@@ -16,7 +16,11 @@ def events_list(request):
         'perms': request.user.is_staff,
     }
 
-    return render(request, 'events/events-list.html', context)
+    return render(
+        request,
+        'events/events-list.html',
+        context
+    )
 
 
 class CreateEventCBV(LoginRequiredMixin, generic.CreateView):
@@ -43,7 +47,11 @@ def edit_event(request, pk):
 
     context = {'form': form, 'event': event, }
 
-    return render(request, 'events/edit-event.html', context, )
+    return render(
+        request,
+        'events/edit-event.html',
+        context
+    )
 
 
 @login_required
@@ -60,8 +68,15 @@ def delete_event(request, pk):
 
     context = {'form': form, 'event': event, }
 
-    return render(request, 'events/delete-event.html', context)
+    return render(
+        request,
+        'events/delete-event.html',
+        context
+    )
 
 
 def gift_page(request):
-    return render(request, 'common/gift-page.html')
+    return render(
+        request,
+        'common/gift-page.html'
+    )

@@ -44,7 +44,6 @@ def index(request):
         'all_photos': all_photos,
         'comment_form': comment_form,
         'search_form': search_form,
-        'has_perms': request.user.has_perm('events.add_event'),
     }
 
     return render(
@@ -67,10 +66,6 @@ def like_functionality(request, photo_id):
         )
 
     return redirect(request.META['HTTP_REFERER'])
-
-
-def get_photo_url(request, photo_id):
-    return request.META['HTTP_REFERER'] + f'photos/{photo_id}'
 
 
 def share(request, photo_id):
@@ -105,6 +100,7 @@ def delete_comment(request, photo_id, comment_pk):
     photo = get_object_or_404(Photo, pk=photo_id)
     comment = Comment.objects.filter(to_photo=photo, pk=comment_pk)
     comment.delete()
+
     return redirect(request.META['HTTP_REFERER'] + f'#{photo_id}')
 
 

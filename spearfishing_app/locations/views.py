@@ -31,12 +31,10 @@ def locations(request):
 
     # Create Map Object
     m = folium.Map(location=[lat, lng], zoom_start=9)
-
     folium.Marker([lat, lng], tooltip='See more details!', popup=country).add_to(m)
-
     # # Get HTML Representation of Map Object
-    tooltip = "See more details!"
     # STATIC Markers:
+    tooltip = "See more details!"
     folium.Marker(
         [39.18475207792338, -0.21667029996640755],
         popup="<i>Cullera Playa LOCATION: 39.18475207792338, -0.21667029996640755</i>", tooltip=tooltip
@@ -229,6 +227,7 @@ def weather(request):
             return render(request, 'locations/weather.html')
 
         weather_data = fetch_weather_and_forecast(city, api_key, current_weather_url)
+
         if weather_data is None:
             return render(request, 'locations/wrong-data1.html')
 
