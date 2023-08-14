@@ -84,3 +84,15 @@ Traceback (most recent call last):
 2023-08-11 18:29:06,265 [WARNING] basehttp 5780 10800 "GET /accounts/profile/21/delete/ HTTP/1.1" 403 6220
 2023-08-11 21:09:52,206 [WARNING] log 7244 4112 Not Found: /favicon.ico
 2023-08-11 21:09:52,207 [WARNING] basehttp 7244 4112 "GET /favicon.ico HTTP/1.1" 404 4678
+2023-08-12 13:57:06,493 [WARNING] log 9272 11964 Forbidden: /accounts/profile/1/delete/
+2023-08-12 13:57:07,276 [WARNING] log 9272 11964 Forbidden: /accounts/profile/1/edit/
+2023-08-12 22:50:21,645 [WARNING] log 7000 1440 Forbidden: /accounts/profile/1/delete/
+2023-08-12 22:50:22,377 [WARNING] log 7000 1440 Forbidden: /accounts/profile/1/edit/
+2023-08-12 22:58:34,002 [WARNING] log 10196 8396 Not Found: /favicon.ico
+2023-08-12 22:58:34,005 [WARNING] basehttp 10196 8396 "GET /favicon.ico HTTP/1.1" 404 4678
+2023-08-12 23:00:17,950 [WARNING] log 10196 8760 Forbidden: /stories/delete/3/
+2023-08-12 23:00:17,951 [WARNING] basehttp 10196 8760 "GET /stories/delete/3/ HTTP/1.1" 403 6117
+2023-08-12 23:00:18,069 [WARNING] log 10196 8760 Forbidden: /stories/delete/3/
+2023-08-12 23:00:18,069 [WARNING] basehttp 10196 8760 "GET /stories/delete/3/ HTTP/1.1" 403 6117
+2023-08-13 09:37:47,504 [WARNING] log 7896 3996 Not Found: /favicon.ico
+2023-08-13 09:37:47,505 [WARNING] basehttp 7896 3996 "GET /favicon.ico HTTP/1.1" 404 4678
