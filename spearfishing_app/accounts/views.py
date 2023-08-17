@@ -34,7 +34,6 @@ class SingInView(generic.CreateView):
     form_class = UserCreateForm
     success_url = reverse_lazy('index')
 
-    # When new user is created,auto-login
     def form_valid(self, form):
         response = super().form_valid(form)
         user = form.save()
