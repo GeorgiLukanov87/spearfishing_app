@@ -19,7 +19,6 @@ urlpatterns = (
     )),
 
     path('to_github/', to_github, name='go to github'),
-
     path('change-password/', ChangePasswordCBV.as_view(), name='change-password'),
 )
 

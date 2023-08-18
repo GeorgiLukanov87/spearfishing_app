@@ -74,6 +74,7 @@ def share(request, photo_id):
     })
 
     pyperclip.copy(request.META['HTTP_HOST'] + photo_details_url)
+
     return redirect(request.META['HTTP_REFERER'] + f'#{photo_id}')
 
 
