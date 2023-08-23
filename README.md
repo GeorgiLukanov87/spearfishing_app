@@ -111,21 +111,9 @@ https://www.youtube.com/watch?v=XNHSm7wJup8
 
 ## <code style="color : red">Screenshots</code>
 
-<h3> $${\color{orange}Home \space page:}$$ </h3>
-
-![screencapture-127-0-0-1-8000-2023-07-30-11_30_29](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/d774f804-1452-40a6-854c-af9b32374b0e)
-
-<h3> $${\color{orange}Login \space page:}$$ </h3>
-
-![screencapture-127-0-0-1-8000-accounts-login-2023-07-30-11_35_33](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/0488b301-41e3-45dd-a9b2-e0e8da85d2ed)
-
 <h3> $${\color{orange}Locations \space page:}$$ </h3>
 
 ![screencapture-127-0-0-1-8000-locations-2023-07-30-11_36_52](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/bbeca2be-8220-45e0-bea1-6b3f2b801c4d)
-
-<h3> $${\color{orange}About \space page:}$$ </h3>
-
-![screencapture-127-0-0-1-8000-stories-about-2023-07-30-11_37_18](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/3301d3bc-3078-42cd-aeba-72af55b9e06f)
 
 <h3> $${\color{orange}Add-photo \space page:}$$ </h3>
 
@@ -139,21 +127,9 @@ https://www.youtube.com/watch?v=XNHSm7wJup8
 
 ![screencapture-127-0-0-1-8000-calculator-2023-07-30-11_38_35](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/56b22978-598c-44e9-91db-aad47a0fe45a)
 
-<h3> $${\color{orange}Apnea-trainer \space page:}$$ </h3>
-
-![screencapture-127-0-0-1-8000-apnea-trainer-2023-07-30-11_38_51](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/a5cd6968-3e59-428d-ad0c-f79aca0df8c8)
-
-<h3> $${\color{orange}Stories-page:}$$ </h3>
-
-![screencapture-127-0-0-1-8000-stories-2023-07-30-11_39_21](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/6fb7e39e-63fb-4b76-9197-4c01ac044b96)
-
 <h3> $${\color{orange}Add-story:}$$ </h3>
 
 ![screencapture-127-0-0-1-8000-stories-create-2023-07-30-11_39_38](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/102220c9-7ed0-4ff6-9447-bdd1cdec72d6)
-
-<h3> $${\color{orange}Events:}$$ </h3>
-
-![screencapture-127-0-0-1-8000-events-2023-07-30-11_40_10](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/85058ce4-d466-474a-ba21-67935f4c2b53)
 
 <h3> $${\color{orange}Profile-page:}$$ </h3>
 
