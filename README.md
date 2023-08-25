@@ -1,6 +1,7 @@
 <h1>Spearfishing4Life</h1>
 
-### <code style="color : red">Link to website: </code> https://goto.pythonanywhere.com/
+### <code style="color : red">Link to website: </code>
+https://goto.pythonanywhere.com/
 
 ![logo1](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/434d1d8f-fd34-4ec0-89a6-8dfa5de84210)
 
