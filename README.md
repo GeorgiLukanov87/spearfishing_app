@@ -11,7 +11,7 @@ This page is a worldwide community.
 We respect each other. So we expect you do the same!
 Here we are all brothers in our passion and love - Spearfishing and Diving!
 Here you can find a good resources, stories and much more. And also share your own.
-We organize a few Tournaments for free every year! If you want join ?
+We organize a few Tournaments for free every year!
 </h3>
 
 
