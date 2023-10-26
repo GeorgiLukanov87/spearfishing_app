@@ -112,31 +112,31 @@ https://www.youtube.com/watch?v=XNHSm7wJup8
 
 ## <code style="color : red">Screenshots</code>
 
-<h3> $${\color{orange}Locations \space page:}$$ </h3>
+$${\color{orange}Locations \space page:}$$
 
 ![screencapture-127-0-0-1-8000-locations-2023-07-30-11_36_52](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/bbeca2be-8220-45e0-bea1-6b3f2b801c4d)
 
-<h3> $${\color{orange}Add-photo \space page:}$$ </h3>
+$${\color{orange}Add-photo \space page:}$$
 
 ![screencapture-127-0-0-1-8000-photos-add-2023-07-30-11_37_51](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/199fcc6c-cf02-46e1-b36f-4f17c0336078)
 
-<h3> $${\color{orange}Weather \space page:}$$ </h3>
+$${\color{orange}Weather \space page:}$$
 
 ![screencapture-127-0-0-1-8000-locations-weather-2023-07-30-11_38_15](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/c1316788-94c7-4b30-bf09-691578062913)
 
-<h3> $${\color{orange}Calculator \space page:}$$ </h3>
+$${\color{orange}Calculator \space page:}$$
 
 ![screencapture-127-0-0-1-8000-calculator-2023-07-30-11_38_35](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/56b22978-598c-44e9-91db-aad47a0fe45a)
 
-<h3> $${\color{orange}Add-story:}$$ </h3>
+$${\color{orange}Add-story:}$$
 
 ![screencapture-127-0-0-1-8000-stories-create-2023-07-30-11_39_38](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/102220c9-7ed0-4ff6-9447-bdd1cdec72d6)
 
-<h3> $${\color{orange}Profile-page:}$$ </h3>
+$${\color{orange}Profile-page:}$$
 
 ![screencapture-127-0-0-1-8000-accounts-profile-1-2023-07-30-11_40_59](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/eee059f0-781e-4fa6-9672-ac03e109f2ec)
 
-<h3> $${\color{orange}Users:}$$ </h3>
+$${\color{orange}Users:}$$
 
 ![screencapture-127-0-0-1-8000-users-list-2023-07-30-11_41_42](https://github.com/GeorgiLukanov87/spearfishing_app/assets/102332504/3ad5a06f-b85d-4754-bfc4-f22afb88abec)
 
